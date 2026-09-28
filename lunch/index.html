@@ -257,7 +257,7 @@
       <button class="x" id="closeModal" aria-label="닫기">✕</button>
     </div>
     <div class="modal-body">
-      <textarea id="input" placeholder="여기에 식단 텍스트를 붙여넣으세요.&#10;&#10;5월 18일 (월)&#10;조식&#10;한식: 근대된장국, 돈육간장불고기, 배추김치&#10;양식: 식빵, 녹차크림수프&#10;중식&#10;한식: 밤떡갈비구이, 조랭이떡국, 옥수수밥"></textarea>
+      <textarea id="input" placeholder="식단 표를 그대로 붙여넣으세요 (엑셀·웹 표 복사 지원).&#10;&#10;날짜&#9;구분&#9;한식 메뉴&#9;양식/간편식 메뉴&#10;09/28 (월)&#9;조식&#9;사골김치찌개&#9;토스트 2종 & 잼, 버터&#10;&#9;중식&#9;등심돈까스 & 참깨데미소스&#9;아보카도 눈꽃치즈 샐러드&#10;09/29 (화)&#9;조식&#9;전주식 콩나물해장국&#9;토스트 2종 & 잼, 버터&#10;&#10;※ 목록형(5월 18일 (월) / 조식 / 한식: ...)도 그대로 인식합니다."></textarea>
     </div>
     <div class="modal-foot">
       <label class="filebtn">
@@ -294,6 +294,7 @@
 
   var DATE_RE = /^\s*(\d{1,2})\s*[월\/\.\-]\s*(\d{1,2})\s*일?\s*[\(\[]?\s*([월화수목금토일])?\s*[\)\]]?\s*$/;
   var MEAL_RE = /^\s*(조식|중식|석식|야식|아침|점심|저녁|브런치)\s*$/;
+  var MEAL_CELL_RE = /^(조식|중식|석식|야식|아침|점심|저녁|브런치)$/;
   var MEAL_INFO = {
     '조식': { cls: 'bf', ord: 0 }, '브런치': { cls: 'bf', ord: 1 },
     '중식': { cls: 'lu', ord: 2 }, '석식': { cls: 'di', ord: 3 },
@@ -307,7 +308,8 @@
     return s.trim();
   }
   function splitItems(s) {
-    return s.split(/[,，·]/).map(function (x) { return x.trim(); }).filter(Boolean);
+    return s.split(/[,，·]/).map(function (x) { return x.trim(); })
+            .filter(function (x) { return x && !/^[-–—]+$/.test(x); });
   }
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
@@ -315,7 +317,88 @@
     });
   }
 
+  // 한 줄을 셀 배열로 분해 (탭 / 마크다운 파이프 / 공백 2칸 이상)
+  function splitCells(line) {
+    var cells;
+    if (line.indexOf('\t') > -1) {
+      cells = line.split('\t');
+    } else if (line.indexOf('|') > -1) {
+      cells = line.replace(/^\s*\|/, '').replace(/\|\s*$/, '').split('|');
+    } else {
+      cells = line.split(/\s{2,}/);
+    }
+    return cells.map(function (c) { return c.trim(); });
+  }
+  function isSepRow(cells) { // 마크다운 표 구분선 |---|---|
+    return cells.length > 1 && cells.every(function (c) { return /^:?-{2,}:?$/.test(c); });
+  }
+  function isHeaderRow(cells) {
+    return cells.length > 1 && /날짜|일자/.test(cells[0]) && cells.some(function (c) { return /구분|끼니|식사/.test(c); });
+  }
+  function catName(s) { // "한식 메뉴" → "한식", "양식/간편식 메뉴" → "양식/간편식"
+    return s.replace(/\s*메뉴\s*$/, '').trim();
+  }
+
+  // 표 형식인지 판정: 셀 2개 이상이면서 끼니 셀을 포함한 줄이 있는가
+  function looksLikeTable(text) {
+    var lines = text.split(/\r?\n/);
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (!line) continue;
+      var cells = splitCells(line);
+      if (cells.length < 2) continue;
+      if (isHeaderRow(cells)) return true;
+      for (var j = 0; j < Math.min(2, cells.length); j++) {
+        if (MEAL_CELL_RE.test(cells[j])) return true;
+      }
+    }
+    return false;
+  }
+
+  // 표 형식 파서
+  // 날짜 | 구분 | 한식 메뉴 | 양식/간편식 메뉴   ← 헤더(있으면 분류명으로 사용)
+  // 09/28 (월) | 조식 | ...  ← 날짜 셀 있는 행
+  //            중식 | ...    ← 날짜 셀 생략(병합) 행은 직전 날짜에 붙는다
+  function parseTable(text) {
+    var lines = text.split(/\r?\n/), days = [], day = null, headers = [];
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (!line) continue;
+      var cells = splitCells(line);
+      if (isSepRow(cells)) continue;
+      if (isHeaderRow(cells)) {          // 날짜·구분 다음 열들이 분류명
+        headers = cells.slice(2).map(catName);
+        continue;
+      }
+
+      // 앞쪽 셀에서 끼니 칸 위치를 찾는다(날짜 칸이 비어 있거나 생략된 병합 행 대응)
+      var mealIdx = -1, dm = null;
+      for (var j = 0; j < Math.min(3, cells.length); j++) {
+        if (MEAL_CELL_RE.test(cells[j])) { mealIdx = j; break; }
+        if (!dm) dm = cells[j].match(DATE_RE);
+      }
+      if (mealIdx < 0) continue;                    // 끼니가 없는 줄은 건너뜀
+      if (dm) {
+        day = { date: (+dm[1]) + '월 ' + (+dm[2]) + '일', dow: dm[3] || '', meals: {} };
+        days.push(day);
+      }
+      if (!day) continue;
+
+      var label = mealLabel(cells[mealIdx]);
+      var meal = day.meals[label] || { name: label, cats: [] };
+      day.meals[label] = meal;
+
+      for (var k = mealIdx + 1; k < cells.length; k++) {
+        var items = splitItems(cells[k]);
+        if (!items.length) continue;
+        meal.cats.push({ name: headers[k - mealIdx - 1] || '', items: items });
+      }
+    }
+    return days;
+  }
+
   function parse(text) {
+    if (looksLikeTable(text)) return parseTable(text);
     var lines = text.split(/\r?\n/), days = [], day = null, meal = null, cat = null;
     for (var i = 0; i < lines.length; i++) {
       var line = lines[i].trim();
@@ -359,7 +442,7 @@
   // 끼니별로 같은 행에 배치 → 모든 요일의 "중식" 시작 위치가 정렬됨
   function render(days) {
     if (!days.length) {
-      output.innerHTML = '<div class="empty-state">날짜 줄을 찾지 못했어요. <b>"5월 18일 (월)"</b> 형태가 있는지 확인해 주세요.</div>';
+      output.innerHTML = '<div class="empty-state">날짜를 찾지 못했어요. 표를 붙여넣었다면 <b>"09/28 (월)"</b> 같은 날짜 칸이, 목록형이라면 <b>"5월 18일 (월)"</b> 줄이 있는지 확인해 주세요.</div>';
       return;
     }
     var cols = days.length;
