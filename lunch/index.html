@@ -43,6 +43,14 @@
   header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
   h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
   .range { color: var(--muted); font-size: 13px; }
+  .tools { display: flex; align-items: center; gap: 8px; }
+  .icon-btn {
+    appearance: none; display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; padding: 0; border-radius: 10px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+  }
+  .icon-btn:hover { color: var(--ink); border-color: var(--muted); }
+
 
   /* 주간 표: 좁은 화면에선 가로 스크롤, 첫 열·머리 행 고정 */
   .scroller {
@@ -89,13 +97,43 @@
   .notice { text-align: center; color: var(--muted); padding: 40px 0; font-size: 14px; }
   .notice.stale { padding: 10px 14px; margin: 0 0 12px; background: var(--accent-soft); color: var(--accent); border-radius: 12px; text-align: left; font-size: 13px; }
   footer { margin-top: 16px; text-align: center; color: var(--muted); font-size: 12px; }
+
+  /* 인쇄: A4 가로 한 장에 5일이 다 들어가게, 밝은 색으로 */
+  @page { size: A4 landscape; margin: 10mm; }
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --ink: #000; --muted: #444; --line: #bbb; --accent: #000; --accent-soft: #f2f2f2; --head: #e8e8e8; }
+    .wrap { max-width: none; padding: 0; }
+    .icon-btn, #stale, footer { display: none; }
+    .scroller { overflow: visible; border: 0; border-radius: 0; }
+    /* 화면용 1px 연한 선은 인쇄 축소 때 반올림으로 빠지기도 해서, 인쇄는 칸마다 진한 선을 둘러 겹친다 */
+    table { min-width: 0; border-collapse: collapse; }
+    th, td, td + td, th + th { border: 1px solid #888; }
+    tbody tr:last-child td, tbody tr:last-child th { border-bottom: 1px solid #888; }
+    tr.meal-start > * { border-top: 2px solid #000; }
+    thead th, th.row { position: static; }
+    /* 오늘 강조는 화면에서만 - 인쇄물은 한 주 내내 쓰므로 모든 요일을 똑같이 */
+    thead th.today { background: var(--head); color: var(--ink); }
+    thead th.today .dt { color: var(--muted); opacity: 1; }
+    td.today { background: var(--surface); }
+    td { padding: 6px 8px; font-size: 11px; }
+    .name { font-size: 12px; }
+    tr { break-inside: avoid; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <h1>이번 주 식단</h1>
-    <span class="range" id="range"></span>
+    <div class="tools">
+      <span class="range" id="range"></span>
+      <button class="icon-btn" id="print" type="button" title="인쇄" aria-label="인쇄">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/>
+        </svg>
+      </button>
+    </div>
   </header>
   <div id="stale"></div>
   <div id="board"><p class="notice">불러오는 중…</p></div>
@@ -260,6 +298,8 @@ async function init() {
 
   render(data);
 }
+
+$('print').onclick = () => window.print();
 
 init();
 </script>
