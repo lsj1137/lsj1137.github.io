@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>주간 식단표</title>
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root {
+    --bg: #eef0f4;
+    --card: #ffffff;
+    --line: #e6e8ee;
+    --ink: #1f2430;
+    --muted: #8a90a0;
+    --accent: #3b6ef5;
+    --bf: #eaf1ff;   /* 조식 */
+    --lu: #fff2e3;   /* 중식 */
+    --di: #e7f7ec;   /* 석식 */
+    --bf-d: #3b6ef5;
+    --lu-d: #f08a24;
+    --di-d: #25a35a;
+    --shadow: 0 1px 2px rgba(20,28,48,.04), 0 8px 24px rgba(20,28,48,.06);
+    --font: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Malgun Gothic", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 28px 20px 80px; }
+
+  .topbar {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 16px; margin-bottom: 22px; flex-wrap: wrap;
+  }
+  .title h1 { font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -.02em; }
+  .title p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  button {
+    font-family: var(--font);
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .06s ease, box-shadow .12s ease, background .12s ease;
+  }
+  button:hover { box-shadow: var(--shadow); }
+  button:active { transform: translateY(1px); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.ghost { background: transparent; }
+  button.icon-btn {
+    width: 40px; height: 40px; padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--muted);
+  }
+  button.icon-btn:hover { color: var(--accent); border-color: #cbd6f5; }
+
+  /* ===== 주간 식단표 (메인) ===== */
+  .week {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr));
+    gap: 10px;
+    align-items: stretch;
+  }
+  .day-head {
+    background: #2b2f3a;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .day-head .date { font-size: 16px; font-weight: 800; letter-spacing: -.01em; }
+  .day-head .dow  { font-size: 12px; opacity: .72; margin-top: 2px; }
+  .day-head.sat .dow { color: #9ec5ff; opacity: 1; }
+  .day-head.sun .dow { color: #ff9e9e; opacity: 1; }
+
+  .cell {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+  .cell.bf { background: var(--bf); border-color: #d6e3ff; }
+  .cell.lu { background: var(--lu); border-color: #ffe0bf; }
+  .cell.di { background: var(--di); border-color: #c9ecd5; }
+  .cell.empty { background: #f7f8fa; border-style: dashed; }
+
+  .meal-tag {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .bf .meal-tag { background: var(--bf-d); }
+  .lu .meal-tag { background: var(--lu-d); }
+  .di .meal-tag { background: var(--di-d); }
+
+  .cat { margin-bottom: 10px; }
+  .cat:last-child { margin-bottom: 0; }
+  .cat-name {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--muted);
+    margin-bottom: 4px;
+    letter-spacing: .02em;
+  }
+  .cat ul { margin: 0; padding-left: 16px; }
+  .cat li { font-size: 13px; line-height: 1.6; color: #333a48; }
+  .cell.empty .none { color: var(--muted); font-size: 12px; margin: auto; }
+
+  .empty-state {
+    background: var(--card);
+    border: 1px dashed var(--line);
+    border-radius: 16px;
+    padding: 64px 16px;
+    text-align: center;
+    color: var(--muted);
+  }
+  .empty-state b { color: var(--ink); }
+
+  /* ===== 모달 ===== */
+  .backdrop {
+    position: fixed; inset: 0;
+    background: rgba(20,24,36,.45);
+    backdrop-filter: blur(2px);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 20px; z-index: 50;
+  }
+  .backdrop.open { display: flex; }
+  .modal {
+    background: #fff;
+    width: min(720px, 100%);
+    max-height: 88vh;
+    border-radius: 16px;
+    box-shadow: 0 24px 64px rgba(10,16,32,.28);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .modal-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 20px; border-bottom: 1px solid var(--line);
+  }
+  .modal-head h2 { margin: 0; font-size: 16px; font-weight: 800; }
+  .x {
+    border: none; background: #f1f2f5; width: 32px; height: 32px;
+    border-radius: 8px; font-size: 16px; line-height: 1; cursor: pointer; color: var(--muted);
+    display: flex; align-items: center; justify-content: center; padding: 0;
+  }
+  .modal-body { padding: 20px; overflow: auto; }
+  textarea {
+    width: 100%;
+    min-height: 240px;
+    resize: vertical;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 13px;
+    line-height: 1.65;
+    font-family: ui-monospace, "D2Coding", Consolas, monospace;
+    color: var(--ink);
+  }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .modal-foot {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    padding: 16px 20px; border-top: 1px solid var(--line); background: #fafbfc;
+  }
+  .modal-foot .spacer { flex: 1; }
+  .filebtn { position: relative; overflow: hidden; }
+  .filebtn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 32px;
+    transform: translate(-50%, 16px);
+    background: #21262f; color: #fff;
+    font-size: 13px; font-weight: 600;
+    padding: 12px 20px; border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(10,16,32,.3);
+    opacity: 0; pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+    z-index: 100; max-width: 90vw;
+  }
+  .toast.err { background: #c0392b; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (max-width: 760px) {
+    .week { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { background: #fff; }
+    .topbar .actions, .backdrop { display: none !important; }
+    .wrap { max-width: none; padding: 0; }
+    .week { gap: 6px; }
+    .cell, .day-head { box-shadow: none; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="title">
+      <h1>🍱 주간 식단표</h1>
+      <p>일주일 메뉴를 한눈에. 우측 버튼으로 입력·저장하세요.</p>
+    </div>
+    <div class="actions">
+      <button class="primary" id="openModal">＋ 만들기 / 편집</button>
+      <button class="icon-btn" id="saveJson" title="JSON으로 저장" aria-label="JSON으로 저장">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+          <polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="printBtn" title="인쇄" aria-label="인쇄">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="output">
+    <div class="empty-state">아직 식단이 없습니다. <b>＋ 만들기 / 편집</b>을 눌러 텍스트를 붙여넣으세요.</div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- 입력 모달 -->
+<div class="backdrop" id="backdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="식단 입력">
+    <div class="modal-head">
+      <h2>식단 입력 / 편집</h2>
+      <button class="x" id="closeModal" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <textarea id="input" placeholder="식단 표를 그대로 붙여넣으세요 (엑셀·웹 표 복사 지원).&#10;&#10;날짜&#9;구분&#9;한식 메뉴&#9;양식/간편식 메뉴&#10;09/28 (월)&#9;조식&#9;사골김치찌개&#9;토스트 2종 & 잼, 버터&#10;&#9;중식&#9;등심돈까스 & 참깨데미소스&#9;아보카도 눈꽃치즈 샐러드&#10;09/29 (화)&#9;조식&#9;전주식 콩나물해장국&#9;토스트 2종 & 잼, 버터&#10;&#10;※ 목록형(5월 18일 (월) / 조식 / 한식: ...)도 그대로 인식합니다."></textarea>
+    </div>
+    <div class="modal-foot">
+      <label class="filebtn">
+        <button type="button">TXT 파일</button>
+        <input type="file" id="loadTxt" accept=".txt,text/plain" />
+      </label>
+      <label class="filebtn">
+        <button type="button">JSON 파일</button>
+        <input type="file" id="loadJson" accept="application/json,.json" />
+      </label>
+      <button id="clearBtn">지우기</button>
+      <span class="spacer"></span>
+      <button class="primary" id="buildBtn">표 만들기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var input    = document.getElementById('input');
+  var output   = document.getElementById('output');
+  var backdrop = document.getElementById('backdrop');
+  var STORAGE_KEY = 'mealMenuInput';
+  var toastEl = document.getElementById('toast');
+  var toastTimer;
+  function showToast(msg, isErr) {
+    toastEl.textContent = msg;
+    toastEl.className = 'toast show' + (isErr ? ' err' : '');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toastEl.className = 'toast' + (isErr ? ' err' : '');
+    }, 2600);
+  }
+
+  var DATE_RE = /^\s*(\d{1,2})\s*[월\/\.\-]\s*(\d{1,2})\s*일?\s*[\(\[]?\s*([월화수목금토일])?\s*[\)\]]?\s*$/;
+  var MEAL_RE = /^\s*(조식|중식|석식|야식|아침|점심|저녁|브런치)\s*$/;
+  var MEAL_CELL_RE = /^(조식|중식|석식|야식|아침|점심|저녁|브런치)$/;
+  var MEAL_INFO = {
+    '조식': { cls: 'bf', ord: 0 }, '브런치': { cls: 'bf', ord: 1 },
+    '중식': { cls: 'lu', ord: 2 }, '석식': { cls: 'di', ord: 3 },
+    '야식': { cls: 'di', ord: 4 }
+  };
+
+  function mealLabel(s) {
+    if (/조식|아침/.test(s)) return '조식';
+    if (/중식|점심/.test(s)) return '중식';
+    if (/석식|저녁/.test(s)) return '석식';
+    return s.trim();
+  }
+  function splitItems(s) {
+    return s.split(/[,，·]/).map(function (x) { return x.trim(); })
+            .filter(function (x) { return x && !/^[-–—]+$/.test(x); });
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  // 한 줄을 셀 배열로 분해 (탭 / 마크다운 파이프 / 공백 2칸 이상)
+  function splitCells(line) {
+    var cells;
+    if (line.indexOf('\t') > -1) {
+      cells = line.split('\t');
+    } else if (line.indexOf('|') > -1) {
+      cells = line.replace(/^\s*\|/, '').replace(/\|\s*$/, '').split('|');
+    } else {
+      cells = line.split(/\s{2,}/);
+    }
+    return cells.map(function (c) { return c.trim(); });
+  }
+  function isSepRow(cells) { // 마크다운 표 구분선 |---|---|
+    return cells.length > 1 && cells.every(function (c) { return /^:?-{2,}:?$/.test(c); });
+  }
+  function isHeaderRow(cells) {
+    return cells.length > 1 && /날짜|일자/.test(cells[0]) && cells.some(function (c) { return /구분|끼니|식사/.test(c); });
+  }
+  function catName(s) { // "한식 메뉴" → "한식", "양식/간편식 메뉴" → "양식/간편식"
+    return s.replace(/\s*메뉴\s*$/, '').trim();
+  }
+
+  // 표 형식인지 판정: 셀 2개 이상이면서 끼니 셀을 포함한 줄이 있는가
+  function looksLikeTable(text) {
+    var lines = text.split(/\r?\n/);
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (!line) continue;
+      var cells = splitCells(line);
+      if (cells.length < 2) continue;
+      if (isHeaderRow(cells)) return true;
+      for (var j = 0; j < Math.min(2, cells.length); j++) {
+        if (MEAL_CELL_RE.test(cells[j])) return true;
+      }
+    }
+    return false;
+  }
+
+  // 표 형식 파서
+  // 날짜 | 구분 | 한식 메뉴 | 양식/간편식 메뉴   ← 헤더(있으면 분류명으로 사용)
+  // 09/28 (월) | 조식 | ...  ← 날짜 셀 있는 행
+  //            중식 | ...    ← 날짜 셀 생략(병합) 행은 직전 날짜에 붙는다
+  function parseTable(text) {
+    var lines = text.split(/\r?\n/), days = [], day = null, headers = [];
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (!line) continue;
+      var cells = splitCells(line);
+      if (isSepRow(cells)) continue;
+      if (isHeaderRow(cells)) {          // 날짜·구분 다음 열들이 분류명
+        headers = cells.slice(2).map(catName);
+        continue;
+      }
+
+      // 앞쪽 셀에서 끼니 칸 위치를 찾는다(날짜 칸이 비어 있거나 생략된 병합 행 대응)
+      var mealIdx = -1, dm = null;
+      for (var j = 0; j < Math.min(3, cells.length); j++) {
+        if (MEAL_CELL_RE.test(cells[j])) { mealIdx = j; break; }
+        if (!dm) dm = cells[j].match(DATE_RE);
+      }
+      if (mealIdx < 0) continue;                    // 끼니가 없는 줄은 건너뜀
+      if (dm) {
+        day = { date: (+dm[1]) + '월 ' + (+dm[2]) + '일', dow: dm[3] || '', meals: {} };
+        days.push(day);
+      }
+      if (!day) continue;
+
+      var label = mealLabel(cells[mealIdx]);
+      var meal = day.meals[label] || { name: label, cats: [] };
+      day.meals[label] = meal;
+
+      for (var k = mealIdx + 1; k < cells.length; k++) {
+        var items = splitItems(cells[k]);
+        if (!items.length) continue;
+        meal.cats.push({ name: headers[k - mealIdx - 1] || '', items: items });
+      }
+    }
+    return days;
+  }
+
+  function parse(text) {
+    if (looksLikeTable(text)) return parseTable(text);
+    var lines = text.split(/\r?\n/), days = [], day = null, meal = null, cat = null;
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (!line) continue;
+      var dm = line.match(DATE_RE);
+      if (dm) {
+        day = { date: dm[1] + '월 ' + dm[2] + '일', dow: dm[3] || '', meals: {} };
+        days.push(day); meal = null; cat = null; continue;
+      }
+      if (!day) continue;
+      if (MEAL_RE.test(line)) {
+        var label = mealLabel(line);
+        meal = { name: label, cats: [] };
+        day.meals[label] = meal; cat = null; continue;
+      }
+      if (!meal) { meal = { name: '메뉴', cats: [] }; day.meals['메뉴'] = meal; }
+      var ci = line.search(/[:：]/);
+      if (ci > -1 && ci < 12) {
+        cat = { name: line.slice(0, ci).trim(), items: splitItems(line.slice(ci + 1)) };
+        meal.cats.push(cat);
+      } else {
+        if (!cat) { cat = { name: '', items: [] }; meal.cats.push(cat); }
+        cat.items = cat.items.concat(splitItems(line));
+      }
+    }
+    return days;
+  }
+
+  function mealOrder(days) {
+    var seen = {};
+    days.forEach(function (d) {
+      Object.keys(d.meals).forEach(function (k) { seen[k] = true; });
+    });
+    return Object.keys(seen).sort(function (a, b) {
+      var oa = MEAL_INFO[a] ? MEAL_INFO[a].ord : 9;
+      var ob = MEAL_INFO[b] ? MEAL_INFO[b].ord : 9;
+      return oa - ob;
+    });
+  }
+
+  // 끼니별로 같은 행에 배치 → 모든 요일의 "중식" 시작 위치가 정렬됨
+  function render(days) {
+    if (!days.length) {
+      output.innerHTML = '<div class="empty-state">날짜를 찾지 못했어요. 표를 붙여넣었다면 <b>"09/28 (월)"</b> 같은 날짜 칸이, 목록형이라면 <b>"5월 18일 (월)"</b> 줄이 있는지 확인해 주세요.</div>';
+      return;
+    }
+    var cols = days.length;
+    var mealKeys = mealOrder(days);
+    var dowCls = { '토': 'sat', '일': 'sun' };
+    var html = '<div class="week" style="--cols:' + cols + '">';
+
+    // 1행: 날짜 헤더
+    days.forEach(function (d) {
+      html += '<div class="day-head ' + (dowCls[d.dow] || '') + '">' +
+                '<div class="date">' + esc(d.date) + '</div>' +
+                (d.dow ? '<div class="dow">' + esc(d.dow) + '요일</div>' : '') +
+              '</div>';
+    });
+
+    // 끼니별 행
+    mealKeys.forEach(function (mk) {
+      var cls = MEAL_INFO[mk] ? MEAL_INFO[mk].cls : '';
+      days.forEach(function (d) {
+        var m = d.meals[mk];
+        if (!m) {
+          html += '<div class="cell empty"><span class="meal-tag">' + esc(mk) +
+                  '</span><div class="none">—</div></div>';
+          return;
+        }
+        html += '<div class="cell ' + cls + '"><span class="meal-tag">' + esc(mk) + '</span>';
+        m.cats.forEach(function (c) {
+          html += '<div class="cat">';
+          if (c.name) html += '<div class="cat-name">' + esc(c.name) + '</div>';
+          html += '<ul>';
+          c.items.forEach(function (it) { html += '<li>' + esc(it) + '</li>'; });
+          html += '</ul></div>';
+        });
+        html += '</div>';
+      });
+    });
+
+    html += '</div>';
+    output.innerHTML = html;
+  }
+
+  function build() {
+    var text = input.value;
+    try { localStorage.setItem(STORAGE_KEY, text); } catch (e) {}
+    render(parse(text));
+  }
+
+  // ----- 모달 -----
+  function openModal()  { backdrop.classList.add('open'); input.focus(); }
+  function closeModal() { backdrop.classList.remove('open'); }
+  document.getElementById('openModal').addEventListener('click', openModal);
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+  backdrop.addEventListener('click', function (e) { if (e.target === backdrop) closeModal(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && backdrop.classList.contains('open')) closeModal();
+  });
+
+  // ----- 모달 내 동작 -----
+  document.getElementById('buildBtn').addEventListener('click', function () {
+    build(); closeModal();
+  });
+  document.getElementById('clearBtn').addEventListener('click', function () {
+    input.value = '';
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  });
+  document.getElementById('loadTxt').addEventListener('change', function (e) {
+    var f = e.target.files && e.target.files[0];
+    if (!f) return;
+    var r = new FileReader();
+    r.onload = function () { input.value = String(r.result); };
+    r.readAsText(f, 'utf-8'); e.target.value = '';
+  });
+
+  // ----- JSON 저장 / 불러오기 (일주일치) -----
+  // 첫 날짜로 "n월 n주차" 산출 (월요일 시작 주 기준)
+  function weekLabel(days) {
+    var d = days[0]; if (!d) return '식단표';
+    var m = d.date.match(/(\d{1,2})월\s*(\d{1,2})일/);
+    if (!m) return '식단표';
+    var month = +m[1], dayNum = +m[2];
+    var DOW = { '월':0, '화':1, '수':2, '목':3, '금':4, '토':5, '일':6 };
+    var week;
+    if (d.dow && d.dow in DOW) {
+      var firstWd = (((DOW[d.dow] - (dayNum - 1)) % 7) + 7) % 7; // 1일의 요일(월=0)
+      week = Math.floor((dayNum - 1 + firstWd) / 7) + 1;
+    } else {
+      week = Math.ceil(dayNum / 7);
+    }
+    return month + '월 ' + week + '주차';
+  }
+
+  document.getElementById('saveJson').addEventListener('click', function () {
+    var days = parse(input.value);
+    if (!days.length) { showToast('저장할 식단이 없습니다. 먼저 식단을 입력해 주세요.', true); return; }
+    var label = weekLabel(days);
+    var payload = { type: 'weekly-menu', version: 1, label: label,
+                    savedAt: new Date().toISOString(), raw: input.value, days: days };
+    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = label + ' 식단표.json';
+    a.click(); URL.revokeObjectURL(url);
+    showToast('"' + label + ' 식단표.json" 으로 저장했습니다');
+  });
+  document.getElementById('loadJson').addEventListener('change', function (e) {
+    var f = e.target.files && e.target.files[0];
+    if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      try {
+        var data = JSON.parse(String(r.result));
+        if (data.raw) { input.value = data.raw; build(); }
+        else if (data.days) { render(data.days); }
+        else throw 0;
+      } catch (err) { alert('올바른 식단표 JSON 파일이 아닙니다.'); }
+    };
+    r.readAsText(f, 'utf-8'); e.target.value = '';
+  });
+
+  document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+
+  // 자동 저장본 복원
+  try {
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) { input.value = saved; build(); }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

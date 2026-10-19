@@ -2,9 +2,9 @@ name: fetch-menu
 
 on:
   workflow_dispatch:
-  # 수동 실행으로 성공 확인 후 주석 해제. 평일 KST 06:30 (UTC 21:30, 일~목)
-  # schedule:
-  #   - cron: '30 21 * * 0-4'
+  # 매주 월요일 KST 06:30 (UTC 일요일 21:30) - 그 주 월~금을 받는다
+  schedule:
+    - cron: '30 21 * * 0'
 
 permissions:
   contents: write
