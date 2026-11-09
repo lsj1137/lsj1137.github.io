@@ -1,19 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="70" viewBox="0 0 840 70" role="img" aria-label="solved.ac lsj1137">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="104" viewBox="0 0 840 104" role="img" aria-label="solved.ac lsj1137: Platinum V">
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1f2328; }
     .muted { fill: #656d76; }
-    .section { font-size: 12px; fill: #656d76; }
+    .tier { font-size: 20px; font-weight: 700; fill: #27e2a4; }
+    .emblem { font-size: 20px; font-weight: 800; fill: #ffffff; }
     .value { font-size: 20px; font-weight: 600; }
     .label { font-size: 12px; }
   </style>
-  <text x="0" y="12" class="section">Baekjoon · solved.ac</text>
-  <rect x="0" y="32" width="8" height="8" fill="#27e2a4"/>
-    <text x="14" y="44" class="value">Platinum V</text>
-    <text x="0" y="64" class="label muted">Tier</text><line x1="140" y1="24" x2="140" y2="70" stroke="#d0d7de"/>
-    <text x="156" y="44" class="value">1,741</text>
-    <text x="156" y="64" class="label muted">Rating</text><line x1="280" y1="24" x2="280" y2="70" stroke="#d0d7de"/>
-    <text x="296" y="44" class="value">820</text>
-    <text x="296" y="64" class="label muted">Solved</text><line x1="420" y1="24" x2="420" y2="70" stroke="#d0d7de"/>
-    <text x="436" y="44" class="value">5</text>
-    <text x="436" y="64" class="label muted">Class</text>
+  <polygon points="22.0,4.0 42.8,16.0 42.8,40.0 22.0,52.0 1.2,40.0 1.2,16.0" fill="#27e2a4"/>
+  <text x="22" y="35" text-anchor="middle" class="emblem">5</text>
+  <text x="60" y="26" class="tier">Platinum V</text>
+  <text x="60" y="46" class="label muted">lsj1137 · solved.ac</text>
+  <line x1="280" y1="4" x2="280" y2="52" stroke="#d0d7de"/>
+    <text x="296" y="26" class="value">1,741</text>
+    <text x="296" y="46" class="label muted">Rating</text><line x1="420" y1="4" x2="420" y2="52" stroke="#d0d7de"/>
+    <text x="436" y="26" class="value">820</text>
+    <text x="436" y="46" class="label muted">Solved</text><line x1="560" y1="4" x2="560" y2="52" stroke="#d0d7de"/>
+    <text x="576" y="26" class="value">5</text>
+    <text x="576" y="46" class="label muted">Class</text>
+  <rect x="0" y="74" width="840" height="6" fill="#eaeef2"/>
+  <rect x="0" y="74" width="789.6" height="6" fill="#27e2a4"/>
+  <text x="840" y="100" text-anchor="end" class="label muted">1,741 / 1,750 · 94% to Platinum IV</text>
 </svg>
