@@ -1,0 +1,35 @@
+// github-readme-stats(lsj1137 fork)의 카드 핸들러를 서버 없이 호출해 SVG 파일로 저장한다.
+// GitHub Pages는 정적 파일만 서빙하므로, Actions가 주기적으로 그려서 stats/*.svg 로 커밋한다.
+// 사용법: node scripts/render-stats.mjs <readme-stats 체크아웃 경로> <출력 폴더>
+// 토큰은 환경변수 PAT_1 (readme-stats 규약)로 받는다.
+import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+
+const [statsDir, outDir] = process.argv.slice(2);
+if (!statsDir || !outDir) { console.error('사용법: render-stats.mjs <readme-stats 경로> <출력 폴더>'); process.exit(1); }
+if (!process.env.PAT_1) { console.error('환경변수 PAT_1 없음'); process.exit(1); }
+
+// 프로필 README에서 쓰는 카드. 옵션을 바꾸려면 query만 고치면 된다.
+const cards = [
+  { file: 'stats.svg', handler: 'api/index.js', query: { username: 'lsj1137' } },
+];
+
+let failed = false;
+for (const { file, handler, query } of cards) {
+  const { default: render } = await import(pathToFileURL(path.resolve(statsDir, handler)).href);
+  let body = '';
+  const res = { setHeader() {}, status() { return res; }, send(b) { body = String(b); return res; } };
+  await render({ query }, res);
+
+  // 실패해도 핸들러는 에러 카드 SVG를 돌려주므로 내용으로 판별한다. 기존 정상 카드는 덮어쓰지 않는다.
+  if (!body.startsWith('<svg') || body.includes('Something went wrong')) {
+    console.error(`${file}: 생성 실패`);
+    failed = true;
+    continue;
+  }
+  await mkdir(outDir, { recursive: true });
+  await writeFile(path.join(outDir, file), body);
+  console.log(`${file}: ${body.length} bytes`);
+}
+process.exit(failed ? 1 : 0);

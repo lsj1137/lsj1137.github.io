@@ -1,0 +1,57 @@
+name: render-stats
+
+on:
+  workflow_dispatch:
+  # 매일 KST 06:00 (UTC 21:00)
+  schedule:
+    - cron: '0 21 * * *'
+  push:
+    branches: [main]
+    paths:
+      - scripts/render-stats.mjs
+      - .github/workflows/stats.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-stats
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: lsj1137/github-readme-stats
+          path: .readme-stats
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install readme-stats
+        run: npm ci --omit=dev --ignore-scripts --prefix .readme-stats
+
+      - name: Render cards
+        env:
+          # 비공개 저장소 기여까지 세려면 Secrets 에 STATS_PAT 를 등록한다. 없으면 기본 토큰(공개 데이터만).
+          PAT_1: ${{ secrets.STATS_PAT || github.token }}
+        run: node scripts/render-stats.mjs .readme-stats stats
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore: update stats card"
+            git pull --rebase
+            git push
+          fi
