@@ -19,7 +19,8 @@ let failed = false;
 for (const { file, handler, query } of cards) {
   const { default: render } = await import(pathToFileURL(path.resolve(statsDir, handler)).href);
   let body = '';
-  const res = { setHeader() {}, status() { return res; }, send(b) { body = String(b); return res; } };
+  // 템플릿 문자열이라 앞에 공백·줄바꿈이 붙어 나온다
+  const res = { setHeader() {}, status() { return res; }, send(b) { body = String(b).trim(); return res; } };
   await render({ query }, res);
 
   // 실패해도 핸들러는 에러 카드 SVG를 돌려주므로 내용으로 판별한다. 기존 정상 카드는 덮어쓰지 않는다.
