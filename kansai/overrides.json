@@ -1,0 +1,167 @@
+{
+ "https://travelcontentsapp.com/kr/attraction/osaka/tsutenkaku-tower-slider/": {
+  "lat": 34.6525393,
+  "lng": 135.5063098,
+  "approx": "通天閣"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/nonotory/": {
+  "lat": 34.664,
+  "lng": 135.502,
+  "approx": "수동"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/wonderloopbus/": {
+  "lat": 34.7020963,
+  "lng": 135.4939485,
+  "approx": "大阪駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/shiga/tanukimura/": {
+  "lat": 34.8955,
+  "lng": 136.0731,
+  "approx": "수동"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/hakata-hanamidori-hilton-plaza-store/": {
+  "lat": 34.6997,
+  "lng": 135.4949,
+  "approx": "수동"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/hakata-hanamidori-shinsaibashi-store/": {
+  "lat": 34.6745173,
+  "lng": 135.5003566,
+  "approx": "心斎橋駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/chicken-izakaya-hakata-hanazen-umeda-store/": {
+  "lat": 34.7034131,
+  "lng": 135.4975879,
+  "approx": "梅田駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/shiga/koka-ninja-village/": {
+  "lat": 34.9200317,
+  "lng": 136.2078083,
+  "approx": "甲賀の里忍術村"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/dotonbori-creo-ru-hep-navio-store/": {
+  "lat": 34.7030489,
+  "lng": 135.4998906,
+  "approx": "HEP NAVIO"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/miraiza/": {
+  "lat": 34.6858543,
+  "lng": 135.5264848,
+  "approx": "ミライザ大阪城"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/tennoji-zoo/": {
+  "lat": 34.6506421,
+  "lng": 135.5083594,
+  "approx": "天王寺動物園"
+ },
+ "https://travelcontentsapp.com/kr/attraction/kyoto/future-train/": {
+  "lat": 34.9884503,
+  "lng": 135.7432177,
+  "approx": "梅小路京都西駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/shiga/pre-biwako-biennale/": {
+  "lat": 35.1283751,
+  "lng": 136.0979404,
+  "approx": "近江八幡市"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/kansai-jr-rent-a-car/": {
+  "lat": 34.7328772,
+  "lng": 135.4981408,
+  "approx": "新大阪駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/tsutenkaku/": {
+  "lat": 34.6525393,
+  "lng": 135.5063098,
+  "approx": "通天閣"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/tsutenkaku-divewalk/": {
+  "lat": 34.6525393,
+  "lng": 135.5063098,
+  "approx": "通天閣"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/dotonbori-grill-bar-wonder/": {
+  "lat": 34.6690306,
+  "lng": 135.5015715,
+  "approx": "道頓堀"
+ },
+ "https://travelcontentsapp.com/kr/attraction/kyoto/garden-museum/": {
+  "lat": 35.0645,
+  "lng": 135.8279,
+  "approx": "수동"
+ },
+ "https://travelcontentsapp.com/kr/attraction/kyoto/arashiyama/": {
+  "lat": 35.0164733,
+  "lng": 135.6905327,
+  "approx": "嵐電嵐山駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/kyoto/kyoto-railway-museum/": {
+  "lat": 34.9864888,
+  "lng": 135.7426965,
+  "approx": "京都鉄道博物館"
+ },
+ "https://travelcontentsapp.com/kr/attraction/hyogo/kobe-suma-seaworld/": {
+  "lat": 34.6439517,
+  "lng": 135.12784,
+  "approx": "神戸須磨シーワールド"
+ },
+ "https://travelcontentsapp.com/kr/attraction/hyogo/ganso-mitsumori-honpo/": {
+  "lat": 34.7992564,
+  "lng": 135.2462748,
+  "approx": "有馬温泉"
+ },
+ "https://travelcontentsapp.com/kr/attraction/hyogo/tonton-tonkatsu/": {
+  "lat": 34.6945647,
+  "lng": 135.195217,
+  "approx": "三宮駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/hyogo/kannonya/": {
+  "lat": 34.6893607,
+  "lng": 135.187414,
+  "approx": "元町駅 神戸"
+ },
+ "https://travelcontentsapp.com/kr/attraction/hyogo/kobe-concerto/": {
+  "lat": 34.6785119,
+  "lng": 135.1803111,
+  "approx": "神戸ハーバーランド"
+ },
+ "https://travelcontentsapp.com/kr/attraction/herb-garden/": {
+  "lat": 34.7150568,
+  "lng": 135.1923434,
+  "approx": "神戸布引ハーブ園"
+ },
+ "https://travelcontentsapp.com/kr/attraction/shiga/nagahama-odekake-passport/": {
+  "lat": 35.3784466,
+  "lng": 136.2653231,
+  "approx": "長浜駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/shiga/lake-biwa-otsu-prince-hote/": {
+  "lat": 35.0048875,
+  "lng": 135.8887631,
+  "approx": "びわ湖大津プリンスホテル"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/%EC%A7%81%EC%A0%91-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%8B%A4%EC%BD%94%EC%95%BC%ED%82%A4-%EC%9D%B4%EC%9E%90%EC%B9%B4%EC%95%BC-takoyaki-lab/": {
+  "lat": 34.6636625,
+  "lng": 135.5017751,
+  "approx": "難波駅"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/yakinaiku-daidomon/": {
+  "lat": 34.6937569,
+  "lng": 135.5014539,
+  "approx": "大阪(대략)"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/tsubohachi-shinsaibashi/": {
+  "lat": 34.672085,
+  "lng": 135.4979465,
+  "approx": "アメリカ村"
+ },
+ "https://travelcontentsapp.com/kr/attraction/kyoto/kinnobuta-premium-shijokawaramachi-store/": {
+  "lat": 35.0037796,
+  "lng": 135.76932,
+  "approx": "四条河原町"
+ },
+ "https://travelcontentsapp.com/kr/attraction/osaka/omo-cafe-and-bar/": {
+  "lat": 34.6507307,
+  "lng": 135.501776,
+  "approx": "OMO7大阪"
+ }
+}

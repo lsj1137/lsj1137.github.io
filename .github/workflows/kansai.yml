@@ -1,0 +1,49 @@
+name: fetch-kansai
+
+on:
+  workflow_dispatch:
+    inputs:
+      full:
+        description: '상세 페이지 전부 다시 읽기'
+        type: boolean
+        default: false
+  # 매주 월요일 KST 05:17 (UTC 일요일 20:17). 매월 첫 주는 스크립트가 알아서 전체 재수집한다.
+  schedule:
+    - cron: '17 20 * * 0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-kansai
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch facilities
+        env:
+          FULL: ${{ inputs.full && '1' || '' }}
+        run: node scripts/fetch-kansai.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kansai/data.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore: update kansai facilities"
+            # 같은 시간대에 식단 봇이 먼저 push 했을 수 있다
+            git pull --rebase
+            git push
+          fi
