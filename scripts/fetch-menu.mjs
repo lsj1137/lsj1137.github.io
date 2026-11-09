@@ -9,7 +9,11 @@ for (const [k, v] of Object.entries({ MENU_BASE_URL, MENU_USER_ID, MENU_USER_PW,
 }
 
 const base = MENU_BASE_URL.replace(/\/+$/, '');
-const commonHeaders = { 'Content-Type': 'application/json', Origin: base };
+// 웹(W)으로 로그인하면 9912 로 막히므로 안드로이드 앱 웹뷰처럼 보낸다.
+const OS_DV_CD = 'A';
+const APP_VER = '1.2.4';
+const APP_UA = 'Mozilla/5.0 (Linux; Android 14; SM-S918N Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.0.0 Mobile Safari/537.36';
+const commonHeaders = { 'Content-Type': 'application/json', Origin: base, 'User-Agent': APP_UA };
 
 // KST 기준 오늘. 토·일이면 다음 주 월요일부터 본다.
 function weekdaysKst() {
@@ -24,18 +28,39 @@ function weekdaysKst() {
   });
 }
 
-async function login() {
-  const res = await fetch(`${base}/api/com/login.do`, {
+// Set-Cookie 의 name=value 를 기존 쿠키에 합친다. 같은 이름은 새 값으로 덮는다.
+function mergeCookie(prev, res) {
+  const jar = new Map(prev ? prev.split('; ').map((c) => [c.split('=')[0], c]) : []);
+  for (const c of res.headers.getSetCookie()) {
+    const pair = c.split(';')[0];
+    jar.set(pair.split('=')[0], pair);
+  }
+  return [...jar.values()].join('; ');
+}
+
+// 앱 웹뷰가 로그인 전에 하는 기기정보 등록. 서버가 이 쿠키로 앱 환경을 판정한다.
+async function registerApp() {
+  const appInfo = { osDvCd: OS_DV_CD, userCurrAppVer: APP_VER, mobiPhTrmlId: '', trmlTokenVal: '', id: '', pw: '' };
+  const res = await fetch(`${base}/api/common/setCookie.do`, {
     method: 'POST',
     headers: commonHeaders,
+    body: JSON.stringify({ appInfo }),
+  });
+  if (res.status !== 200) throw new Error(`앱 정보 등록 실패 (HTTP ${res.status})`);
+  return mergeCookie('', res);
+}
+
+async function login(appCookie) {
+  const res = await fetch(`${base}/api/com/login.do`, {
+    method: 'POST',
+    headers: appCookie ? { ...commonHeaders, Cookie: appCookie } : commonHeaders,
     body: JSON.stringify({ userId: MENU_USER_ID, userData: MENU_USER_PW }),
   });
   if (res.status !== 200) throw new Error(`로그인 실패 (HTTP ${res.status})`);
   // 실패해도 200 + 쿠키를 주므로 본문 errorCode 로 판정한다. (9912 = 웹 로그인 차단)
   const body = await res.json().catch(() => ({}));
   if (body.errorCode) throw new Error(`로그인 거절 (errorCode ${body.errorCode}: ${body.errorMsg ?? ''})`);
-  // Set-Cookie 에서 name=value 만 모아 다음 요청 Cookie 로 쓴다.
-  const cookie = res.headers.getSetCookie().map((c) => c.split(';')[0]).join('; ');
+  const cookie = mergeCookie(appCookie, res);
   if (!cookie) throw new Error('로그인 응답에 쿠키 없음');
   return cookie;
 }
@@ -59,7 +84,7 @@ async function fetchDay(cookie, yyyymmdd) {
   }));
 }
 
-const cookie = await login();
+const cookie = await login(await registerApp());
 const days = {};
 for (const ymd of weekdaysKst()) {
   days[ymd] = await fetchDay(cookie, ymd);
