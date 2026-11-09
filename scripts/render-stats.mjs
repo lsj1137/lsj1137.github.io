@@ -10,10 +10,18 @@ const [statsDir, outDir] = process.argv.slice(2);
 if (!statsDir || !outDir) { console.error('사용법: render-stats.mjs <readme-stats 경로> <출력 폴더>'); process.exit(1); }
 if (!process.env.PAT_1) { console.error('환경변수 PAT_1 없음'); process.exit(1); }
 
-// 프로필 README에서 쓰는 카드. 옵션을 바꾸려면 query만 고치면 된다.
-const cards = [
-  { file: 'stats.svg', handler: 'api/index.js', query: { username: 'lsj1137' } },
-];
+// 프로필 README에서 쓰는 카드. 대시보드(render-dashboard.mjs)와 같은 보라·청록 색감으로 다크/라이트 2벌씩 만든다.
+const base = { username: 'lsj1137', hide_border: 'true', title_color: '7c5cff', icon_color: '22d3ee', ring_color: '7c5cff' };
+const palettes = {
+  dark: { bg_color: '0d1117', text_color: 'e6edf3' },
+  light: { bg_color: 'ffffff', text_color: '1f2328' },
+};
+const cards = Object.entries(palettes).flatMap(([mode, colors]) => [
+  { file: `stats-${mode}.svg`, handler: 'api/index.js', query: { ...base, ...colors, show_icons: 'true' } },
+  { file: `top-langs-${mode}.svg`, handler: 'api/top-langs.js', query: { ...base, ...colors, layout: 'compact', langs_count: '8' } },
+]);
+// 예전 README 링크 호환용 기본 카드
+cards.push({ file: 'stats.svg', handler: 'api/index.js', query: { username: 'lsj1137' } });
 
 let failed = false;
 for (const { file, handler, query } of cards) {

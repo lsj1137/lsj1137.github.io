@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - scripts/render-stats.mjs
+      - scripts/render-dashboard.mjs
       - .github/workflows/stats.yml
 
 permissions:
@@ -39,9 +40,23 @@ jobs:
 
       - name: Render cards
         env:
-          # 비공개 저장소 기여까지 세려면 Secrets 에 STATS_PAT 를 등록한다. 없으면 기본 토큰(공개 데이터만).
-          PAT_1: ${{ secrets.STATS_PAT || github.token }}
+          # Classic PAT 필요. 기본 GITHUB_TOKEN·Fine-grained(Public repos)는 저장소 star 조회가 FORBIDDEN 으로 막힌다.
+          PAT_1: ${{ secrets.STATS_PAT }}
         run: node scripts/render-stats.mjs .readme-stats stats
+
+      - name: Render dashboard
+        env:
+          STATS_TOKEN: ${{ secrets.STATS_PAT }}
+        run: node scripts/render-dashboard.mjs stats
+
+      # 기여 잔디를 뱀이 먹는 애니메이션
+      - name: Render snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: lsj1137
+          outputs: |
+            stats/snake-light.svg
+            stats/snake-dark.svg?palette=github-dark
 
       - name: Commit if changed
         run: |
@@ -51,7 +66,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "변경 없음"
           else
-            git commit -m "chore: update stats card"
+            git commit -m "chore: update stats cards"
             git pull --rebase
             git push
           fi
