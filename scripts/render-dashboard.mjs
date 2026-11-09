@@ -1,5 +1,5 @@
 // GitHub 활동을 GraphQL로 받아 프로필 README용 대시보드 SVG(다크/라이트)를 그린다.
-// README는 HTML·JS가 막혀 있어 SVG 이미지(CSS 애니메이션은 동작)로 꾸민다.
+// README는 HTML·JS가 막혀 있어 SVG 이미지로 그린다.
 // 사용법: node scripts/render-dashboard.mjs <출력 폴더>   (토큰: 환경변수 STATS_TOKEN, Classic PAT)
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -85,31 +85,33 @@ function summarize(user) {
     login: user.login,
     days,
     stats: [
-      { label: 'Contributions', sub: 'last year', value: user.contributionsCollection.contributionCalendar.totalContributions },
-      { label: 'Commits', sub: 'last year', value: user.contributionsCollection.totalCommitContributions },
-      { label: 'Pull Requests', sub: 'all time', value: user.pullRequests.totalCount },
-      { label: 'Stars', sub: 'earned', value: user.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0) },
-      { label: 'Current Streak', sub: 'days', value: current },
-      { label: 'Longest Streak', sub: 'days', value: longest },
+      { label: 'Contributions (1y)', value: user.contributionsCollection.contributionCalendar.totalContributions },
+      { label: 'Commits (1y)', value: user.contributionsCollection.totalCommitContributions },
+      { label: 'Pull Requests', value: user.pullRequests.totalCount },
+      { label: 'Stars', value: user.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0) },
+      { label: 'Current Streak', value: current, unit: 'day' },
+      { label: 'Longest Streak', value: longest, unit: 'day' },
     ],
     langs: top,
   };
 }
 
 // ── 그리기 ────────────────────────────────────────────────────
+// 담백하게: 단색 배경, 얇은 선, 무채색 잔디, 애니메이션 없음. 언어 색만 GitHub 표준색을 쓴다.
 
 const THEMES = {
   dark: {
-    bg1: '#0d1117', bg2: '#161b2e', border: '#30363d', text: '#e6edf3', muted: '#8b949e',
-    tile: '#161b22', empty: '#1f2530', heat: ['#1f2530', '#2d2a6e', '#4f46e5', '#7c5cff', '#22d3ee'],
+    bg: '#0d1117', border: '#30363d', text: '#e6edf3', muted: '#8b949e',
+    heat: ['#161b22', '#2f353d', '#4b535d', '#7d8590', '#c9d1d9'],
   },
   light: {
-    bg1: '#ffffff', bg2: '#f3f4ff', border: '#d0d7de', text: '#1f2328', muted: '#656d76',
-    tile: '#f6f8fa', empty: '#ebedf0', heat: ['#ebedf0', '#c7d2fe', '#818cf8', '#6366f1', '#06b6d4'],
+    bg: '#ffffff', border: '#d0d7de', text: '#1f2328', muted: '#656d76',
+    heat: ['#ebedf0', '#c8ccd1', '#9aa1a9', '#6e7781', '#24292f'],
   },
 };
 
 const W = 840;
+const PAD = 28;
 const FONT = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`;
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const fmt = (n) => n.toLocaleString('en-US');
@@ -123,97 +125,72 @@ function heatLevels(days) {
 }
 
 function render(data, t) {
-  const pad = 28;
+  const inner = W - PAD * 2;
 
-  // 통계 타일 3x2
-  const tileW = 150;
-  const tileH = 64;
-  const gap = 12;
-  const tilesTop = 92;
-  const tiles = data.stats.map((s, i) => {
-    const x = pad + (i % 3) * (tileW + gap);
-    const y = tilesTop + Math.floor(i / 3) * (tileH + gap);
-    return `
-    <g class="fade" style="animation-delay:${0.1 + i * 0.08}s" transform="translate(${x},${y})">
-      <rect width="${tileW}" height="${tileH}" rx="12" fill="${t.tile}" stroke="${t.border}"/>
-      <text x="14" y="30" class="value">${fmt(s.value)}</text>
-      <text x="14" y="50" class="label">${esc(s.label)} <tspan fill="${t.muted}" opacity="0.7">· ${esc(s.sub)}</tspan></text>
-    </g>`;
+  // 수치 한 줄(세로 구분선)
+  const statsTop = 92;
+  const colW = inner / data.stats.length;
+  const stats = data.stats.map((s, i) => {
+    const x = PAD + i * colW;
+    const divider = i === 0 ? '' : `<line x1="${x}" y1="${statsTop}" x2="${x}" y2="${statsTop + 48}" stroke="${t.border}"/>`;
+    const tx = x + (i === 0 ? 0 : 16);
+    return `${divider}
+    <text x="${tx}" y="${statsTop + 22}" class="value">${fmt(s.value)}${s.unit ? `<tspan class="label muted"> ${s.unit}${s.value === 1 ? '' : 's'}</tspan>` : ''}</text>
+    <text x="${tx}" y="${statsTop + 42}" class="label muted">${esc(s.label)}</text>`;
   }).join('');
 
-  // 언어 비율 막대 + 범례
-  const langX = pad + 3 * (tileW + gap) + 16;
-  const langW = W - langX - pad;
+  // 언어 비율 막대 + 한 줄 범례
+  const langTop = 196;
+  const shown = data.langs.reduce((a, l) => a + l.pct, 0) || 1;
   let acc = 0;
   const bar = data.langs.map((l) => {
-    const w = (l.pct / 100) * langW;
-    const seg = `<rect x="${acc.toFixed(1)}" width="${w.toFixed(1)}" height="10" fill="${l.color}"/>`;
+    const w = (l.pct / shown) * inner;
+    const seg = `<rect x="${(PAD + acc).toFixed(1)}" y="${langTop}" width="${w.toFixed(1)}" height="8" fill="${l.color}"/>`;
     acc += w;
     return seg;
   }).join('');
+  const legendW = inner / data.langs.length;
   const legend = data.langs.map((l, i) => {
-    const x = (i % 2) * (langW / 2);
-    const y = 34 + Math.floor(i / 2) * 26;
-    return `
-      <g class="fade" style="animation-delay:${0.5 + i * 0.06}s" transform="translate(${x},${y})">
-        <circle cx="5" cy="-4" r="5" fill="${l.color}"/>
-        <text x="16" y="0" class="label">${esc(l.name)} <tspan fill="${t.muted}">${l.pct.toFixed(1)}%</tspan></text>
-      </g>`;
+    const x = PAD + i * legendW;
+    return `<rect x="${x}" y="${langTop + 22}" width="8" height="8" fill="${l.color}"/>
+    <text x="${x + 14}" y="${langTop + 30}" class="label">${esc(l.name)}<tspan class="muted"> ${l.pct.toFixed(1)}%</tspan></text>`;
   }).join('');
 
   // 잔디(최근 53주)
-  const cell = 11;
-  const cgap = 3;
+  const gap = 3;
   const weeks = [];
   for (let i = 0; i < data.days.length; i += 7) weeks.push(data.days.slice(i, i + 7));
+  const cell = (inner + gap) / weeks.length - gap;
   const level = heatLevels(data.days);
-  const heatW = weeks.length * (cell + cgap) - cgap;
-  const heatX = (W - heatW) / 2;
-  const heatTop = 268;
+  const heatTop = 282;
   const heat = weeks.map((week, wi) => week.map((d, di) =>
-    `<rect class="cell" style="animation-delay:${(0.6 + wi * 0.015).toFixed(3)}s" x="${wi * (cell + cgap)}" y="${di * (cell + cgap)}" width="${cell}" height="${cell}" rx="2.5" fill="${t.heat[level(d.contributionCount)]}"><title>${d.date}: ${d.contributionCount}</title></rect>`,
+    `<rect x="${(PAD + wi * (cell + gap)).toFixed(1)}" y="${(heatTop + di * (cell + gap)).toFixed(1)}" width="${cell.toFixed(1)}" height="${cell.toFixed(1)}" rx="2" fill="${t.heat[level(d.contributionCount)]}"><title>${d.date}: ${d.contributionCount}</title></rect>`,
   ).join('')).join('');
-  const H = heatTop + 7 * (cell + cgap) + 24;
+  const H = Math.round(heatTop + 7 * (cell + gap) + PAD - gap);
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(data.name)}'s GitHub dashboard">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="${t.bg1}"/><stop offset="1" stop-color="${t.bg2}"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/>
-    </linearGradient>
-    <clipPath id="barClip"><rect width="${langW}" height="10" rx="5"/></clipPath>
-  </defs>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(data.name)}'s GitHub activity">
   <style>
     text { font-family: ${FONT}; fill: ${t.text}; }
-    .title { font-size: 26px; font-weight: 800; }
-    .sub { font-size: 13px; fill: ${t.muted}; }
-    .section { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; fill: ${t.muted}; }
-    .value { font-size: 22px; font-weight: 800; }
+    .name { font-size: 20px; font-weight: 600; }
+    .muted { fill: ${t.muted}; }
+    .section { font-size: 12px; fill: ${t.muted}; }
+    .value { font-size: 20px; font-weight: 600; }
     .label { font-size: 12px; }
-    .fade, .cell { opacity: 0; animation: fadeIn 0.6s ease forwards; }
-    .grow { transform-box: fill-box; transform-origin: left; animation: grow 1.2s cubic-bezier(.2,.8,.2,1) forwards; transform: scaleX(0); }
-    @keyframes fadeIn { to { opacity: 1; } }
-    @keyframes grow { to { transform: scaleX(1); } }
-    @media (prefers-reduced-motion: reduce) { .fade, .cell { animation: none; opacity: 1; } .grow { animation: none; transform: none; } }
   </style>
+  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="6" fill="${t.bg}" stroke="${t.border}"/>
 
-  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="18" fill="url(#bg)" stroke="${t.border}"/>
-  <rect x="${pad}" y="26" width="4" height="40" rx="2" fill="url(#accent)"/>
-  <text x="${pad + 16}" y="50" class="title">${esc(data.name)}</text>
-  <text x="${pad + 16}" y="70" class="sub">@${esc(data.login)} · GitHub activity</text>
+  <text x="${PAD}" y="48" class="name">${esc(data.name)}</text>
+  <text x="${PAD}" y="68" class="label muted">@${esc(data.login)}</text>
+  ${stats}
 
-  ${tiles}
+  <line x1="${PAD}" y1="${statsTop + 66}" x2="${W - PAD}" y2="${statsTop + 66}" stroke="${t.border}"/>
 
-  <g transform="translate(${langX},${tilesTop})">
-    <text x="0" y="-12" class="section">TOP LANGUAGES</text>
-    <g clip-path="url(#barClip)"><g class="grow">${bar}</g></g>
-    <g transform="translate(0,14)">${legend}</g>
-  </g>
+  <text x="${PAD}" y="${langTop - 12}" class="section">Languages</text>
+  ${bar}
+  ${legend}
 
-  <text x="${heatX}" y="${heatTop - 12}" class="section">CONTRIBUTIONS · LAST 12 MONTHS</text>
-  <g transform="translate(${heatX},${heatTop})">${heat}</g>
+  <text x="${PAD}" y="${heatTop - 12}" class="section">Contributions in the last year</text>
+  ${heat}
 </svg>
 `;
 }
