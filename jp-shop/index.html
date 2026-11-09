@@ -1,252 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
-<meta name="theme-color" content="#f6f4ef">
-<title>일본 쇼핑 필수템</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<style>
-  :root {
-    --bg: #f6f4ef; --surface: #ffffff; --ink: #1d1b18; --muted: #7a746a;
-    --line: #e6e1d6; --accent: #d9480f; --accent-soft: #fff4ec; --chip: #efeae0; --done: #2f9e44;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #151412; --surface: #1f1d1a; --ink: #f2efe8; --muted: #9b958a; --line: #2e2b27; --accent: #ff8a4c; --accent-soft: #2a1f17; --chip: #262420; --done: #51cf66; }
-  }
-  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-  html, body { margin: 0; }
-  body {
-    background: var(--bg); color: var(--ink); line-height: 1.4;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  button { font: inherit; color: inherit; }
-
-  /* 상단 고정 영역 */
-  .top { position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
-  .top-inner { max-width: 1200px; margin: 0 auto; }
-  .titlebar { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-  h1 { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
-  .progress { font-size: 13px; color: var(--muted); white-space: nowrap; }
-  .progress b { color: var(--done); }
-  .bar { height: 4px; background: var(--line); border-radius: 2px; margin: 8px 0 10px; overflow: hidden; }
-  .bar i { display: block; height: 100%; width: 0; background: var(--done); transition: width .3s; }
-  .controls { display: flex; gap: 8px; }
-  .search { flex: 1; position: relative; }
-  .search input {
-    width: 100%; height: 38px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
-    padding: 0 12px 0 32px; font: inherit; font-size: 15px; color: var(--ink); outline: none;
-  }
-  .search::before { content: "⌕"; position: absolute; left: 11px; top: 50%; transform: translateY(-52%); color: var(--muted); font-size: 17px; }
-  .toggle {
-    flex: none; height: 38px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line);
-    background: var(--surface); font-size: 13px; cursor: pointer; white-space: nowrap;
-  }
-  .toggle.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  .cats { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
-  .cats::-webkit-scrollbar { display: none; }
-  .cat {
-    flex: none; border: 0; border-radius: 99px; padding: 6px 12px; font-size: 13px; cursor: pointer;
-    background: var(--chip); white-space: nowrap;
-  }
-  .cat small { color: var(--muted); margin-left: 3px; }
-  .cat.on { background: var(--ink); color: var(--bg); }
-  .cat.on small { color: inherit; opacity: .7; }
-
-  /* 상품 목록 */
-  main { max-width: 1200px; margin: 0 auto; padding: 14px 16px 60px; }
-  .section { font-size: 15px; font-weight: 800; margin: 18px 2px 10px; display: flex; align-items: baseline; gap: 6px; }
-  .section:first-child { margin-top: 4px; }
-  .section small { font-weight: 500; color: var(--muted); font-size: 12px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
-  @media (max-width: 420px) { .grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
-  .item { position: relative; cursor: pointer; }
-  .thumb {
-    position: relative; aspect-ratio: 1; border-radius: 14px; overflow: hidden; background: #fff;
-    border: 1px solid var(--line); display: grid; place-items: center;
-  }
-  .thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
-  .thumb .emoji { font-size: 46px; }
-  .check {
-    position: absolute; top: 6px; right: 6px; width: 30px; height: 30px; border-radius: 50%; border: 0; cursor: pointer;
-    background: rgba(255,255,255,.92); box-shadow: 0 1px 4px rgba(0,0,0,.2); display: grid; place-items: center; font-size: 15px; color: #bbb;
-  }
-  .item.done .check { background: var(--done); color: #fff; }
-  .item.done .thumb img, .item.done .thumb .emoji { opacity: .35; }
-  .item.done .ko { text-decoration: line-through; color: var(--muted); }
-  .ko { font-size: 14px; font-weight: 700; margin: 8px 2px 1px; letter-spacing: -0.01em; word-break: keep-all; }
-  .ja { font-size: 11.5px; color: var(--muted); margin: 0 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 4px; margin: 4px 2px 0; }
-  .price { font-size: 14px; font-weight: 800; color: var(--accent); }
-  .where { font-size: 11px; color: var(--muted); text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .empty { text-align: center; color: var(--muted); padding: 50px 0; }
-  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 28px; line-height: 1.6; }
-
-  /* 상세: 점원에게 보여 주기용 큰 화면 */
-  dialog {
-    border: 0; padding: 0; border-radius: 20px; width: min(92vw, 440px); max-height: 90vh;
-    background: var(--surface); color: var(--ink); box-shadow: 0 20px 60px rgba(0,0,0,.35);
-  }
-  dialog::backdrop { background: rgba(0,0,0,.5); }
-  .d-img { background: #fff; aspect-ratio: 1; display: grid; place-items: center; }
-  .d-img img { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
-  .d-img .emoji { font-size: 90px; }
-  .d-body { padding: 16px 18px 18px; }
-  .d-ja { font-size: 22px; font-weight: 800; line-height: 1.3; margin: 0 0 4px; word-break: keep-all; }
-  .d-ko { color: var(--muted); margin: 0 0 10px; }
-  .d-ask { background: var(--accent-soft); color: var(--accent); border-radius: 12px; padding: 10px 12px; font-size: 15px; font-weight: 700; margin-bottom: 12px; }
-  .d-ask small { display: block; font-weight: 500; font-size: 12px; opacity: .8; }
-  .d-row { display: flex; justify-content: space-between; font-size: 14px; padding: 6px 0; border-top: 1px solid var(--line); }
-  .d-row span:first-child { color: var(--muted); }
-  .d-actions { display: flex; gap: 8px; margin-top: 14px; }
-  .d-actions > * {
-    flex: 1; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface);
-    display: grid; place-items: center; text-decoration: none; color: var(--ink); font-size: 14px; cursor: pointer;
-  }
-  .d-actions .primary { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 700; }
-  .d-close { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(0,0,0,.55); color: #fff; font-size: 16px; cursor: pointer; }
-</style>
-</head>
-<body>
-<div class="top">
-  <div class="top-inner">
-    <div class="titlebar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content="noindex" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="일본 쇼핑" />
+    <title>일본 쇼핑 필수템</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
       <h1>일본 쇼핑 필수템</h1>
-      <span class="progress" id="progress"></span>
-    </div>
-    <div class="bar"><i id="bar"></i></div>
-    <div class="controls">
-      <div class="search"><input id="q" type="search" placeholder="제품명 검색 (한국어·일본어)" autocomplete="off"></div>
-      <button class="toggle" id="todo" type="button">안 산 것만</button>
-    </div>
-    <div class="cats" id="cats"></div>
-  </div>
-</div>
+      <form class="search" onsubmit="return false">
+        <svg class="glass" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></svg>
+        <input id="q" type="search" placeholder="이름으로 검색 (카베진, 휴족, ㅎㄷㄹㅂ)" autocomplete="off" enterkeyhint="search" />
+      </form>
+      <nav id="cats"></nav>
+    </header>
 
-<main id="list"><p class="empty">불러오는 중…</p></main>
-
-<dialog id="detail"></dialog>
-
-<script>
-const CATS = {
-  med: ['의약품', '💊'], beauty: ['스킨케어·화장품', '🧴'], daily: ['생활·위생', '🧼'], snack: ['과자·간식', '🍫'],
-  food: ['식품·주류', '🍜'], goods: ['주방·생활잡화', '🍳'], stationery: ['문구', '✏️'], kansai: ['간사이 기념품', '🏯'],
-};
-const CHECK_KEY = 'jp-shop-checked';
-const $ = (id) => document.getElementById(id);
-const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const yen = (n) => `¥${Number(n).toLocaleString()}`;
-
-const checked = new Set(JSON.parse(localStorage.getItem(CHECK_KEY) || '[]'));
-const save = () => localStorage.setItem(CHECK_KEY, JSON.stringify([...checked]));
-const state = { cat: 'all', q: '', todo: false };
-let ITEMS = [];
-
-// 외부 이미지가 막히면 검색 썸네일 → 그래도 안 되면 분류 이모지로 대신한다
-function imgHtml(it) {
-  const emoji = `<span class="emoji">${CATS[it.cat][1]}</span>`;
-  if (!it.img && !it.thumb) return emoji;
-  return `<img src="${esc(it.img || it.thumb)}" data-alt="${esc(it.thumb)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this)">`;
-}
-function imgFail(img) {
-  const alt = img.dataset.alt;
-  if (alt && img.src !== alt) { img.src = alt; img.dataset.alt = ''; return; }
-  const it = ITEMS[+img.closest('[data-id]')?.dataset.id];
-  img.replaceWith(Object.assign(document.createElement('span'), { className: 'emoji', textContent: it ? CATS[it.cat][1] : '🛍️' }));
-}
-
-function match(it) {
-  if (state.cat !== 'all' && it.cat !== state.cat) return false;
-  if (state.todo && checked.has(it.ja)) return false;
-  if (state.q) {
-    const hay = `${it.ko} ${it.ja} ${it.where} ${CATS[it.cat][0]}`.toLowerCase();
-    if (!state.q.split(/\s+/).every((w) => hay.includes(w))) return false;
-  }
-  return true;
-}
-
-function renderCats() {
-  const count = (k) => ITEMS.filter((it) => k === 'all' || it.cat === k).length;
-  $('cats').innerHTML = [['all', ['전체']], ...Object.entries(CATS)].map(([k, [label, icon]]) =>
-    `<button class="cat${state.cat === k ? ' on' : ''}" data-cat="${k}" type="button">${icon ? icon + ' ' : ''}${label}<small>${count(k)}</small></button>`).join('');
-}
-
-function renderProgress() {
-  const done = ITEMS.filter((it) => checked.has(it.ja)).length;
-  $('progress').innerHTML = `<b>${done}</b> / ${ITEMS.length} 체크`;
-  $('bar').style.width = `${(done / ITEMS.length) * 100}%`;
-}
-
-function card(it) {
-  return `<div class="item${checked.has(it.ja) ? ' done' : ''}" data-id="${it.id}">
-    <div class="thumb">${imgHtml(it)}<button class="check" type="button" aria-label="체크">✓</button></div>
-    <p class="ko">${esc(it.ko)}</p>
-    <p class="ja">${esc(it.ja)}</p>
-    <div class="meta"><span class="price">${yen(it.price)}</span><span class="where">${esc(it.where)}</span></div>
-  </div>`;
-}
-
-function render() {
-  renderCats();
-  renderProgress();
-  $('todo').classList.toggle('on', state.todo);
-  const rows = ITEMS.filter(match);
-  if (!rows.length) { $('list').innerHTML = '<p class="empty">조건에 맞는 제품이 없습니다</p>'; return; }
-  // 전체 보기일 때는 분류별 구역으로 나눠 보여 준다
-  const groups = state.cat === 'all' ? Object.keys(CATS) : [state.cat];
-  $('list').innerHTML = groups.map((k) => {
-    const list = rows.filter((it) => it.cat === k);
-    if (!list.length) return '';
-    return `<h2 class="section">${CATS[k][1]} ${CATS[k][0]}<small>${list.length}</small></h2><div class="grid">${list.map(card).join('')}</div>`;
-  }).join('') + `<footer>가격은 세금 포함 참고가로 매장·용량에 따라 다릅니다<br>체크 표시는 이 기기에만 저장됩니다</footer>`;
-}
-
-function toggle(it) {
-  checked.has(it.ja) ? checked.delete(it.ja) : checked.add(it.ja);
-  save();
-}
-
-function openDetail(it) {
-  const q = encodeURIComponent(it.ja);
-  $('detail').innerHTML = `
-    <div class="d-img" data-id="${it.id}">${imgHtml(it)}</div>
-    <button class="d-close" type="button" aria-label="닫기">✕</button>
-    <div class="d-body">
-      <p class="d-ja">${esc(it.ja)}</p>
-      <p class="d-ko">${esc(it.ko)}</p>
-      <div class="d-ask">これはどこにありますか？<small>이거 어디에 있나요? — 점원에게 이 화면을 보여 주세요</small></div>
-      <div class="d-row"><span>참고가</span><span>${yen(it.price)}</span></div>
-      <div class="d-row"><span>구매처</span><span>${esc(it.where)}</span></div>
-      <div class="d-actions">
-        <a href="https://www.google.com/search?tbm=isch&q=${q}" target="_blank" rel="noopener">사진 더 보기</a>
-        <button class="primary" type="button" data-toggle>${checked.has(it.ja) ? '체크 해제' : '샀어요 ✓'}</button>
+    <main>
+      <div class="caption">
+        <p><span id="count"></span> · <span id="rate"></span></p>
+        <select id="sort" aria-label="정렬">
+          <option value="default">기본순</option>
+          <option value="priceAsc">가격 낮은순</option>
+          <option value="priceDesc">가격 높은순</option>
+          <option value="name">가나다순</option>
+        </select>
       </div>
-    </div>`;
-  $('detail').querySelector('.d-close').onclick = () => $('detail').close();
-  $('detail').querySelector('[data-toggle]').onclick = () => { toggle(it); render(); $('detail').close(); };
-  $('detail').showModal();
-}
+      <ul id="list"></ul>
+    </main>
 
-$('list').addEventListener('click', (e) => {
-  const el = e.target.closest('.item'); if (!el) return;
-  const it = ITEMS[+el.dataset.id];
-  if (e.target.closest('.check')) { toggle(it); el.classList.toggle('done', checked.has(it.ja)); renderProgress(); if (state.todo) render(); return; }
-  openDetail(it);
-});
-$('detail').addEventListener('click', (e) => { if (e.target === $('detail')) $('detail').close(); });
-$('cats').addEventListener('click', (e) => {
-  const b = e.target.closest('[data-cat]'); if (!b) return;
-  state.cat = b.dataset.cat; render(); window.scrollTo({ top: 0 });
-});
-$('q').addEventListener('input', () => { state.q = $('q').value.trim().toLowerCase(); render(); });
-$('todo').onclick = () => { state.todo = !state.todo; render(); };
+    <footer>
+      <p>가격은 세금 포함 참고가입니다. 대부분 정가 없이 매장이 값을 정하는 제품이라 매장·용량에 따라 다릅니다. 제품을 누르면 일본어 이름이 크게 나와서 점원에게 바로 보여 줄 수 있어요.</p>
+      <p>일본 면세(2026년 11월부터 환급 방식): 같은 날 한 매장에서 세금 제외 ¥5,000 이상 사면 여권을 보여 주고 세금 포함 가격으로 결제한 뒤, 출국할 때 공항 세관 확인을 받으면 소비세 10%를 돌려받습니다. 세관이 물건을 확인할 수 있게 챙겨 가야 하고(먹거나 쓴 건 환급 안 됨), 구매일로부터 90일 안에 출국해야 합니다.<br />
+        한국 입국 면세: 총 $800 이하(술·담배·향수 별도). 의약품은 품목당 6병(통) 이하, 고기가 든 식품(551 부타망 등)은 반입 불가.</p>
+    </footer>
 
-fetch('data.json', { cache: 'no-cache' })
-  .then((r) => r.json())
-  .then((d) => { ITEMS = d.items.map((it, id) => ({ ...it, id })); render(); })
-  .catch(() => { $('list').innerHTML = '<p class="empty">목록을 불러오지 못했습니다</p>'; });
-</script>
-</body>
+    <button type="button" id="cartbar" hidden>
+      <span class="ttl">쇼핑 목록</span>
+      <span class="sum"></span>
+      <span class="flag"></span>
+    </button>
+
+    <dialog id="cart"><div class="content"></div></dialog>
+    <dialog id="viewer"><div class="content"></div></dialog>
+
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
