@@ -31,6 +31,9 @@ async function login() {
     body: JSON.stringify({ userId: MENU_USER_ID, userData: MENU_USER_PW }),
   });
   if (res.status !== 200) throw new Error(`로그인 실패 (HTTP ${res.status})`);
+  // 실패해도 200 + 쿠키를 주므로 본문 errorCode 로 판정한다. (9912 = 웹 로그인 차단)
+  const body = await res.json().catch(() => ({}));
+  if (body.errorCode) throw new Error(`로그인 거절 (errorCode ${body.errorCode}: ${body.errorMsg ?? ''})`);
   // Set-Cookie 에서 name=value 만 모아 다음 요청 Cookie 로 쓴다.
   const cookie = res.headers.getSetCookie().map((c) => c.split(';')[0]).join('; ');
   if (!cookie) throw new Error('로그인 응답에 쿠키 없음');
