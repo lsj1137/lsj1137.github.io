@@ -2,6 +2,7 @@
 // 접속 정보는 전부 환경변수(Actions Secrets)로 받는다 - 저장소가 공개라 코드에 남기지 않는다.
 // 응답 원문은 로그에 찍지 않는다. Actions 로그도 공개다.
 import { writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const { MENU_BASE_URL, MENU_USER_ID, MENU_USER_PW, MENU_SITE_CD } = process.env;
 for (const [k, v] of Object.entries({ MENU_BASE_URL, MENU_USER_ID, MENU_USER_PW, MENU_SITE_CD })) {
@@ -10,8 +11,11 @@ for (const [k, v] of Object.entries({ MENU_BASE_URL, MENU_USER_ID, MENU_USER_PW,
 
 const base = MENU_BASE_URL.replace(/\/+$/, '');
 // 웹(W)으로 로그인하면 9912 로 막히므로 안드로이드 앱 웹뷰처럼 보낸다.
+// 앱 버전·단말ID는 Secrets 로 덮을 수 있다. 버전 기본값은 Play 스토어 공개 버전(com.ehyundai.greenfood 4.0.23).
+// 단말ID가 없으면 계정 ID 해시 16자리(Android ID 형식)로 매번 같은 기기처럼 보낸다.
 const OS_DV_CD = 'A';
-const APP_VER = '1.2.4';
+const APP_VER = process.env.MENU_APP_VER || '4.0.23';
+const TRML_ID = process.env.MENU_TRML_ID || createHash('sha256').update(MENU_USER_ID).digest('hex').slice(0, 16);
 const APP_UA = 'Mozilla/5.0 (Linux; Android 14; SM-S918N Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.0.0 Mobile Safari/537.36';
 const commonHeaders = { 'Content-Type': 'application/json', Origin: base, 'User-Agent': APP_UA };
 
@@ -40,7 +44,7 @@ function mergeCookie(prev, res) {
 
 // 앱 웹뷰가 로그인 전에 하는 기기정보 등록. 서버가 이 쿠키로 앱 환경을 판정한다.
 async function registerApp() {
-  const appInfo = { osDvCd: OS_DV_CD, userCurrAppVer: APP_VER, mobiPhTrmlId: '', trmlTokenVal: '', id: '', pw: '' };
+  const appInfo = { osDvCd: OS_DV_CD, userCurrAppVer: APP_VER, mobiPhTrmlId: TRML_ID, trmlTokenVal: '', id: '', pw: '' };
   const res = await fetch(`${base}/api/common/setCookie.do`, {
     method: 'POST',
     headers: commonHeaders,
