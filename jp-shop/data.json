@@ -1,0 +1,905 @@
+{
+ "note": "참고가는 세금 포함 대략적인 가격으로 매장·용량에 따라 다릅니다",
+ "items": [
+  {
+   "cat": "med",
+   "ko": "이브 퀵 두통약 DX",
+   "ja": "イブクイック頭痛薬DX 20錠",
+   "where": "드럭스토어",
+   "price": 1000,
+   "img": "https://www.forest.co.jp/forest/goods/images/p/186650.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.JmAldL28LpZMCTV0ckLUBwHaFj&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "록소닌 S",
+   "ja": "ロキソニンS 12錠",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://www.daiichisankyo-hc.co.jp/library/content/img_library/image/loxonin-s_CF005_main.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.1zZT-u9OZHVdGNgjvUeb5gHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "카베진 코와 알파",
+   "ja": "キャベジンコーワα 300錠",
+   "where": "드럭스토어",
+   "price": 2500,
+   "img": "https://m.media-amazon.com/images/I/71t7L8-gxPL.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.jrOOo82z351Xz6xaKjskFAHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "오타이산 위장약",
+   "ja": "太田胃散 分包 32包",
+   "where": "드럭스토어",
+   "price": 1700,
+   "img": "https://img14.shop-pro.jp/PA01303/370/product/83387360.jpg?cmsp_timestamp=20150620143807",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.7Bzq2OIibkwk6p-9l3NaBQAAAA&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "사론파스 Ae",
+   "ja": "サロンパスAe 140枚",
+   "where": "드럭스토어",
+   "price": 1300,
+   "img": "https://imageproxy.wolt.com/menu/menu-images/6447213fba24d6912b25f20e/bae6a0f6-e4d9-11ed-a022-361dffa532c8_4987188100325.jpeg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.3XCi7g8bE8NYNt4SJkoPigHaEK&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "로이히츠보코 동전파스",
+   "ja": "ロイヒつぼ膏 156枚",
+   "where": "드럭스토어",
+   "price": 1300,
+   "img": "https://m.media-amazon.com/images/I/71jqv7fkEIL._AC_SL1000_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ISmVR3LArfg507xby0YjEQHaF0&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "휴족시간",
+   "ja": "休足時間 18枚",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://lion-corp.s3.amazonaws.com/uploads/grn/product/normal_image/341/012-01.png",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.rwD_Dswlotv8qaFIuVgDOQHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "아이봉 세안액",
+   "ja": "アイボン 500ml",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://m.media-amazon.com/images/I/81nzodPI23L._AC_SL1500_.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.LYn4qEIPfCXCQNfJLLPVAAHaJe&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "산테 FX 네오 안약",
+   "ja": "サンテFXネオ 12ml",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://www.mtdrug.co.jp/upload/editor/108-1.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.hiRqSIuPKinAH502t8MStgHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "로토 지 안약",
+   "ja": "ロートジーb 12ml",
+   "where": "드럭스토어",
+   "price": 650,
+   "img": "https://item-shopping.c.yimg.jp/i/f/benkyoannexx_cs-yumail-4987241165117",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.pT8Uj4LiL2nJQYqP0bGG6QHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "파브론 골드 A 감기약",
+   "ja": "パブロンゴールドA 微粒 44包",
+   "where": "드럭스토어",
+   "price": 2500,
+   "img": "https://r.r10s.jp/ran/img/1001/0004/987/306/045/255/10010004987306045255_1.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.v59Jm7Nu8x2lu_AImnbs9gHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "용각산 다이렉트",
+   "ja": "龍角散ダイレクト スティック ミント 16包",
+   "where": "드럭스토어",
+   "price": 800,
+   "img": "https://item-shopping.c.yimg.jp/i/n/benkyoudou_cs-4987240210535-yk",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.RmB-j3ZEJ_oWtIV_KHkv0wHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "사카무케아 액체 반창고",
+   "ja": "サカムケア 10g",
+   "where": "드럭스토어",
+   "price": 800,
+   "img": "https://m.media-amazon.com/images/I/71ifi2+1ggL.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.lB2092Hm56rAT_CbCU_GsAHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "무히 알파 EX",
+   "ja": "ムヒアルファEX 15g",
+   "where": "드럭스토어",
+   "price": 1100,
+   "img": "https://item-shopping.c.yimg.jp/i/n/benkyoudou_cs-4987426002138-yk",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.-riXQafQjE53Vw9KkhMsqgHaHa&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "냉각시트 히에피타",
+   "ja": "冷えピタ 大人用 12枚",
+   "where": "드럭스토어",
+   "price": 500,
+   "img": "https://item-shopping.c.yimg.jp/i/n/himawaridg_4903301025917",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.qALbUAGByi7PzUi6cxEZDAAAAA&pid=15.1"
+  },
+  {
+   "cat": "med",
+   "ko": "하이치올 C 플러스",
+   "ja": "ハイチオールCプラス2 60錠",
+   "where": "드럭스토어",
+   "price": 1600,
+   "img": "https://m.media-amazon.com/images/I/61SWWh3JOuL.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.kVOfKjCAeUk_KjZKcBo-2QHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "하다라보 고쿠쥰 로션",
+   "ja": "肌ラボ 極潤 ヒアルロン液 170ml",
+   "where": "드럭스토어",
+   "price": 900,
+   "img": "https://cdn.nafco-online.com/upload/save_image/n20733384_1.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.iUMZjThAHYLCZqci5l0EjQHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "멜라노CC 미용액",
+   "ja": "メラノCC 薬用しみ集中対策 プレミアム美容液",
+   "where": "드럭스토어",
+   "price": 1300,
+   "img": "https://cdn.askul.co.jp/img/product/3L1/EP87588_3L1.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.7pLbEoZIa2vGHFWKXk3IOQHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "비오레 UV 아쿠아리치",
+   "ja": "ビオレUV アクアリッチ ウォータリーエッセンス",
+   "where": "드럭스토어",
+   "price": 1000,
+   "img": "https://www.kao-kirei.com/content/dam/sites/kao/www-kao-kirei-com/jp/ja/item/khg/bioresarasarauv/25501404/GG01.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.EgvZBlmG-sYrXS9_t6KdPAHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "아넷사 퍼펙트 UV 밀크",
+   "ja": "アネッサ パーフェクトUV スキンケアミルク 60ml",
+   "where": "드럭스토어",
+   "price": 3300,
+   "img": "https://shop.r10s.jp/sundrug/cabinet/79/4909978147105.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.zPO6-gD2CD2yoioAHXM1gwHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "큐렐 페이스 크림",
+   "ja": "キュレル 潤浸保湿 フェイスクリーム 40g",
+   "where": "드럭스토어",
+   "price": 2500,
+   "img": "https://shop.r10s.jp/sundrug/cabinet/34/4901301236210.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.vuQ_eQ_BW210sqqSYM-kawHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "퀄리티퍼스트 VC100 마스크",
+   "ja": "クオリティファースト ダーマレーザー スーパーVC100 マスク",
+   "where": "드럭스토어",
+   "price": 800,
+   "img": "https://item-shopping.c.yimg.jp/i/n/ohgiri-store_quality1436",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.j8qSq1Aa__y5Da1k7_SW9wHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "케아나나데시코 쌀 마스크",
+   "ja": "毛穴撫子 お米のマスク 10枚",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://ic4-a.wowma.net/mis/gr/135/image.wowma.jp/28527201/ikou24/10049319.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.2o4eL5Dm9Z-YEpyU3-25aQHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "나메라카혼포 링클 아이크림",
+   "ja": "なめらか本舗 リンクルアイクリーム N",
+   "where": "드럭스토어",
+   "price": 1000,
+   "img": "https://item-shopping.c.yimg.jp/i/n/sgline_tokiwa-eyecream-n-20g",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.3aniEVeOIZ9g2OJq-vGk_QHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "센카 퍼펙트 휩",
+   "ja": "SENKA パーフェクトホイップ 120g",
+   "where": "드럭스토어",
+   "price": 600,
+   "img": "https://www.biteki.com/wp-content/uploads/2023/12/202402gbc-3-3.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.pCvAQg6wOevYGmeXoy9INgHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "판케루 마일드 클렌징 오일",
+   "ja": "ファンケル マイルドクレンジングオイル 120ml",
+   "where": "드럭스토어",
+   "price": 1980,
+   "img": "https://r.r10s.jp/ran/img/1001/0004/908/049/618/605/10010004908049618605_1.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.ak1XlpwesVOs1_SZkP5VDwHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "룰룬 프레셔스 그린 마스크",
+   "ja": "ルルルン プレシャス GREEN 32枚",
+   "where": "드럭스토어",
+   "price": 1900,
+   "img": "https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0502/users/24a5097422b3caa25efb4ec49dc6a6ea37c81da6/i-img1200x1200-17071934081emle0243741.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.PzqvfZPEjBgeX-QvKzFG5wHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "비오레 코팩",
+   "ja": "ビオレ 毛穴すっきりパック 鼻用",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://miyamoto-drug.shop/html/upload/save_image/0120153751_63ca36bfa2de7.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Ha2u8qNlvcXxsJ759BiN7QHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "키스미 히로인 메이크 마스카라",
+   "ja": "ヒロインメイク ロング&カールマスカラ アドバンストフィルム",
+   "where": "드럭스토어",
+   "price": 1300,
+   "img": "https://m.media-amazon.com/images/I/7123ZyifCQL._AC_SL1200_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP._FmiIaAYHreQM4ZGFXGuuwHaKe&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "캔메이크 마시멜로 피니시 파우더",
+   "ja": "キャンメイク マシュマロフィニッシュパウダー",
+   "where": "드럭스토어",
+   "price": 1000,
+   "img": "https://tomods-ap.com/img/goods/L/4901008316246a.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.A8PpHTtDZpTcdoi2dxQAwgHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "세잔느 펄 글로우 하이라이트",
+   "ja": "セザンヌ パールグロウハイライト",
+   "where": "드럭스토어",
+   "price": 660,
+   "img": "https://www.cezanne.co.jp/uploads/lineup/4939553041122/img1_01.png",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.dZkPecaoLQNOaGK1IjS1mAHaHa&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "앤허니 딥모이스트 샴푸",
+   "ja": "&honey ディープモイスト シャンプー",
+   "where": "드럭스토어",
+   "price": 1500,
+   "img": "https://m.media-amazon.com/images/I/71IeHIkD+FL.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.M6rV2ugK5ikv1TFcqLbQpwHaLG&pid=15.1"
+  },
+  {
+   "cat": "beauty",
+   "ko": "DHC 약용 립크림",
+   "ja": "DHC 薬用リップクリーム",
+   "where": "드럭스토어",
+   "price": 770,
+   "img": "https://cdn.lipscosme.com/image/e43c084f38bc4a5286fbc167-1586183736.png",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.2G4ePn0tWpvR1z2sZfNWkAHaHa&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "메구리즘 증기 안대",
+   "ja": "めぐりズム 蒸気でホットアイマスク 12枚",
+   "where": "드럭스토어",
+   "price": 1300,
+   "img": "https://www.kao.com/content/dam/sites/kao/www-kao-com/jp/ja/products/megrhythm/25426387/GG01.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.MZFTO28PoNud8iHPyOUaBQHaHa&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "핫카이로 붙이는 핫팩",
+   "ja": "ホッカイロ 貼る レギュラー 10個",
+   "where": "드럭스토어",
+   "price": 500,
+   "img": "https://m.media-amazon.com/images/I/513HQbxILvL._AC_SL1200_.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.9TMzK1HsNkkSH9NBF4u3VwHaFL&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "비오레 사라사라 파우더 시트",
+   "ja": "ビオレ さらさらパウダーシート",
+   "where": "드럭스토어",
+   "price": 400,
+   "img": "https://www.kao-kirei.com/content/dam/sites/kao/www-kao-kirei-com/jp/ja/item/khg/bioresarasara/25941312/GG01.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.WMDacCxkgGqnstSiBtbhmQHaLX&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "반 땀 블록 롤온",
+   "ja": "Ban 汗ブロックロールオン",
+   "where": "드럭스토어",
+   "price": 800,
+   "img": "https://www.atpress.ne.jp/releases/122971/img_122971_3.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.Ak292bViAMHqhL-qglMPBQHaN4&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "아파가드 프리미오 치약",
+   "ja": "アパガード プレミオ",
+   "where": "드럭스토어",
+   "price": 1500,
+   "img": "https://m.media-amazon.com/images/I/71TIsoJfunS._AC_SL1500_.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.SElp3IProF6hBmMJ3HX7egHaI0&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "베이비 풋 발각질 제거",
+   "ja": "ベビーフット イージーパック",
+   "where": "드럭스토어",
+   "price": 1500,
+   "img": "https://item-shopping.c.yimg.jp/i/n/ben-see_beauty-020-4533213670266-liberta-babyfoot-easypack-dp60-ssize-3pack",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.j9klpFLiHUe7c-WCdl6hggHaHa&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "유스킨 A 핸드크림",
+   "ja": "ユースキンA 70g",
+   "where": "드럭스토어",
+   "price": 1100,
+   "img": "https://yuskin.co.jp/Portals/0/products/productImage/03_ya70/ya70_001.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.dcVZMySl-6SubVdvWG0DsAHaHa&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "바브 입욕제",
+   "ja": "バブ 薬用入浴剤",
+   "where": "드럭스토어",
+   "price": 700,
+   "img": "https://m.media-amazon.com/images/I/91zDcvZ2MPL._AC_SL1500_.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.GxtQSfMnZBIGozVfnPxTPgHaJf&pid=15.1"
+  },
+  {
+   "cat": "daily",
+   "ko": "초쾌적 마스크",
+   "ja": "超快適マスク プリーツタイプ",
+   "where": "드럭스토어",
+   "price": 800,
+   "img": "https://m.media-amazon.com/images/I/51ZfofckkgL._SL500_.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.DT2nWsOc8Qpj5ZJMNu23rgHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "킷캣 말차",
+   "ja": "キットカット 抹茶",
+   "where": "돈키호테·마트",
+   "price": 450,
+   "img": "https://prtimes.jp/i/5825/4/resize/d5825-4-821844-0.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.YWTCiyL8UHIrVSz3ujuY0wHaFh&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "자가비 소금맛",
+   "ja": "じゃがビー うすしお",
+   "where": "돈키호테·마트",
+   "price": 300,
+   "img": "https://d3mijdhf1k8u77.cloudfront.net/img/goods/S/AA0278-a401x24xt-P.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.AIbIUjczUmy6U0G67YnmcAHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "쟈가리코 샐러드",
+   "ja": "じゃがりこ サラダ",
+   "where": "편의점",
+   "price": 180,
+   "img": "https://www.calbee.co.jp/jagarico/upload_files/products/1642981465038_package_image.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.9Nj6daT3Xhx9HSMW8CCQ3AHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "로이스 생초콜릿",
+   "ja": "ロイズ 生チョコレート オーレ",
+   "where": "공항",
+   "price": 900,
+   "img": "https://www.royce.com/images/goods/2054_3.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.hmtLAkOZEu7aXIqVKAlJ8QHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "하이츄",
+   "ja": "ハイチュウ グレープ",
+   "where": "편의점",
+   "price": 130,
+   "img": "https://www.morinaga.co.jp/products/products_images/l/PRD2022-01-0030_100019_00_1736384715_677dcf4b29716.png",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.ipn5IIXOZp6hPRTfChcMdwHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "알포트",
+   "ja": "ブルボン アルフォート",
+   "where": "돈키호테·마트",
+   "price": 250,
+   "img": "https://m.media-amazon.com/images/I/71RIW07COpL.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.3g5McGhSgWvI7PVvOu-fSgHaGR&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "블랙썬더",
+   "ja": "ブラックサンダー",
+   "where": "편의점",
+   "price": 40,
+   "img": "https://dagashijiten.com/img/brack.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.gCTfwV2B8aDjdHOT-dWF7AHaDt&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "우마이봉",
+   "ja": "うまい棒",
+   "where": "돈키호테·마트",
+   "price": 15,
+   "img": "https://m.media-amazon.com/images/I/81QHuo0Y9DL._AC_SL1500_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.2mZ1-0Y4QMiJXGUts4k2CAHaHu&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "곤약젤리 곤냐쿠바타케",
+   "ja": "蒟蒻畑 ぶどう味",
+   "where": "돈키호테·마트",
+   "price": 300,
+   "img": "https://image.rakuten.co.jp/mannanlife/cabinet/lala/imgrc0094640249.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.HiKEYyJocic_k6bynTJ9xQHaJW&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "메이지 더 초콜릿",
+   "ja": "明治 ザ・チョコレート",
+   "where": "편의점",
+   "price": 250,
+   "img": "https://cdn.mainichi.jp/vol1/2017/12/17/20171217hrc00m040001000q/8.jpg?1",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ZuYRUEXKw__CHJ3Uy1TQ5QHaEl&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "코로로 젤리",
+   "ja": "UHA味覚糖 コロロ",
+   "where": "편의점",
+   "price": 150,
+   "img": "https://m.media-amazon.com/images/I/7133TGv5SaL._AC_SL1500_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.Y0TGGmYjqP407prSjxk63AHaE7&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "파이노미",
+   "ja": "ロッテ パイの実",
+   "where": "돈키호테·마트",
+   "price": 200,
+   "img": "https://prcdn.freetls.fastly.net/release_image/2360/1804/2360-1804-09db809c6c33499538dbc72da806cf43-2067x2067.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1950&height=1350&fit=bounds",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.mHEzhk_oxKTcpNbWa7bpTwHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "키노코노야마",
+   "ja": "きのこの山",
+   "where": "돈키호테·마트",
+   "price": 250,
+   "img": "https://www.meiji.co.jp/products/brand/global/choco/ja/kinotake/assets/images/img_kv_kinoko.png",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.7AYcIq11edGG9XijQeGEgwHaF1&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "루만도",
+   "ja": "ブルボン ルマンド",
+   "where": "돈키호테·마트",
+   "price": 300,
+   "img": "https://thumbnail.image.rakuten.co.jp/@0_mall/matsukiyo/cabinet/d0088/4901360354177_1.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.oL3xgh8V8CcYMWAILE9_RgHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "요쿠모쿠 시가루",
+   "ja": "ヨックモック シガール 20本",
+   "where": "백화점·공항",
+   "price": 1600,
+   "img": "https://d3s2d3jcyg9997.cloudfront.net/full/goods/1010011201030_1_3.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.i4danxlWOxngaWW3l8eoQwHaHa&pid=15.1"
+  },
+  {
+   "cat": "snack",
+   "ko": "가루비 노리시오 포테이토칩",
+   "ja": "カルビー ポテトチップス のりしお",
+   "where": "편의점",
+   "price": 180,
+   "img": "https://www.calbee.co.jp/newsrelease/img/230911_1.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.konWa76uiisXMJz2mtCrZAHaEo&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "닛신 컵누들 해물",
+   "ja": "カップヌードル シーフードヌードル",
+   "where": "편의점",
+   "price": 240,
+   "img": "https://m.media-amazon.com/images/I/71sJYeS6vBL._AC_SL1500_.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ZFoBbuv26UBkoMjuEwv_MAHaIr&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "돈베이 키츠네 우동",
+   "ja": "日清のどん兵衛 きつねうどん",
+   "where": "편의점",
+   "price": 240,
+   "img": "https://cdn.askul.co.jp/img/product/3L1/P692133_3L1.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.gXvTSUT4DAR8q7wnfxnh8gHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "닛신 치킨라멘",
+   "ja": "日清 チキンラーメン 5食",
+   "where": "돈키호테·마트",
+   "price": 600,
+   "img": "https://sm.r10s.jp/item/08/4902105051108.jpg?fit=inside|630:630&composite-to=*,*|630:630&background-color=white",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.n9XWHQw-vtYI6IGM6XKC9gHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "이치란 라멘 세트",
+   "ja": "一蘭 ラーメン ちぢれ麺 5食",
+   "where": "이치란 매장",
+   "price": 2500,
+   "img": "https://shop.r10s.jp/smilespoon/cabinet/91/7135491-0006_1.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.VSqnpP2ecqtcuhslqjRYTQHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "큐피 마요네즈",
+   "ja": "キユーピー マヨネーズ 450g",
+   "where": "돈키호테·마트",
+   "price": 400,
+   "img": "https://m.media-amazon.com/images/I/61pVIxS5BAL._AC_SY550_.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.DRvr0GLhQzrS5KRA9oKRugAAAA&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "미츠칸 아지퐁",
+   "ja": "ミツカン 味ぽん",
+   "where": "돈키호테·마트",
+   "price": 300,
+   "img": "https://cdn.shopify.com/s/files/1/0674/2582/9179/files/ajipon360.png?v=1698128620",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.1188dvLH0eqHvViGdOxZ6AHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "노리타마 후리카케",
+   "ja": "丸美屋 のりたま",
+   "where": "돈키호테·마트",
+   "price": 250,
+   "img": "https://item-shopping.c.yimg.jp/i/n/himarilife_4902820101126",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.mkBU-gwr0AC_yuJzjFKzBwHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "카야노야 다시팩",
+   "ja": "茅乃舎だし 30袋",
+   "where": "백화점",
+   "price": 2400,
+   "img": "https://image.rakuten.co.jp/zero-one-store/cabinet/kayanoya/imgrc0081641489.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.RFO70lCN1nuYq4FdhA3YcgHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "골든 카레 중간맛",
+   "ja": "S&B ゴールデンカレー 中辛",
+   "where": "돈키호테·마트",
+   "price": 300,
+   "img": "https://cdn.sbfoods.co.jp/products/18559_1_xl.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.0NoaePdMxUAiEYxB9PUf7gHaJw&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "츠지리 말차 밀크",
+   "ja": "辻利 インスタント 抹茶ミルク",
+   "where": "돈키호테·마트",
+   "price": 500,
+   "img": "https://m.media-amazon.com/images/I/81rFjJl2NhL._AC_SL1500_.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.qjf8XHlyw0oS3jBvkb306QHaHX&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "블렌디 스틱 카페오레",
+   "ja": "ブレンディ スティック カフェオレ",
+   "where": "돈키호테·마트",
+   "price": 450,
+   "img": "https://m.media-amazon.com/images/I/81-oW-iH-8L._AC_SL1500_.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.7dVPgGaucqnAXjlPHb-DhAHaHw&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "산토리 가쿠빈 위스키",
+   "ja": "サントリー 角瓶 700ml",
+   "where": "돈키호테·마트",
+   "price": 1900,
+   "img": "https://item-shopping.c.yimg.jp/i/n/syurui-net_1210",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.yCuwCcRDfCWh8DVo0RHxFAHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "닷사이 45 사케",
+   "ja": "獺祭 純米大吟醸45 720ml",
+   "where": "백화점·주류점",
+   "price": 1900,
+   "img": "https://baseec-img-mng.akamaized.net/images/item/origin/9044027d783b4e98a5ddc3ffc7ee9f29.jpg?imformat=generic",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.v1JOsPmhGX2FzxKQy5llhQHaHa&pid=15.1"
+  },
+  {
+   "cat": "food",
+   "ko": "초야 우메슈",
+   "ja": "チョーヤ 梅酒 The CHOYA",
+   "where": "돈키호테·마트",
+   "price": 1000,
+   "img": "https://www.choya.co.jp/cms/wp-content/uploads/2019/02/TC_shigoku_650ml_L.png",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.3AM-amd6gUsN-5j36Mw4YAHaGJ&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "서모스 텀블러",
+   "ja": "サーモス 真空断熱ケータイマグ JOK",
+   "where": "가전양판점",
+   "price": 3500,
+   "img": "https://item-shopping.c.yimg.jp/i/n/royal3000_f467",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.A0vZ7X7xxanKPVUJ67FjdwHaHa&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "세키마고로쿠 식칼",
+   "ja": "貝印 関孫六 包丁 三徳",
+   "where": "가전양판점·백화점",
+   "price": 4000,
+   "img": "https://tshop.r10s.jp/hitline/cabinet/item/1/66/4580614310666_1.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.5HEQ8wqEVy_D5s1iV53nlwHaHa&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "타쿠미노와자 손톱깎이",
+   "ja": "匠の技 爪切り グリーンベル",
+   "where": "돈키호테·잡화점",
+   "price": 1200,
+   "img": "https://item-shopping.c.yimg.jp/i/n/kurashiichibankan_4972525052931",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.55VCOKE8pq9-5EkZSRXzrQHaHa&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "우타마로 비누",
+   "ja": "ウタマロ石けん",
+   "where": "드럭스토어",
+   "price": 200,
+   "img": "https://m.media-amazon.com/images/I/51+g5klftBL._AC_SY355_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.SiwibJPBLTN3tcdWyRv7LQHaEJ&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "게키오치쿤 매직 스펀지",
+   "ja": "激落ちくん",
+   "where": "드럭스토어·100엔샵",
+   "price": 200,
+   "img": "https://www.gekiochikun.jp/wp-content/themes/gekiochikun/assets/img/product/melamine/melamine_gekiochikun-main.png",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.j1bG2806cAbx7Dq36a_qQgHaHa&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "하리오 V60 드리퍼",
+   "ja": "HARIO V60 透過ドリッパー 02",
+   "where": "잡화점",
+   "price": 700,
+   "img": "https://m.media-amazon.com/images/I/61nvASUrGLL.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.01rWRlcxw6LipeyfOVZlFgHaHn&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "이마바리 타월 손수건",
+   "ja": "今治タオル ハンカチ",
+   "where": "백화점",
+   "price": 1000,
+   "img": "https://m.media-amazon.com/images/I/71oBn8+rfnL._AC_SL1500_.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.jl0-5yWUPiDwm1M-9eXE9QHaF0&pid=15.1"
+  },
+  {
+   "cat": "goods",
+   "ko": "슈팟토 에코백",
+   "ja": "Shupatto コンパクトバッグ",
+   "where": "잡화점",
+   "price": 1600,
+   "img": "https://image.rakuten.co.jp/kurashikaiteki-shop/cabinet/mana/imgrc0091585004.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.GabkYa9isrojjTFhkXHa_gHaHd&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "제트스트림 4&1",
+   "ja": "ジェットストリーム 4&1 0.5",
+   "where": "로프트·문구점",
+   "price": 1200,
+   "img": "https://item-shopping.c.yimg.jp/i/n/komeri_4548351213435",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.2Jsc5Q9LRutsKtvh-6iKwAHaHa&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "사라사 클립 볼펜",
+   "ja": "サラサクリップ 0.5",
+   "where": "로프트·문구점",
+   "price": 120,
+   "img": "https://mrmax.jp/static_files/product_images/4901681376612_01.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.36KdP3D7urL3N0WqQoZEyAHaHa&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "프릭션 볼",
+   "ja": "フリクションボール ノック 0.5",
+   "where": "로프트·문구점",
+   "price": 250,
+   "img": "https://mrmax.jp/static_files/product_images/4902505408120_02.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.sr_ITMHvhiA6Cvgd6o_YjAHaHa&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "쿠루토가 샤프",
+   "ja": "クルトガ アドバンス",
+   "where": "로프트·문구점",
+   "price": 550,
+   "img": "https://s3-ap-northeast-1.amazonaws.com/static.gp-s.biz/item_img/1805017/180501701x2.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.wErkfUAQeFF9dd3OeApQGgHaHa&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "모노 지우개",
+   "ja": "トンボ MONO 消しゴム",
+   "where": "로프트·문구점",
+   "price": 110,
+   "img": "https://m.media-amazon.com/images/I/81GX-KHbE2L._AC_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.KviYkeiXFMVexH2ZaZym2QHaF0&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "mt 마스킹테이프",
+   "ja": "mt マスキングテープ",
+   "where": "로프트·문구점",
+   "price": 200,
+   "img": "https://item-shopping.c.yimg.jp/i/n/sozaihompo_tkd1297",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.m7nyQI8fdKBWW7ZUbPf6QQHaHa&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "마일드라이너 형광펜",
+   "ja": "ゼブラ マイルドライナー",
+   "where": "로프트·문구점",
+   "price": 120,
+   "img": "https://www.zebra.co.jp/images/mildliner1.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.QMNXCMdfbJ7FCnXNyqvfrgHaFj&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "호보니치 수첩",
+   "ja": "ほぼ日手帳 オリジナル",
+   "where": "로프트",
+   "price": 2500,
+   "img": "https://www.1101.com/store/techo/2024/images/all_about/original_index/img_01.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.CtehqUt3pgAbqbAjKFs3pQHaFj&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "캠퍼스 노트",
+   "ja": "コクヨ キャンパスノート",
+   "where": "로프트·문구점",
+   "price": 200,
+   "img": "https://m.media-amazon.com/images/I/71qSASSts+L._AC_.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.Uu5lDWuCsONV9Q8caYgaPgHaGB&pid=15.1"
+  },
+  {
+   "cat": "stationery",
+   "ko": "하이테크C 콜레토",
+   "ja": "ハイテックC コレト",
+   "where": "로프트·문구점",
+   "price": 200,
+   "img": "https://komamono-honpo.com/syousai_photo/LHKC-1SC.jpg",
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.czHsTO8Lu_f3Lk4EZBpRKAHaHa&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "551 호라이 부타망",
+   "ja": "551蓬莱 豚まん",
+   "where": "오사카역·난바 매장",
+   "price": 440,
+   "img": "https://www.551horai.co.jp/asset/img/index/image/slide_1_pc.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.WRgSKTJL5ATxBO3ls7thOQHaEg&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "리쿠로 오지상 치즈케이크",
+   "ja": "りくろーおじさんの店 焼きたてチーズケーキ",
+   "where": "난바 매장",
+   "price": 965,
+   "img": "https://www.asty-kyoto.co.jp/asty_osaka/store/abbed580fe52f703c8683ca181f430b0.jpg",
+   "thumb": "https://ts4.explicit.bing.net/th?id=OIP.oy3eBGxcpOt-DuX41ByqQgHaE8&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "오모시로이 코이비토",
+   "ja": "面白い恋人",
+   "where": "오사카 기념품점",
+   "price": 750,
+   "img": "https://blog.omiyage-nippon.jp/wp-content/uploads/2023/09/1030162.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.yoX-2DzsFcJR0GpDDchdgwHaFS&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "고베 푸딩",
+   "ja": "神戸プリン",
+   "where": "고베 기념품점",
+   "price": 1000,
+   "img": "https://item-shopping.c.yimg.jp/i/n/cbland-kobe_pid-c0001_2",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.u6ioLEdF6D5tjLmOU5Q3cgHaHa&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "고베 프란츠 츠보 푸딩",
+   "ja": "神戸フランツ 魔法の壷プリン",
+   "where": "고베 매장",
+   "price": 500,
+   "img": "https://www.foodee.jp/wp/wp-content/uploads/2017/10/pudding.jpg",
+   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.403sV1ZXHfYX_PA1CpReqwHaHa&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "나마야츠하시 오타베",
+   "ja": "おたべ 生八ッ橋",
+   "where": "교토 기념품점",
+   "price": 600,
+   "img": "https://tabizine.jp/wp-content/uploads/2023/02/520005-01.jpg",
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.8vzqCPf_pWvm78-dK1rqCAHaFj&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "말블랑슈 차노카",
+   "ja": "マールブランシュ 茶の菓",
+   "where": "교토 매장",
+   "price": 1700,
+   "img": "https://www.malebranche.co.jp/wp/wp-content/uploads/2016/04/2020SS_CK_2.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.yKzJkHVyC3SWFwAduL9jwQHaDt&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "교바움",
+   "ja": "京ばあむ",
+   "where": "교토 기념품점",
+   "price": 1300,
+   "img": "https://cdn.macaro-ni.jp/image/summary/130/130560/60M1eSXtWYmrUHMZIQgMWiGKCL5fu1YFqLROh68b.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Y5v8cDprwVjehwnfrJeqVAHaE7&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "요지야 기름종이",
+   "ja": "よーじや あぶらとり紙",
+   "where": "교토 매장",
+   "price": 400,
+   "img": "https://www.leafkyoto.net/leaf/wp-content/uploads/2024/01/240111-kyoto-yojiya-1-1-1024x682.jpg",
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.7cFcn4wNJdqxDVi481aFQwHaE7&pid=15.1"
+  },
+  {
+   "cat": "kansai",
+   "ko": "도지마 롤",
+   "ja": "モンシェール 堂島ロール",
+   "where": "오사카 매장",
+   "price": 1700,
+   "img": "https://www.mon-cher.com/_img/index/_slider/ichigo_sp.jpg",
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.LQ84OqzC1WL-0CzyvIYIEgHaIf&pid=15.1"
+  }
+ ]
+}
