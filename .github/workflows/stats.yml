@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - scripts/render-dashboard.mjs
+      - scripts/render-solvedac.mjs
       - .github/workflows/stats.yml
 
 permissions:
@@ -34,6 +35,11 @@ jobs:
           # Classic PAT 필요. 기본 GITHUB_TOKEN 은 다른 저장소 정보 조회가 막힌다.
           STATS_TOKEN: ${{ secrets.STATS_PAT }}
         run: node scripts/render-dashboard.mjs stats
+
+      # solved.ac 는 Cloudflare 가 가끔 막는다. 실패해도 기존 SVG를 두고 대시보드 커밋은 진행한다.
+      - name: Render solved.ac
+        continue-on-error: true
+        run: node scripts/render-solvedac.mjs stats
 
       - name: Commit if changed
         run: |

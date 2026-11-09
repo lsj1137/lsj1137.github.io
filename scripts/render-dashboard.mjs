@@ -97,21 +97,22 @@ function summarize(user) {
 }
 
 // ── 그리기 ────────────────────────────────────────────────────
-// 담백하게: 단색 배경, 얇은 선, 무채색 잔디, 애니메이션 없음. 언어 색만 GitHub 표준색을 쓴다.
+// 담백하게: 배경·테두리·여백 없이 README에 녹아들게, 얇은 선, 무채색 잔디, 애니메이션 없음.
+// 언어 색만 GitHub 표준색을 쓴다. 배경이 투명이라 다크/라이트는 글자·선 색만 다르다.
 
 const THEMES = {
   dark: {
-    bg: '#0d1117', border: '#30363d', text: '#e6edf3', muted: '#8b949e',
+    border: '#30363d', text: '#e6edf3', muted: '#8b949e',
     heat: ['#161b22', '#2f353d', '#4b535d', '#7d8590', '#c9d1d9'],
   },
   light: {
-    bg: '#ffffff', border: '#d0d7de', text: '#1f2328', muted: '#656d76',
+    border: '#d0d7de', text: '#1f2328', muted: '#656d76',
     heat: ['#ebedf0', '#c8ccd1', '#9aa1a9', '#6e7781', '#24292f'],
   },
 };
 
 const W = 840;
-const PAD = 28;
+const PAD = 0;
 const FONT = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`;
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const fmt = (n) => n.toLocaleString('en-US');
@@ -128,7 +129,7 @@ function render(data, t) {
   const inner = W - PAD * 2;
 
   // 수치 한 줄(세로 구분선)
-  const statsTop = 92;
+  const statsTop = 66;
   const colW = inner / data.stats.length;
   const stats = data.stats.map((s, i) => {
     const x = PAD + i * colW;
@@ -140,7 +141,7 @@ function render(data, t) {
   }).join('');
 
   // 언어 비율 막대 + 한 줄 범례
-  const langTop = 196;
+  const langTop = 170;
   const shown = data.langs.reduce((a, l) => a + l.pct, 0) || 1;
   let acc = 0;
   const bar = data.langs.map((l) => {
@@ -162,11 +163,11 @@ function render(data, t) {
   for (let i = 0; i < data.days.length; i += 7) weeks.push(data.days.slice(i, i + 7));
   const cell = (inner + gap) / weeks.length - gap;
   const level = heatLevels(data.days);
-  const heatTop = 282;
+  const heatTop = 256;
   const heat = weeks.map((week, wi) => week.map((d, di) =>
     `<rect x="${(PAD + wi * (cell + gap)).toFixed(1)}" y="${(heatTop + di * (cell + gap)).toFixed(1)}" width="${cell.toFixed(1)}" height="${cell.toFixed(1)}" rx="2" fill="${t.heat[level(d.contributionCount)]}"><title>${d.date}: ${d.contributionCount}</title></rect>`,
   ).join('')).join('');
-  const H = Math.round(heatTop + 7 * (cell + gap) + PAD - gap);
+  const H = Math.round(heatTop + 7 * (cell + gap) - gap + 1);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(data.name)}'s GitHub activity">
   <style>
@@ -177,10 +178,8 @@ function render(data, t) {
     .value { font-size: 20px; font-weight: 600; }
     .label { font-size: 12px; }
   </style>
-  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="6" fill="${t.bg}" stroke="${t.border}"/>
-
-  <text x="${PAD}" y="48" class="name">${esc(data.name)}</text>
-  <text x="${PAD}" y="68" class="label muted">@${esc(data.login)}</text>
+  <text x="${PAD}" y="22" class="name">${esc(data.name)}</text>
+  <text x="${PAD}" y="42" class="label muted">@${esc(data.login)}</text>
   ${stats}
 
   <line x1="${PAD}" y1="${statsTop + 66}" x2="${W - PAD}" y2="${statsTop + 66}" stroke="${t.border}"/>
