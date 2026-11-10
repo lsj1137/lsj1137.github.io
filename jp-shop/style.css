@@ -214,6 +214,7 @@ footer p + p { margin-top: 8px; }
 #viewer {
   width: min(92vw, 480px);
   max-height: 90vh;
+  max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   padding: 0;
   border: 0;
   border-radius: 20px;
@@ -222,7 +223,7 @@ footer p + p { margin-top: 8px; }
   overflow: auto;
 }
 #viewer::backdrop { background: rgba(0, 0, 0, 0.55); }
-#viewer .photo { display: grid; place-items: center; height: min(52vh, 360px); padding: 20px; background: #f9fafb; }
+#viewer .photo { display: grid; place-items: center; height: min(45vh, 45dvh, 360px); padding: 20px; background: #f9fafb; }
 #viewer .photo img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 #viewer .photo .none { font-size: 80px; }
 #viewer .info { padding: 18px 20px 20px; }
@@ -283,6 +284,7 @@ body:has(#cartbar:not([hidden])) footer { padding-bottom: calc(96px + env(safe-a
 #cart {
   width: min(94vw, 520px);
   max-height: 88vh;
+  max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   padding: 0;
   border: 0;
   border-radius: 20px;
@@ -321,6 +323,7 @@ body:has(#cartbar:not([hidden])) footer { padding-bottom: calc(96px + env(safe-a
 #tips {
   width: min(94vw, 600px);
   max-height: 90vh;
+  max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   padding: 0;
   border: 0;
   border-radius: 20px;
