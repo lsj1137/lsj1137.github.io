@@ -18,8 +18,8 @@ const state = {
   list: [],
   cart: loadCart(),
   rate: Number(localStorage.getItem('krwPerJpy')) || 8.6,
-  // 주소 끝 #tips, #med 등으로 탭을 바로 열 수 있다
-  cat: ['tips', ...Object.keys(CATS)].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'all',
+  // 주소 끝 #med 등으로 탭을, #tips 로 팁 창을 바로 열 수 있다
+  cat: Object.keys(CATS).includes(location.hash.slice(1)) ? location.hash.slice(1) : 'all',
   sort: localStorage.getItem('jp-shop-sort') || 'default',
 };
 const saveCart = () => localStorage.setItem('jp-shop-cart', JSON.stringify(state.cart));
@@ -159,12 +159,6 @@ const SORTS = {
 };
 
 function render() {
-  const tips = state.cat === 'tips';
-  $('.caption').hidden = tips;
-  if (tips) {
-    $('#list').innerHTML = `<li class="tips">${tipsHtml()}</li>`;
-    return;
-  }
   const items = search($('#q').value).filter((it) => state.cat === 'all' || it.cat === state.cat);
   if (SORTS[state.sort]) items.sort(SORTS[state.sort]);
   $('#list').innerHTML = items.length
@@ -174,7 +168,7 @@ function render() {
 }
 
 function renderCats() {
-  $('#cats').innerHTML = [['all', '전체'], ...Object.entries(CATS).map(([k, [label]]) => [k, label]), ['tips', '면세·반입 팁']]
+  $('#cats').innerHTML = [['all', '전체'], ...Object.entries(CATS).map(([k, [label]]) => [k, label])]
     .map(([k, label]) => `<button type="button" data-cat="${k}" class="${state.cat === k ? 'on' : ''}">${label}</button>`).join('');
 }
 
@@ -332,10 +326,16 @@ $('#cats').addEventListener('click', (e) => {
   render();
   window.scrollTo({ top: 0 });
 });
-$('#q').addEventListener('input', () => {
-  // 팁 화면에서 검색하면 전체 목록으로 돌아간다
-  if (state.cat === 'tips' && $('#q').value.trim()) { state.cat = 'all'; renderCats(); }
-  render();
+$('#q').addEventListener('input', render);
+
+function openTips() {
+  $('#tips .content').innerHTML = tipsHtml();
+  $('#tips').showModal();
+  $('#tips').scrollTop = 0;
+}
+$('#tipsBtn').addEventListener('click', openTips);
+$('#tips').addEventListener('click', (e) => {
+  if (e.target === $('#tips') || e.target.closest('.close')) $('#tips').close();
 });
 $('#sort').value = state.sort;
 $('#sort').addEventListener('change', () => {
@@ -358,3 +358,4 @@ renderRate();
 render();
 renderCart();
 loadRate();
+if (location.hash === '#tips') openTips();

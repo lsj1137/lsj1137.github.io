@@ -15,7 +15,10 @@
   </head>
   <body>
     <header>
-      <h1>일본 쇼핑 필수템</h1>
+      <div class="titlebar">
+        <h1>일본 쇼핑 필수템</h1>
+        <button type="button" id="tipsBtn">면세·반입 팁</button>
+      </div>
       <form class="search" onsubmit="return false">
         <svg class="glass" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></svg>
         <input id="q" type="search" placeholder="이름으로 검색 (카베진, 휴족, ㅎㄷㄹㅂ)" autocomplete="off" enterkeyhint="search" />
@@ -50,6 +53,7 @@
 
     <dialog id="cart"><div class="content"></div></dialog>
     <dialog id="viewer"><div class="content"></div></dialog>
+    <dialog id="tips"><button type="button" class="close" aria-label="닫기">✕</button><div class="content tips"></div></dialog>
 
     <script type="module" src="app.js"></script>
   </body>
