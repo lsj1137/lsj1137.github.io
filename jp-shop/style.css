@@ -126,7 +126,13 @@ main { max-width: 640px; margin: 0 auto; padding: 0 12px; }
 }
 .pic.none { display: grid; place-items: center; font-size: 30px; mix-blend-mode: normal; }
 .body { flex: 1; min-width: 0; }
-.name { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.name { display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 600; }
+.name span:last-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 한국 반입 금지·주의 배지 */
+.tag { flex: none; padding: 1px 6px; border-radius: 6px; font-size: 11px; font-weight: 700; line-height: 1.6; }
+.tag.ban { background: #ffeceb; color: var(--red); }
+.tag.caution { background: #fff4e0; color: #d97706; }
+.row.banned .pic { opacity: 0.45; }
 .sub { margin-top: 1px; font-size: 12px; color: var(--faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pp { display: flex; align-items: baseline; gap: 6px; margin-top: 6px; white-space: nowrap; }
 .pp b { font-size: 16px; font-weight: 700; }
@@ -253,3 +259,30 @@ body:has(#cartbar:not([hidden])) footer { padding-bottom: calc(96px + env(safe-a
 #cart .items .yen { flex: none; color: var(--sub); }
 #cart .del { flex: none; width: 32px; height: 32px; border: 0; border-radius: 8px; background: none; color: var(--faint); font-size: 14px; cursor: pointer; }
 #cart .note { margin-top: 10px; font-size: 12px; color: var(--faint); }
+
+/* 상세 화면 경고 */
+#viewer .alert { margin-top: 14px; padding: 12px 14px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
+#viewer .alert b { display: block; margin-bottom: 2px; font-size: 15px; }
+#viewer .alert.ban { background: #ffeceb; color: #b4232b; }
+#viewer .alert.caution { background: #fff4e0; color: #9a5b00; }
+#cart .items .tag { margin-right: 4px; vertical-align: 1px; }
+#cart .note.ban { color: var(--red); }
+
+/* 면세·반입 팁 */
+.caption[hidden] { display: none; }
+#list .tips { padding: 6px 18px 20px; font-size: 14px; line-height: 1.6; }
+.tips section { padding: 16px 0; }
+.tips section + section { border-top: 1px solid #e5e8eb; }
+.tips h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.02em; }
+.tips h2 small { margin-left: 4px; font-size: 13px; font-weight: 500; color: var(--sub); }
+.tips .lead { color: var(--text); }
+.tips ol, .tips ul { margin: 8px 0 0; padding-left: 20px; }
+.tips li + li { margin-top: 6px; }
+.tips .callout { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: #ffeceb; color: #8a1c22; }
+.tips .callout ul { margin-top: 4px; }
+.tips .tip { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: var(--blue-soft); color: #1b4fa0; }
+.tips table { width: 100%; margin-top: 4px; border-collapse: collapse; }
+.tips th, .tips td { padding: 9px 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.tips th { width: 64px; color: var(--sub); font-weight: 500; }
+.tips .src { padding-top: 14px; border-top: 1px solid #e5e8eb; font-size: 12px; color: var(--faint); }
+.tips .src a { color: inherit; }

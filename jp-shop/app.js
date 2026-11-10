@@ -18,7 +18,8 @@ const state = {
   list: [],
   cart: loadCart(),
   rate: Number(localStorage.getItem('krwPerJpy')) || 8.6,
-  cat: 'all',
+  // 주소 끝 #tips, #med 등으로 탭을 바로 열 수 있다
+  cat: ['tips', ...Object.keys(CATS)].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'all',
   sort: localStorage.getItem('jp-shop-sort') || 'default',
 };
 const saveCart = () => localStorage.setItem('jp-shop-cart', JSON.stringify(state.cart));
@@ -67,19 +68,88 @@ document.addEventListener('error', (e) => {
 const PLUS = '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>';
 const CHECK = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>';
 
+// 한국 반입 금지·주의 표시 (warn: { level: 'ban' | 'caution', reason })
+const TAG = { ban: '반입금지', caution: '주의' };
+const tag = (it) => (it.warn ? `<span class="tag ${it.warn.level}">${TAG[it.warn.level]}</span>` : '');
+
 function row(it) {
   return `
-  <li class="row${inCart(it) ? ' in' : ''}" data-id="${it.id}">
+  <li class="row${inCart(it) ? ' in' : ''}${it.warn?.level === 'ban' ? ' banned' : ''}" data-id="${it.id}">
     <div class="head">
       ${pic(it)}
       <div class="body">
-        <p class="name">${esc(it.ko)}</p>
+        <p class="name">${tag(it)}<span>${esc(it.ko)}</span></p>
         <p class="sub">${esc(it.ja)}</p>
         <p class="pp"><b>${yen(it.price)}</b><span class="krw">${won(it.price * state.rate)}</span><span class="where">${esc(it.where)}</span></p>
       </div>
       <button type="button" class="pick" aria-label="${inCart(it) ? '목록에서 빼기' : '쇼핑 목록에 담기'}">${inCart(it) ? CHECK : PLUS}</button>
     </div>
   </li>`;
+}
+
+// ---------- 면세·반입 팁 ----------
+// 규정은 2026년 11월 기준. 바뀌면 이 함수만 고친다.
+function tipsHtml() {
+  const banned = state.list.filter((it) => it.warn?.level === 'ban');
+  const link = (u, t) => `<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
+  return `
+  <section>
+    <h2>🇯🇵 일본 면세 <small>2026.11.1부터 환급 방식</small></h2>
+    <p class="lead">매장에서 바로 깎아 주던 면세가 끝났어요. <b>세금까지 다 내고 사고, 출국할 때 공항에서 돌려받는</b> 방식이에요.</p>
+    <ol>
+      <li><b>같은 날 같은 매장에서 세금 제외 ¥5,000 이상</b>(세금 포함 약 ¥5,500)이면 대상이에요. 화장품·식품 같은 소모품과 일반 물건을 합쳐도 되고, 소모품 ¥50만 상한은 없어졌어요.</li>
+      <li>계산할 때 <b>여권을 보여 주고</b> 세금 포함 가격으로 결제해요. 환급받을 방법(카드 등)을 이때 등록하는 매장이 많아요.</li>
+      <li>출국하는 날 <b>짐을 부치기 전에</b> 출국장 세관 키오스크에서 여권을 스캔해요. GREEN이면 끝, RED면 물건을 보여 줘야 해요. <b>짐을 먼저 부치면 환급을 못 받아요.</b></li>
+      <li>세관 확인이 끝나면 등록한 방법으로 소비세(10%, 식품 8%)를 돌려받아요. 수수료를 떼는 곳도 있어요.</li>
+    </ol>
+    <div class="callout">
+      <p><b>꼭 지킬 것</b></p>
+      <ul>
+        <li>영수증 한 장에 적힌 물건 중 <b>하나라도 없으면 그 영수증 전체</b>가 환급이 안 돼요. 여행 중에 먹거나 쓸 건 따로 계산하세요.</li>
+        <li>면세로 산 화장품·과자·약은 <b>출국 전에 뜯거나 쓰면 안 돼요.</b></li>
+        <li>산 날부터 <b>90일 안에</b> 출국해야 해요.</li>
+        <li>공항 세관 줄이 길 수 있으니 <b>평소보다 일찍</b> 가세요.</li>
+      </ul>
+    </div>
+    <p class="tip">💡 드럭스토어는 한 곳에서 몰아 사서 ¥5,000을 넘기는 게 유리해요. 돈키호테처럼 여러 층인 매장은 계산대 한 곳에서 합쳐 계산하면 돼요.</p>
+  </section>
+
+  <section>
+    <h2>🇰🇷 한국 입국 면세 한도</h2>
+    <table>
+      <tr><th>기본</th><td>1인 <b>$800</b> 이하</td></tr>
+      <tr><th>술</th><td>병 수 상관없이 <b>합계 2L · $400</b> 이하 (기본 한도와 별도)</td></tr>
+      <tr><th>담배</th><td>궐련 200개비 (별도)</td></tr>
+      <tr><th>향수</th><td>100mL (별도)</td></tr>
+      <tr><th>의약품</th><td>본인이 쓸 만큼, 품목당 <b>6병(통) 이하</b> 또는 3개월분</td></tr>
+    </table>
+    <p class="tip">💡 한도를 넘으면 입국할 때 <b>자진 신고</b>하세요. 관세 30%를 깎아 주고(최대 20만 원), 신고 안 하고 걸리면 가산세 40%가 붙어요.</p>
+  </section>
+
+  <section>
+    <h2>🚫 한국에 가져올 수 없는 것</h2>
+    <ul>
+      <li><b>마약류 성분이 든 일본 약</b> — 알릴이소프로필아세틸요소(이브 등 진통제), 코데인·디히드로코데인(파브론 골드 등 감기약), 슈도에페드린(벤자블록 L 등). 제품 이름이 아니라 <b>성분</b>으로 판단하니 같은 브랜드도 제품마다 달라요.</li>
+      <li><b>고기가 든 식품</b> — 부타망·만두·슈마이·육포·소시지·햄·고기 든 레토르트 카레 등 축산물은 검역증명서 없이 반입 금지예요. 걸리면 과태료가 수백만 원이에요(2026년 고기맛 컵라면 500만 원 부과 사례).</li>
+      <li><b>컵라면은 건더기를 보세요</b> — 고기 건더기(다진 고기·차슈)가 든 컵누들·UFO·페양구 등은 금지, 분말·액상 스프만 든 봉지라면은 가능해요. 애매하면 입국할 때 검역 신고하세요.</li>
+      <li><b>양귀비씨(けしの実)가 든 식품</b> — 케시모치, 일부 시치미 등. 마약류로 분류돼요. 대마씨(麻の実)가 든 시치미도 압수될 수 있어요.</li>
+      <li><b>생과일·채소·씨앗·흙·살아 있는 식물</b></li>
+    </ul>
+    ${banned.length ? `<p class="lead">이 목록에서 반입 금지로 표시한 제품 <b>${banned.length}개</b>: ${banned.map((it) => esc(it.ko)).join(', ')}</p>` : ''}
+  </section>
+
+  <section>
+    <h2>✈️ 짐 쌀 때</h2>
+    <ul>
+      <li><b>칼·가위·면도날</b>은 부치는 짐으로. 기내 반입 안 돼요.</li>
+      <li><b>보조배터리·리튬 배터리</b>는 반드시 들고 타는 짐으로. 2026년 4월부터 1인 2개·160Wh 이하만 되고, 기내에서 충전·사용은 금지예요.</li>
+      <li><b>표백제(하이터·카비키라 등)</b>는 기내·위탁 모두 비행기에 실을 수 없어요.</li>
+      <li><b>100mL 넘는 액체·젤·스프레이</b>(화장수, 샴푸, 술 등)는 부치는 짐으로.</li>
+      <li>면세 환급받을 물건은 <b>세관 확인 뒤에</b> 부치는 짐에 넣으세요.</li>
+    </ul>
+  </section>
+
+  <p class="src">출처: ${link('https://pievat.com/tourist-contents/tax-free-system-changes-2026', 'PIE VAT 면세 개정 해설')} · ${link('https://www.japan.travel/ko/kr/topic/2026nyeon-11weol-1ilbuteo-sobise-myeonse-jedoga-byeongyeongdoebnida/', 'JNTO')} · ${link('https://matcha-jp.com/ko/27460', 'MATCHA')} · ${link('https://www.customs.go.kr', '관세청')} · ${link('https://www.qia.go.kr', '농림축산검역본부')} · ${link('https://airport.kr/ap_ko/916/subview.do', '인천공항 검역 안내')} · ${link('https://www.molit.go.kr/USR/policyTarget/dtl.jsp?idx=209', '국토교통부 항공 반입금지')} · ${link('https://whic.mofa.go.kr/whic/safety/info_view.jsp?idx=16961', '영사관 일본 의약품 안내')}. 규정은 바뀔 수 있으니 출발 전에 한 번 더 확인하세요.</p>`;
 }
 
 const SORTS = {
@@ -89,6 +159,12 @@ const SORTS = {
 };
 
 function render() {
+  const tips = state.cat === 'tips';
+  $('.caption').hidden = tips;
+  if (tips) {
+    $('#list').innerHTML = `<li class="tips">${tipsHtml()}</li>`;
+    return;
+  }
   const items = search($('#q').value).filter((it) => state.cat === 'all' || it.cat === state.cat);
   if (SORTS[state.sort]) items.sort(SORTS[state.sort]);
   $('#list').innerHTML = items.length
@@ -98,7 +174,7 @@ function render() {
 }
 
 function renderCats() {
-  $('#cats').innerHTML = [['all', '전체'], ...Object.entries(CATS).map(([k, [label]]) => [k, label])]
+  $('#cats').innerHTML = [['all', '전체'], ...Object.entries(CATS).map(([k, [label]]) => [k, label]), ['tips', '면세·반입 팁']]
     .map(([k, label]) => `<button type="button" data-cat="${k}" class="${state.cat === k ? 'on' : ''}">${label}</button>`).join('');
 }
 
@@ -139,10 +215,13 @@ function renderCart() {
   bar.querySelector('.flag').textContent = bought === items.length ? '다 샀어요' : bought ? `${bought}개 샀음` : '';
 }
 
+// 반입 금지 품목은 한 번 더 확인하고 담는다 (일본에서 쓸 용도일 수도 있어서 막지는 않는다)
 function toggleCart(it) {
   if (inCart(it)) delete state.cart[it.ja];
+  else if (it.warn?.level === 'ban' && !confirm(`${it.ko}은(는) 한국에 가져갈 수 없는 품목이에요.\n${it.warn.reason}\n\n일본에서 쓸 용도로 담을까요?`)) return false;
   else state.cart[it.ja] = false;
   saveCart();
+  return true;
 }
 
 function openCart() {
@@ -162,12 +241,13 @@ function openCart() {
     <ul class="items">
       ${items.map((it) => `
         <li class="${state.cart[it.ja] ? 'bought' : ''}" data-ja="${esc(it.ja)}">
-          <label><input type="checkbox" ${state.cart[it.ja] ? 'checked' : ''} /><span class="nm">${esc(it.ko)} <small>${esc(it.where)}</small></span></label>
+          <label><input type="checkbox" ${state.cart[it.ja] ? 'checked' : ''} /><span class="nm">${tag(it)}${esc(it.ko)} <small>${esc(it.where)}</small></span></label>
           <span class="yen">${yen(it.price)}</span>
           <button type="button" class="del" aria-label="빼기">✕</button>
         </li>`).join('')}
     </ul>
-    <p class="note">한 매장에서 세금 제외 ¥5,000(세금 포함 약 ¥5,500) 이상이면 면세 환급 대상이에요. 체크하면 산 것으로 표시돼요.</p>
+    ${items.some((it) => it.warn?.level === 'ban') ? `<p class="note ban">반입금지 표시가 있는 물건은 한국에 가져갈 수 없어요. 일본에서 다 쓰거나 두고 오세요.</p>` : ''}
+    <p class="note">한 매장에서 세금 제외 ¥5,000(세금 포함 약 ¥5,500) 이상이면 면세 환급 대상이에요. 환급받을 물건은 수하물을 부치기 전에 공항 세관 확인을 받아야 해요. 체크하면 산 것으로 표시돼요.</p>
     <div class="actions">
       <button type="button" data-act="clear">비우기</button>
       <button type="button" class="primary" data-act="close">닫기</button>
@@ -208,6 +288,7 @@ function openViewer(it) {
     <div class="info">
       <p class="ja">${esc(it.ja)}</p>
       <p class="ko">${esc(it.ko)}</p>
+      ${it.warn ? `<p class="alert ${it.warn.level}"><b>${it.warn.level === 'ban' ? '한국에 가져갈 수 없어요' : '가져갈 때 주의'}</b>${esc(it.warn.reason)}</p>` : ''}
       <p class="ask">これはどこにありますか？<small>이거 어디에 있나요? — 점원에게 이 화면을 보여 주세요</small></p>
       <dl>
         <dt>참고가</dt><dd>${yen(it.price)} · ${won(it.price * state.rate)}</dd>
@@ -224,7 +305,7 @@ $('#viewer').addEventListener('click', (e) => {
   if (e.target === $('#viewer')) return $('#viewer').close();
   const b = e.target.closest('button[data-id]');
   if (!b) return;
-  toggleCart(state.list[+b.dataset.id]);
+  if (!toggleCart(state.list[+b.dataset.id])) return;
   render();
   renderCart();
   $('#viewer').close();
@@ -236,7 +317,7 @@ $('#list').addEventListener('click', (e) => {
   if (!li) return;
   const it = state.list[+li.dataset.id];
   if (e.target.closest('.pick')) {
-    toggleCart(it);
+    if (!toggleCart(it)) return;
     li.outerHTML = row(it);
     renderCart();
     return;
@@ -251,7 +332,11 @@ $('#cats').addEventListener('click', (e) => {
   render();
   window.scrollTo({ top: 0 });
 });
-$('#q').addEventListener('input', render);
+$('#q').addEventListener('input', () => {
+  // 팁 화면에서 검색하면 전체 목록으로 돌아간다
+  if (state.cat === 'tips' && $('#q').value.trim()) { state.cat = 'all'; renderCats(); }
+  render();
+});
 $('#sort').value = state.sort;
 $('#sort').addEventListener('change', () => {
   state.sort = $('#sort').value;

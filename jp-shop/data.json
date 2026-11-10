@@ -8,7 +8,11 @@
    "where": "드럭스토어",
    "price": 1000,
    "img": "https://www.forest.co.jp/forest/goods/images/p/186650.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.JmAldL28LpZMCTV0ckLUBwHaFj&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.JmAldL28LpZMCTV0ckLUBwHaFj&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "알릴이소프로필아세틸요소 함유(국내 향정신성의약품) — 한국 반입 금지, 세관 압수·폐기"
+   }
   },
   {
    "cat": "med",
@@ -98,7 +102,11 @@
    "where": "드럭스토어",
    "price": 2500,
    "img": "https://r.r10s.jp/ran/img/1001/0004/987/306/045/255/10010004987306045255_1.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.v59Jm7Nu8x2lu_AImnbs9gHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.v59Jm7Nu8x2lu_AImnbs9gHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "디히드로코데인인산염 함유(마약류 성분) — 한국 반입 금지"
+   }
   },
   {
    "cat": "med",
@@ -152,7 +160,11 @@
    "where": "드럭스토어",
    "price": 1800,
    "img": "https://item-shopping.c.yimg.jp/i/n/sakuraiyakuhin-store_iya1121",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.xh6qxE2Qt08txgIYqpFN_wHaEK&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.xh6qxE2Qt08txgIYqpFN_wHaEK&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "알릴이소프로필아세틸요소 함유(국내 향정신성의약품) — 한국 반입 금지"
+   }
   },
   {
    "cat": "med",
@@ -161,7 +173,11 @@
    "where": "드럭스토어",
    "price": 1600,
    "img": "https://item-shopping.c.yimg.jp/i/f/akakabeshop_4987107619013-4",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.kfI4cf2EgW5is8pmISHLjAHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.kfI4cf2EgW5is8pmISHLjAHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "알릴이소프로필아세틸요소 함유(일반 록소닌S와 달리) — 한국 반입 금지"
+   }
   },
   {
    "cat": "med",
@@ -179,7 +195,11 @@
    "where": "드럭스토어",
    "price": 1300,
    "img": "https://item-shopping.c.yimg.jp/i/n/h-lohaco_3416445",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.MiN_xFzhIvH1_JkZgypUKAHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.MiN_xFzhIvH1_JkZgypUKAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "브로모발레릴요소(진정·의존성 성분) 함유 — 국내 마약류 지정 여부 미확인, 세관 압수 가능성 있어 구매 자제 권장"
+   }
   },
   {
    "cat": "med",
@@ -521,7 +541,11 @@
    "where": "드럭스토어",
    "price": 1800,
    "img": "https://m.media-amazon.com/images/I/512g9EBzH4L._SL500_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.c3WX9edl5E3dVC_KwCXLtQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.c3WX9edl5E3dVC_KwCXLtQHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "디히드로코데인인산염 함유(마약류 성분) — 한국 반입 금지"
+   }
   },
   {
    "cat": "med",
@@ -530,7 +554,11 @@
    "where": "드럭스토어",
    "price": 2000,
    "img": "https://shop.r10s.jp/fujiyaku/cabinet/item01/4987107609205.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP._uRZ60HPsh1eOy-q9HRMuAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP._uRZ60HPsh1eOy-q9HRMuAHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "디히드로코데인인산염 함유(마약류 성분) — 한국 반입 금지"
+   }
   },
   {
    "cat": "med",
@@ -539,7 +567,11 @@
    "where": "드럭스토어",
    "price": 1800,
    "img": "https://r.r10s.jp/ran/img/1001/0004/987/107/625/465/10010004987107625465_1.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.rr6ceURRF_tCHgW-n8L-qQHaEo&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.rr6ceURRF_tCHgW-n8L-qQHaEo&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "덱스트로메토르판 함유 — 영사관 안내상 제한 성분, 세관 확인 대상"
+   }
   },
   {
    "cat": "med",
@@ -548,7 +580,11 @@
    "where": "드럭스토어",
    "price": 1800,
    "img": "https://m.media-amazon.com/images/I/91f6-00V53L._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.Urz9kTqrGJ953MC3w_uRnQHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.Urz9kTqrGJ953MC3w_uRnQHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "디히드로코데인+슈도에페드린 함유 — 한국 반입 금지"
+   }
   },
   {
    "cat": "med",
@@ -1142,7 +1178,11 @@
    "where": "드럭스토어·돈키호테·마트",
    "price": 900,
    "img": "https://item-shopping.c.yimg.jp/i/f/isshusouden-2_40079986",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.A4rOP8GqTZJuvUhQbVN1vQHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.A4rOP8GqTZJuvUhQbVN1vQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "beauty",
@@ -1916,7 +1956,11 @@
    "where": "드럭스토어",
    "price": 300,
    "img": "https://item-shopping.c.yimg.jp/i/l/tsuruha_10102102",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.IvPngV7qaqMppMEEweC35AHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.IvPngV7qaqMppMEEweC35AHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2006,7 +2050,11 @@
    "where": "돈키호테·마트",
    "price": 600,
    "img": "https://m.media-amazon.com/images/I/81A7r9hr09L._AC_SL1500_.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.wOKM3V2-fNT-PmBOmUfq8AHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.wOKM3V2-fNT-PmBOmUfq8AHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2042,7 +2090,11 @@
    "where": "드럭스토어",
    "price": 550,
    "img": "https://m.media-amazon.com/images/I/61ksh+0r0TL.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.z7ro7IERHlOwc6XXyQPPZAHaH8&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.z7ro7IERHlOwc6XXyQPPZAHaH8&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2105,7 +2157,11 @@
    "where": "드럭스토어",
    "price": 350,
    "img": "https://item-shopping.c.yimg.jp/i/f/benkyoannexx_so-teikei-4901616011014set2",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.nu7kBOFKqPqfWhS5-witvgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.nu7kBOFKqPqfWhS5-witvgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2123,7 +2179,11 @@
    "where": "드럭스토어",
    "price": 650,
    "img": "https://tshop.r10s.jp/rakutensokuhaimart/cabinet/rakuten24/wb367/4903301259367.jpg?fitin=880:880",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.mddq-J25gvbjabigwx4nEQHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.mddq-J25gvbjabigwx4nEQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2150,7 +2210,11 @@
    "where": "드럭스토어",
    "price": 550,
    "img": "https://item-shopping.c.yimg.jp/i/n/tominari-store_4901872446889_1_d_20260117120801",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP._pJGj2hj9ibUeWzbNnjSUgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP._pJGj2hj9ibUeWzbNnjSUgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "화장품 에어로졸 — 위탁, 1개 0.5L·총 2L 이하"
+   }
   },
   {
    "cat": "daily",
@@ -2159,7 +2223,11 @@
    "where": "드럭스토어",
    "price": 700,
    "img": "https://m.media-amazon.com/images/I/51cLeMGN0mL.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.6-OEgXW0N6-icO-qa-vdnwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.6-OEgXW0N6-icO-qa-vdnwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2186,7 +2254,11 @@
    "where": "드럭스토어",
    "price": 1000,
    "img": "https://item-shopping.c.yimg.jp/i/n/wellness-web_10117775",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.PLg13YIsK3sIa57WSwC1rwHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.PLg13YIsK3sIa57WSwC1rwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2195,7 +2267,11 @@
    "where": "드럭스토어",
    "price": 950,
    "img": "https://item-shopping.c.yimg.jp/i/n/rakushindenki_4987241146031",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.N97dHvBTpC-M4jH-kxr-TgHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.N97dHvBTpC-M4jH-kxr-TgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2240,7 +2316,11 @@
    "where": "드럭스토어",
    "price": 1300,
    "img": "https://shop.r10s.jp/energy/cabinet/10589223/4901301281357.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.48hxYbfhoULLTGA0dZShkQHaHN&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.48hxYbfhoULLTGA0dZShkQHaHN&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2321,7 +2401,11 @@
    "where": "드럭스토어",
    "price": 500,
    "img": "https://m.media-amazon.com/images/I/71HfUbVV-WL._AC_SL1280_.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ZyUoijuE7rP8xzydsH7ezAHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ZyUoijuE7rP8xzydsH7ezAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2330,7 +2414,11 @@
    "where": "드럭스토어",
    "price": 800,
    "img": "https://item-shopping.c.yimg.jp/i/n/pigeon-shop_1024561",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.z5GCaFaurja8TQG7326efgHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.z5GCaFaurja8TQG7326efgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2348,7 +2436,11 @@
    "where": "드럭스토어",
    "price": 950,
    "img": "https://item-shopping.c.yimg.jp/i/n/benkyoannexx_cs-teikei-4987133014516set3-yk",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.A_-G88qqa7XOZyBj0PNp1QHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.A_-G88qqa7XOZyBj0PNp1QHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2366,7 +2458,11 @@
    "where": "돈키호테·마트",
    "price": 550,
    "img": "https://jp.images-monotaro.com/Monotaro3/pi/full/mono51078642-161222-02.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.HL5fUbEeOX07h6U6sHaKugAAAA&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.HL5fUbEeOX07h6U6sHaKugAAAA&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "표백제 — 비행기에 실을 수 없음(기내·위탁 모두)"
+   }
   },
   {
    "cat": "daily",
@@ -2375,7 +2471,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://item-shopping.c.yimg.jp/i/n/hc7_4903301306818",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.H1a1UMaXtYuR1g70rQjqoQHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.H1a1UMaXtYuR1g70rQjqoQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2384,7 +2484,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://shop.r10s.jp/fansfactory/cabinet/images193/4901301422484-3set_1.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.krru1HRo159DJwVftYDcLAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.krru1HRo159DJwVftYDcLAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2393,7 +2497,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://m.media-amazon.com/images/I/712xrbRaSFL.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.m1OHWxpaOsOpKx8uLqyJDgHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.m1OHWxpaOsOpKx8uLqyJDgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2402,7 +2510,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://shop.r10s.jp/scbmitsuokun1972/cabinet/household/detergent_sftnr/4902407124340.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.gxHUteeYi6IrxjeL51L78gHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.gxHUteeYi6IrxjeL51L78gHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2429,7 +2541,11 @@
    "where": "드럭스토어",
    "price": 1300,
    "img": "https://item-shopping.c.yimg.jp/i/n/soukai_4984194322284_2",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.kZ27RywY1O7U94ot8q3XyQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.kZ27RywY1O7U94ot8q3XyQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2438,7 +2554,11 @@
    "where": "드럭스토어",
    "price": 1500,
    "img": "https://shop.r10s.jp/maeda/cabinet/i005/clcar-03-0-01.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.VyX8aGygDTGJ3qrdybWclQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.VyX8aGygDTGJ3qrdybWclQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2447,7 +2567,11 @@
    "where": "드럭스토어",
    "price": 700,
    "img": "https://shop.r10s.jp/rakuten24/cabinet/825/4901301452825.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.STlVQZS7kEfwESqgYbK9vgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.STlVQZS7kEfwESqgYbK9vgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2456,7 +2580,11 @@
    "where": "드럭스토어",
    "price": 1200,
    "img": "https://shop.r10s.jp/akakabeshop/cabinet/06890175/4987107615923.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.WLK7OhiTGmSa_FB30UQ-OAHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.WLK7OhiTGmSa_FB30UQ-OAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2465,7 +2593,11 @@
    "where": "드럭스토어",
    "price": 400,
    "img": "https://item-shopping.c.yimg.jp/i/n/himejiryutsuu_101-08140",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.v9S9b4gbUT340NncnqMMIwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.v9S9b4gbUT340NncnqMMIwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2501,7 +2633,11 @@
    "where": "드럭스토어",
    "price": 1000,
    "img": "https://r.r10s.jp/g/gran_img/ht/PEE/OGR/QPW/7PJ/992b9bfb9c4f0e4b5dabfe86a07a4689.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.jB2wxfv-lIFSX8G9otA38QHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.jB2wxfv-lIFSX8G9otA38QHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2510,7 +2646,11 @@
    "where": "드럭스토어",
    "price": 1200,
    "img": "https://m.media-amazon.com/images/I/715jfLaV1-L._AC_SL1500_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.YjBa4Z0auJyN-bvY-AbdvwHaIf&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.YjBa4Z0auJyN-bvY-AbdvwHaIf&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "카트리지 면도기는 기내 가능, 여분 날 주의"
+   }
   },
   {
    "cat": "daily",
@@ -2519,7 +2659,11 @@
    "where": "드럭스토어",
    "price": 1000,
    "img": "https://shop.r10s.jp/thinkrich/cabinet/sale2_muryou_05/s05026.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.FCTxZwYzljgkkIdbwKKZIQHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.FCTxZwYzljgkkIdbwKKZIQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2537,7 +2681,11 @@
    "where": "돈키호테·마트",
    "price": 350,
    "img": "https://item-shopping.c.yimg.jp/i/f/yyshop_4987072063866-16",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.pjWAT5aNUoh2Dj6kSQKcmQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.pjWAT5aNUoh2Dj6kSQKcmQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2546,7 +2694,11 @@
    "where": "돈키호테·마트",
    "price": 350,
    "img": "https://shop.r10s.jp/sundrug/cabinet/56/4987072036358.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.b4dFgWVqMmW9EqAQDAZbfAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.b4dFgWVqMmW9EqAQDAZbfAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "가연성 탈취 스프레이 — 항공 반입 불가 가능"
+   }
   },
   {
    "cat": "daily",
@@ -2555,7 +2707,11 @@
    "where": "드럭스토어",
    "price": 700,
    "img": "https://shop.r10s.jp/fujiyaku/cabinet/item11/4903301378426.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.IWpD3FdjaI5botWURnVUmQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.IWpD3FdjaI5botWURnVUmQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2564,7 +2720,11 @@
    "where": "드럭스토어",
    "price": 350,
    "img": "https://m.media-amazon.com/images/I/71I1yZe1fSL.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.WScE1gKrVmcNKQPpH1JMvAHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.WScE1gKrVmcNKQPpH1JMvAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2627,7 +2787,11 @@
    "where": "돈키호테·마트",
    "price": 500,
    "img": "https://m.media-amazon.com/images/I/71XqXdEg-mS._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ZJyE96Y76Mj65nW-3DsjDgHaOO&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ZJyE96Y76Mj65nW-3DsjDgHaOO&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "표백제 — 비행기에 실을 수 없음(기내·위탁 모두)"
+   }
   },
   {
    "cat": "daily",
@@ -2636,7 +2800,11 @@
    "where": "드럭스토어",
    "price": 850,
    "img": "https://m.media-amazon.com/images/I/71FLulJdeHL._AC_SL1500_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.2xKPDm3BjUdcBwpdJ4gWvwAAAA&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.2xKPDm3BjUdcBwpdJ4gWvwAAAA&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "화장품 에어로졸 — 위탁, 1개 0.5L·총 2L 이하"
+   }
   },
   {
    "cat": "daily",
@@ -2672,7 +2840,11 @@
    "where": "드럭스토어",
    "price": 800,
    "img": "https://r.r10s.jp/ran/img/1001/0004/901/080/504/210/10010004901080504210_1.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.uC81THL4j_qufZPyZpAUSwHaOQ&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.uC81THL4j_qufZPyZpAUSwHaOQ&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "daily",
@@ -2735,7 +2907,11 @@
    "where": "공항",
    "price": 900,
    "img": "https://www.royce.com/images/goods/2054_3.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.hmtLAkOZEu7aXIqVKAlJ8QHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.hmtLAkOZEu7aXIqVKAlJ8QHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "snack",
@@ -3608,7 +3784,11 @@
    "where": "편의점",
    "price": 240,
    "img": "https://m.media-amazon.com/images/I/71sJYeS6vBL._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ZFoBbuv26UBkoMjuEwv_MAHaIr&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ZFoBbuv26UBkoMjuEwv_MAHaIr&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "달걀 건더기·육류 엑기스 — 검역 신고 권장"
+   }
   },
   {
    "cat": "food",
@@ -3644,7 +3824,11 @@
    "where": "돈키호테·마트",
    "price": 400,
    "img": "https://m.media-amazon.com/images/I/61pVIxS5BAL._AC_SY550_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.DRvr0GLhQzrS5KRA9oKRugAAAA&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.DRvr0GLhQzrS5KRA9oKRugAAAA&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "달걀 가공품·액체 100ml 초과 — 위탁·신고"
+   }
   },
   {
    "cat": "food",
@@ -3653,7 +3837,11 @@
    "where": "돈키호테·마트",
    "price": 300,
    "img": "https://cdn.shopify.com/s/files/1/0674/2582/9179/files/ajipon360.png?v=1698128620",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.1188dvLH0eqHvViGdOxZ6AHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.1188dvLH0eqHvViGdOxZ6AHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3680,7 +3868,11 @@
    "where": "돈키호테·마트",
    "price": 300,
    "img": "https://cdn.sbfoods.co.jp/products/18559_1_xl.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.0NoaePdMxUAiEYxB9PUf7gHaJw&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.0NoaePdMxUAiEYxB9PUf7gHaJw&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "우지·돈지 함유 카레루 — 검역 신고 권장"
+   }
   },
   {
    "cat": "food",
@@ -3707,7 +3899,11 @@
    "where": "돈키호테·마트",
    "price": 1900,
    "img": "https://item-shopping.c.yimg.jp/i/n/syurui-net_1210",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.yCuwCcRDfCWh8DVo0RHxFAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.yCuwCcRDfCWh8DVo0RHxFAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3716,7 +3912,11 @@
    "where": "백화점·주류점",
    "price": 1900,
    "img": "https://baseec-img-mng.akamaized.net/images/item/origin/9044027d783b4e98a5ddc3ffc7ee9f29.jpg?imformat=generic",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.v1JOsPmhGX2FzxKQy5llhQHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.v1JOsPmhGX2FzxKQy5llhQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3725,7 +3925,11 @@
    "where": "돈키호테·마트",
    "price": 1000,
    "img": "https://www.choya.co.jp/cms/wp-content/uploads/2019/02/TC_shigoku_650ml_L.png",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.3AM-amd6gUsN-5j36Mw4YAHaGJ&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.3AM-amd6gUsN-5j36Mw4YAHaGJ&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3734,7 +3938,11 @@
    "where": "편의점",
    "price": 240,
    "img": "https://m.media-amazon.com/images/I/81Ix1bNimpL.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.ZrZuoyExBMsrfrwH3AmNfwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.ZrZuoyExBMsrfrwH3AmNfwHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지·닭 다진고기 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3743,7 +3951,11 @@
    "where": "편의점",
    "price": 240,
    "img": "https://m.media-amazon.com/images/I/61XAb2QLazL._AC_SX522_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ptkuXSCXCKht53-pS7XOeAHaIt&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ptkuXSCXCKht53-pS7XOeAHaIt&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지·닭 다진고기 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3752,7 +3964,11 @@
    "where": "편의점",
    "price": 240,
    "img": "https://item-shopping.c.yimg.jp/i/n/tanomail_7612190",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Aifb7io6y0ZlrashHOQLUAHaJe&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Aifb7io6y0ZlrashHOQLUAHaJe&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지·닭 다진고기 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3761,7 +3977,11 @@
    "where": "편의점",
    "price": 260,
    "img": "https://m.media-amazon.com/images/I/81dTHUC-r5L._AC_SL1500_.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.Elwv-7vTIaVoA_aR6uhFcgHaF3&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.Elwv-7vTIaVoA_aR6uhFcgHaF3&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지고기 건더기(味付豚肉) — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3770,7 +3990,11 @@
    "where": "편의점(세븐일레븐)",
    "price": 260,
    "img": "https://r.r10s.jp/ran/img/1001/0004/902/105/252/734/10010004902105252734_1.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.tpkVrmnYX9Leo7n0Ehn9LAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.tpkVrmnYX9Leo7n0Ehn9LAHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지고기 건더기 추정 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3779,7 +4003,11 @@
    "where": "편의점(세븐일레븐)",
    "price": 300,
    "img": "https://m.media-amazon.com/images/I/51F3F80sNnL._AC_.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.G_9lLfMvYRJhLJTz3sjYtQHaFp&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.G_9lLfMvYRJhLJTz3sjYtQHaFp&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "고기 소보로 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3815,7 +4043,11 @@
    "where": "편의점",
    "price": 250,
    "img": "https://item-shopping.c.yimg.jp/i/n/ikkomon-marche_t04902885013983",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.CKA88IoYTZT2cCEHhnLmHQHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.CKA88IoYTZT2cCEHhnLmHQHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "닭고기 다진육 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3887,7 +4119,11 @@
    "where": "편의점",
    "price": 300,
    "img": "https://cdn.nissin.com/gr-documents/attachments/news_post_images/495/0d7ede7df0101a49/original/7553.png?1471826853",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.AxFLL8bypHR2Y4qplDbJuwHaHM&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.AxFLL8bypHR2Y4qplDbJuwHaHM&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "소고기 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3896,7 +4132,11 @@
    "where": "돈키호테·마트",
    "price": 300,
    "img": "https://m.media-amazon.com/images/I/71gJMYZul4L.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.vywqkZSE6GroPnNrs7adOQHaDz&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.vywqkZSE6GroPnNrs7adOQHaDz&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "우지·돈지 함유 카레루 — 검역 신고 권장"
+   }
   },
   {
    "cat": "food",
@@ -3905,7 +4145,11 @@
    "where": "돈키호테·마트",
    "price": 300,
    "img": "https://m.media-amazon.com/images/I/71DAXjzg6jL._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.Vq_hybcYGTXm_nVxhHt3AAHaDt&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.Vq_hybcYGTXm_nVxhHt3AAHaDt&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "우지·돈지 함유 카레루 — 검역 신고 권장"
+   }
   },
   {
    "cat": "food",
@@ -3914,7 +4158,11 @@
    "where": "돈키호테·마트",
    "price": 300,
    "img": "https://m.media-amazon.com/images/I/51zi+A2kCgL._SL500_.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.it2To3kqoWW241KTssmgBgHaD_&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.it2To3kqoWW241KTssmgBgHaD_&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "우지·돈지 함유 카레루 — 검역 신고 권장"
+   }
   },
   {
    "cat": "food",
@@ -3923,7 +4171,11 @@
    "where": "돈키호테·마트",
    "price": 250,
    "img": "https://m.media-amazon.com/images/I/716FZHJH8XL._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.rI1HpSX0wAQN5s9WEDrw8QHaEK&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.rI1HpSX0wAQN5s9WEDrw8QHaEK&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "소고기 든 레토르트 카레 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3932,7 +4184,11 @@
    "where": "무인양품",
    "price": 390,
    "img": "https://assets.st-note.com/img/1729533368-3Yl1OGFR5nEs26dMUmDrv49j.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.z_FMRSbzP_YKLvkwy3EZNAHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.z_FMRSbzP_YKLvkwy3EZNAHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "닭고기 든 레토르트 카레 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3941,7 +4197,11 @@
    "where": "돈키호테·마트",
    "price": 150,
    "img": "https://item-shopping.c.yimg.jp/i/n/umairadotcom_0300105",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.N5pTRFJ4l2JL151o5qrtrgHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.N5pTRFJ4l2JL151o5qrtrgHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "닭고기 통조림 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -3959,7 +4219,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://m.media-amazon.com/images/I/71CEtr9yzKL.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.L1_koBHVWHoLapd2vjnbFQHaTY&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.L1_koBHVWHoLapd2vjnbFQHaTY&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3968,7 +4232,11 @@
    "where": "돈키호테·마트",
    "price": 400,
    "img": "https://m.media-amazon.com/images/I/61tIV09HPOL.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.Ptp0Muzd5pgeikFQHtiyfQHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.Ptp0Muzd5pgeikFQHtiyfQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3977,7 +4245,11 @@
    "where": "돈키호테·마트",
    "price": 350,
    "img": "https://item-shopping.c.yimg.jp/i/n/k-relight_90-4901515122484cs",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.mua74S5G-MJOgvFeQO_AnAHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.mua74S5G-MJOgvFeQO_AnAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3986,7 +4258,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://m.media-amazon.com/images/I/71kw8Hg6+6L._AC_SX679_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.qs0PaQkSjogd6qZfMJ53PQHaTb&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.qs0PaQkSjogd6qZfMJ53PQHaTb&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -3995,7 +4271,11 @@
    "where": "돈키호테·마트",
    "price": 400,
    "img": "https://m.media-amazon.com/images/I/71HYjmERwaL.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.s_P9JNq7FR17NFV0TjtI7wHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.s_P9JNq7FR17NFV0TjtI7wHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4004,7 +4284,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://item-shopping.c.yimg.jp/i/l/misonoya_a316-12",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.dqFG-BnYSuZHMaMBoYqgXgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.dqFG-BnYSuZHMaMBoYqgXgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4013,7 +4297,11 @@
    "where": "돈키호테·마트",
    "price": 350,
    "img": "https://item-shopping.c.yimg.jp/i/n/umaimon-oumi_60950030-40",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.uvv2Nd0NPJaheen8CXh-kwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.uvv2Nd0NPJaheen8CXh-kwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4022,7 +4310,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://m.media-amazon.com/images/I/71HVG+Pi+JL._AC_SL1293_.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.UDhZ03p5mK2nUdc5jY5JGwHaKC&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.UDhZ03p5mK2nUdc5jY5JGwHaKC&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4031,7 +4323,11 @@
    "where": "돈키호테·마트",
    "price": 350,
    "img": "https://item-shopping.c.yimg.jp/i/n/soukai_4902880010086",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.-Qli0niYFVUWYhkrcksymgHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.-Qli0niYFVUWYhkrcksymgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4049,7 +4345,11 @@
    "where": "돈키호테·마트",
    "price": 180,
    "img": "https://tshop.r10s.jp/e-sbfoods/cabinet/goods/home/110prev_main/14047.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.TNwzbzADFhSIwpPUaiKUCgHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.TNwzbzADFhSIwpPUaiKUCgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "대마씨(麻の実) 함유 — 신고 권장·압수 가능"
+   }
   },
   {
    "cat": "food",
@@ -4067,7 +4367,11 @@
    "where": "돈키호테·마트",
    "price": 250,
    "img": "https://sm.r10s.jp/item/12/4902820020212.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.QMf8eLLI6lgHAt6fVcdTLgHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.QMf8eLLI6lgHAt6fVcdTLgHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "닭·돼지 다진고기 함유 소스 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "food",
@@ -4193,7 +4497,11 @@
    "where": "편의점",
    "price": 180,
    "img": "https://item-shopping.c.yimg.jp/i/f/sakenetyafoo_inryoocha-pet2",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.lOFfoDSw_A2NzRWxQHqV4AHaFj&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.lOFfoDSw_A2NzRWxQHqV4AHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4211,7 +4519,11 @@
    "where": "주류점",
    "price": 8000,
    "img": "https://shop.r10s.jp/kawachi/cabinet/products12/4901777270688a.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.C9EbqzVbL_lxHIFa1gqwoQHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.C9EbqzVbL_lxHIFa1gqwoQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4220,7 +4532,11 @@
    "where": "주류점",
    "price": 8000,
    "img": "https://item-shopping.c.yimg.jp/i/n/liquor_yamazaki916",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.6-yAYcBLv8Tfp8XIn1uDBgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.6-yAYcBLv8Tfp8XIn1uDBgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4229,7 +4545,11 @@
    "where": "주류점",
    "price": 8000,
    "img": "https://item-shopping.c.yimg.jp/i/n/nakaya1_100100029",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.NWIAJvpufkIY5SOqDDfOFAHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.NWIAJvpufkIY5SOqDDfOFAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4238,7 +4558,11 @@
    "where": "주류점",
    "price": 5000,
    "img": "https://item-shopping.c.yimg.jp/i/n/noahshoping_4901777279421",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.posAvr_5HHeNKX-_0qb2WgHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.posAvr_5HHeNKX-_0qb2WgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4247,7 +4571,11 @@
    "where": "주류점",
    "price": 5000,
    "img": "https://item-shopping.c.yimg.jp/i/n/sonoma-store_4901777329843box",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.l6k_iqI-6OLBBgcInZig7AHaFj&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.l6k_iqI-6OLBBgcInZig7AHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4256,7 +4584,11 @@
    "where": "돈키호테·마트·주류점",
    "price": 3200,
    "img": "https://m.media-amazon.com/images/I/91K4f7T210L._AC_SL1500_.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.mxGsCy6rP5h9lZNYIbAgWgHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.mxGsCy6rP5h9lZNYIbAgWgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4265,7 +4597,11 @@
    "where": "돈키호테·마트",
    "price": 1300,
    "img": "https://item-shopping.c.yimg.jp/i/n/izmic-ec_541835-01",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.V1O8SGqgcJ_UEaAL5AW4QQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.V1O8SGqgcJ_UEaAL5AW4QQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4274,7 +4610,11 @@
    "where": "주류점",
    "price": 3900,
    "img": "https://m.media-amazon.com/images/I/61plj24E02L._AC_SL1500_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.DF3_JLwAqmmVyrQWEY3GJgHaHX&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.DF3_JLwAqmmVyrQWEY3GJgHaHX&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4283,7 +4623,11 @@
    "where": "주류점",
    "price": 5500,
    "img": "https://item-shopping.c.yimg.jp/i/n/felicity-y_2-taketsuru-rn",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.BQ0QWhnnxChDm_ZqFR_D3AHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.BQ0QWhnnxChDm_ZqFR_D3AHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4292,7 +4636,11 @@
    "where": "주류점",
    "price": 7700,
    "img": "https://item-shopping.c.yimg.jp/i/n/sakayabic_540494-01",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.Ey8TQ6J2SPDrI9Hz5MXYFAHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.Ey8TQ6J2SPDrI9Hz5MXYFAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4301,7 +4649,11 @@
    "where": "주류점",
    "price": 7700,
    "img": "https://item-shopping.c.yimg.jp/i/n/veritas_yanwmyj0",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.f6CZ62v8d3OG_iyofGNbBgHaJ4&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.f6CZ62v8d3OG_iyofGNbBgHaJ4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4310,7 +4662,11 @@
    "where": "돈키호테·마트·주류점",
    "price": 3000,
    "img": "https://item-shopping.c.yimg.jp/i/n/fujimatsu-store_120290_1",
-   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.87zh_pw79k3D7gXnHVGyaQHaHa&pid=15.1"
+   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.87zh_pw79k3D7gXnHVGyaQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4319,7 +4675,11 @@
    "where": "돈키호테·마트",
    "price": 1700,
    "img": "https://m.media-amazon.com/images/I/71qB0hT7LOL._AC_SL1500_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.DO3oCXIck6dgh-7jNw7OPgHaVS&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.DO3oCXIck6dgh-7jNw7OPgHaVS&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4328,7 +4688,11 @@
    "where": "주류점",
    "price": 4500,
    "img": "https://item-shopping.c.yimg.jp/i/n/brasilsaketen_0615",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.ZathRvU_s65emWM3eZrN9QHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.ZathRvU_s65emWM3eZrN9QHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4337,7 +4701,11 @@
    "where": "주류점",
    "price": 3000,
    "img": "https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0505/users/b266515093da9dd9345cd15036936d9fc32165fe/i-img899x1200-1714899884ieuyoe440924.jpg",
-   "thumb": "https://ts1.explicit.bing.net/th?id=OIP.QgHPl1jPRXMVDCkFRX7dFQHaJ4&pid=15.1"
+   "thumb": "https://ts1.explicit.bing.net/th?id=OIP.QgHPl1jPRXMVDCkFRX7dFQHaJ4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4346,7 +4714,11 @@
    "where": "주류점",
    "price": 5500,
    "img": "https://item-shopping.c.yimg.jp/i/n/umaimon-oumi_30147350-24",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.GSzwvdUGaASZoiPsvpbgyAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.GSzwvdUGaASZoiPsvpbgyAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4355,7 +4727,11 @@
    "where": "주류점",
    "price": 1500,
    "img": "https://item-shopping.c.yimg.jp/i/n/niigata-jizake_318",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.L_AcX_-rRP7dz4FNsKpmEQHaJ4&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.L_AcX_-rRP7dz4FNsKpmEQHaJ4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4364,7 +4740,11 @@
    "where": "주류점",
    "price": 1700,
    "img": "https://item-shopping.c.yimg.jp/i/n/mikami-saketen_hakkaisantokuhon720",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.9f4b6aPd-878WRRrZ_U_JQHaI4&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.9f4b6aPd-878WRRrZ_U_JQHaI4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4373,7 +4753,11 @@
    "where": "주류점",
    "price": 1700,
    "img": "https://item-shopping.c.yimg.jp/i/f/izumise_012903",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.TASnkGxchFStkY4nn_ZaRgHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.TASnkGxchFStkY4nn_ZaRgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4382,7 +4766,11 @@
    "where": "돈키호테·마트",
    "price": 500,
    "img": "https://item-shopping.c.yimg.jp/i/n/likaman_010363",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.EMtphaMDUx38k4ycsb1pmwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.EMtphaMDUx38k4ycsb1pmwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4391,7 +4779,11 @@
    "where": "돈키호테·마트",
    "price": 1200,
    "img": "https://item-shopping.c.yimg.jp/i/n/shochuya-doragon_8-006",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.HD1_vmsv1Mjs4gJYsRzscgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.HD1_vmsv1Mjs4gJYsRzscgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4400,7 +4792,11 @@
    "where": "돈키호테·마트",
    "price": 1000,
    "img": "https://item-shopping.c.yimg.jp/i/n/isshusouden-2_15158721",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.iI2Txo4AtclqKN4dJu_kxgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.iI2Txo4AtclqKN4dJu_kxgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4409,7 +4805,11 @@
    "where": "주류점",
    "price": 1700,
    "img": "https://item-shopping.c.yimg.jp/i/n/zenjin-shop_4901777350298-6",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.3jLuE3kbMEId9qINnUf0mgHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.3jLuE3kbMEId9qINnUf0mgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4418,7 +4818,11 @@
    "where": "돈키호테·마트",
    "price": 900,
    "img": "https://item-shopping.c.yimg.jp/i/n/umaimon-oumi_36793020-12",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.zj-LOO4YYDUSnVkxIqGIygHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.zj-LOO4YYDUSnVkxIqGIygHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4427,7 +4831,11 @@
    "where": "편의점",
    "price": 160,
    "img": "https://m.media-amazon.com/images/I/51S3eO-gwGL.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.p7cdEGRMN7esc8r2nBTCMQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.p7cdEGRMN7esc8r2nBTCMQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4436,7 +4844,11 @@
    "where": "편의점",
    "price": 180,
    "img": "https://liquordepot.itembox.design/product/012/000000001258/000000001258-01-l.jpg?t=20240829164932",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.6wx64NwCkwlZm4Z8uvXrVwHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.6wx64NwCkwlZm4Z8uvXrVwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4445,7 +4857,11 @@
    "where": "편의점",
    "price": 250,
    "img": "https://item-shopping.c.yimg.jp/i/n/chaplin_4901004057051",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Nlk20bsDF4OUsDKXJP6PIwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Nlk20bsDF4OUsDKXJP6PIwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4454,7 +4870,11 @@
    "where": "편의점",
    "price": 250,
    "img": "https://item-shopping.c.yimg.jp/i/n/plat-sake_b8961",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.3vbiyC4IR9026VkJXR76kQAAAA&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.3vbiyC4IR9026VkJXR76kQAAAA&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4463,7 +4883,11 @@
    "where": "편의점",
    "price": 300,
    "img": "https://item-shopping.c.yimg.jp/i/n/smilespoon_1770243-0012",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.zA-iPrzJBJYHXGttSzU3hAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.zA-iPrzJBJYHXGttSzU3hAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4472,7 +4896,11 @@
    "where": "편의점",
    "price": 270,
    "img": "https://m.media-amazon.com/images/I/61XX3ErC83L.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.SiPLAxszE4ARLPtLcfjJJwHaOG&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.SiPLAxszE4ARLPtLcfjJJwHaOG&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4481,7 +4909,11 @@
    "where": "편의점",
    "price": 240,
    "img": "https://item-shopping.c.yimg.jp/i/n/yytakuhaibin-2_83000005_8",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.xFa_FY03sEni4JXLKZD8fQHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.xFa_FY03sEni4JXLKZD8fQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4490,7 +4922,11 @@
    "where": "편의점",
    "price": 160,
    "img": "https://m.media-amazon.com/images/I/719d9Pf1P4L._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.TRcz8KA7mJDf-1vg4_wungHaJ4&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.TRcz8KA7mJDf-1vg4_wungHaJ4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "food",
@@ -4499,7 +4935,11 @@
    "where": "편의점",
    "price": 240,
    "img": "https://item-shopping.c.yimg.jp/i/n/quickfactory_5907_3_d_20250215155351",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.lyFjqTwBQPqcqZMb_ZBxRAHaIs&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.lyFjqTwBQPqcqZMb_ZBxRAHaIs&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "소고기 다진육 건더기 — 반입 금지(검역)"
+   }
   },
   {
    "cat": "goods",
@@ -4517,7 +4957,11 @@
    "where": "가전양판점·백화점",
    "price": 4000,
    "img": "https://tshop.r10s.jp/hitline/cabinet/item/1/66/4580614310666_1.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.5HEQ8wqEVy_D5s1iV53nlwHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.5HEQ8wqEVy_D5s1iV53nlwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "칼 — 기내 반입 불가, 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4634,7 +5078,11 @@
    "where": "돈키호테·마트",
    "price": 800,
    "img": "https://item-shopping.c.yimg.jp/i/n/fish-y_ina20231008-388",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.Q3LcDqhVzOQi_3u0jhqw7AHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.Q3LcDqhVzOQi_3u0jhqw7AHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "반려동물 간식 — 검역 대상, 입국 시 신고"
+   }
   },
   {
    "cat": "goods",
@@ -4652,7 +5100,11 @@
    "where": "100엔샵",
    "price": 1100,
    "img": "https://earbuds.aspsv.com/wp-content/uploads/2024/11/g273-4スケルトン１０-1.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.AbzmevoPaiZjixzCcdUizQHaEK&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.AbzmevoPaiZjixzCcdUizQHaEK&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "리튬배터리 내장 — 기내 휴대 권장"
+   }
   },
   {
    "cat": "goods",
@@ -4679,7 +5131,11 @@
    "where": "교토 니시키시장",
    "price": 20000,
    "img": "https://static.mercdn.net/item/detail/orig/photos/m78523954630_1.jpg?1729944475",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.yKiTbfbWDYf3RLmKN1Lr1gHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.yKiTbfbWDYf3RLmKN1Lr1gHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "칼 — 기내 반입 불가, 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4688,7 +5144,11 @@
    "where": "도구야스지",
    "price": 9000,
    "img": "https://item-shopping.c.yimg.jp/i/n/seisuke-hamono_06837_2",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.n7spQnyfXCrBN92G4iuX_QHaJ4&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.n7spQnyfXCrBN92G4iuX_QHaJ4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "칼 — 기내 반입 불가, 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4697,7 +5157,11 @@
    "where": "가전양판점",
    "price": 1800,
    "img": "https://tshop.r10s.jp/book/cabinet/0340/4549980710340_1_2.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.TYKsH_u_YjPhW0Qwtn-U5AHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.TYKsH_u_YjPhW0Qwtn-U5AHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "여분 충전지 — 기내 휴대·단자 절연"
+   }
   },
   {
    "cat": "goods",
@@ -4859,7 +5323,11 @@
    "where": "가전양판점·백화점",
    "price": 13000,
    "img": "https://static.mercdn.net/item/detail/orig/photos/m30707133548_1.jpg?1751718520",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.BB9Vyzan3AKXVznN81jR8gHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.BB9Vyzan3AKXVznN81jR8gHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "칼 — 기내 반입 불가, 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4868,7 +5336,11 @@
    "where": "가전양판점·백화점",
    "price": 8000,
    "img": "https://item-shopping.c.yimg.jp/i/n/discovery-shop_f-503_2",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.hY9t5wSfkQ47j4kUXQbxWgHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.hY9t5wSfkQ47j4kUXQbxWgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "칼 — 기내 반입 불가, 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4877,7 +5349,11 @@
    "where": "가전양판점",
    "price": 3500,
    "img": "https://item-shopping.c.yimg.jp/i/n/seikatsukukan_f161",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.mApk9c7_uxDlpTcuzu4srwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.mApk9c7_uxDlpTcuzu4srwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "칼 — 기내 반입 불가, 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4886,7 +5362,11 @@
    "where": "가전양판점·잡화점",
    "price": 1500,
    "img": "https://item-shopping.c.yimg.jp/i/n/royal3000_g261",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ztXLn86Er7h54Ftp2nxDmwHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ztXLn86Er7h54Ftp2nxDmwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "가위(날 6cm 초과) — 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -4904,7 +5384,11 @@
    "where": "잡화점",
    "price": 600,
    "img": "https://shop.r10s.jp/murphyshop/cabinet/goods/kanda/kai/tpeeler_thum.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.gGSihEgqOdPMJjVnMMBWAwHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.gGSihEgqOdPMJjVnMMBWAwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "필러 칼날 — 위탁수하물 권장"
+   }
   },
   {
    "cat": "goods",
@@ -4940,7 +5424,11 @@
    "where": "백화점",
    "price": 8000,
    "img": "https://item-shopping.c.yimg.jp/i/n/karinhonpo2951_2540",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Oe3BpfLpTc27QNIwbMacXwHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.Oe3BpfLpTc27QNIwbMacXwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "목제품(삼나무) — 미도장품은 식물검역 신고"
+   }
   },
   {
    "cat": "goods",
@@ -4967,7 +5455,11 @@
    "where": "교토 차 전문점",
    "price": 3500,
    "img": "https://item-shopping.c.yimg.jp/i/n/sikkiya_tys001",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.PE5RCli9sF6cN6QH0h434QHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.PE5RCli9sF6cN6QH0h434QHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "대나무 공예품 — 미가공이면 식물검역 신고"
+   }
   },
   {
    "cat": "goods",
@@ -5048,7 +5540,11 @@
    "where": "돈키호테·마트",
    "price": 350,
    "img": "https://item-shopping.c.yimg.jp/i/f/y-lohaco_p683222",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.QVRgXBK3H7nD0yg9g_7eoAHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.QVRgXBK3H7nD0yg9g_7eoAHaHa&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "표백제 — 비행기에 실을 수 없음(기내·위탁 모두)"
+   }
   },
   {
    "cat": "goods",
@@ -5057,7 +5553,11 @@
    "where": "돈키호테·마트",
    "price": 400,
    "img": "https://m.media-amazon.com/images/I/512LUfQbaDL._AC_SL1280_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.m2Kde70yejm-5Be5WkVjGAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.m2Kde70yejm-5Be5WkVjGAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -5066,7 +5566,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://m.media-amazon.com/images/I/71rEsh5rK-L._AC_SL1000_.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.eHTRcbfaNDcAWd8Zx9YGGAHaJ4&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.eHTRcbfaNDcAWd8Zx9YGGAHaJ4&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -5075,7 +5579,11 @@
    "where": "돈키호테·마트",
    "price": 450,
    "img": "https://shop.r10s.jp/matinozakka/cabinet/04001897/img64493459.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.GG0f9BtUGVLfK-5wt8eDBgHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.GG0f9BtUGVLfK-5wt8eDBgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -5102,7 +5610,11 @@
    "where": "돈키호테·마트",
    "price": 700,
    "img": "https://m.media-amazon.com/images/I/719gajxrGoL._AC_SL1500_.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.5nABEhSHpnp4rAnkyhLG0wHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.5nABEhSHpnp4rAnkyhLG0wHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "goods",
@@ -5255,7 +5767,11 @@
    "where": "로프트·문구점·잡화점",
    "price": 2500,
    "img": "https://m.media-amazon.com/images/I/61gUOecISqL._AC_SX466_.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.9jdGlBDF4o3wzkc9nW8HUAAAAA&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.9jdGlBDF4o3wzkc9nW8HUAAAAA&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "가연성 용액 디퓨저 — 항공 반입 제한 가능"
+   }
   },
   {
    "cat": "goods",
@@ -5309,7 +5825,11 @@
    "where": "가전양판점",
    "price": 25000,
    "img": "https://m.media-amazon.com/images/I/71pLQDu8roL._AC_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.usH92s7fas2TI8Cqi2Ub2gHaFO&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.usH92s7fas2TI8Cqi2Ub2gHaFO&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "리튬배터리 내장 — 기내 휴대 권장"
+   }
   },
   {
    "cat": "goods",
@@ -5885,7 +6405,11 @@
    "where": "로프트·문구점",
    "price": 550,
    "img": "https://item-shopping.c.yimg.jp/i/n/officeland_8346062_7",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.n2f1oANXw_MzSFxBY6cPAwHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.n2f1oANXw_MzSFxBY6cPAwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "가위(날 6cm 초과) — 위탁수하물로"
+   }
   },
   {
    "cat": "stationery",
@@ -6308,7 +6832,11 @@
    "where": "오사카역·난바 매장",
    "price": 440,
    "img": "https://www.551horai.co.jp/asset/img/index/image/slide_1_pc.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.WRgSKTJL5ATxBO3ls7thOQHaEg&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.WRgSKTJL5ATxBO3ls7thOQHaEg&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지고기 소 — 한국 반입 금지(검역)"
+   }
   },
   {
    "cat": "kansai",
@@ -6317,7 +6845,11 @@
    "where": "난바 매장",
    "price": 965,
    "img": "https://www.asty-kyoto.co.jp/asty_osaka/store/abbed580fe52f703c8683ca181f430b0.jpg",
-   "thumb": "https://ts4.explicit.bing.net/th?id=OIP.oy3eBGxcpOt-DuX41ByqQgHaE8&pid=15.1"
+   "thumb": "https://ts4.explicit.bing.net/th?id=OIP.oy3eBGxcpOt-DuX41ByqQgHaE8&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "유통기한 짧음·냉장 권장 — 당일~수일"
+   }
   },
   {
    "cat": "kansai",
@@ -6335,7 +6867,11 @@
    "where": "고베 기념품점",
    "price": 1000,
    "img": "https://item-shopping.c.yimg.jp/i/n/cbland-kobe_pid-c0001_2",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.u6ioLEdF6D5tjLmOU5Q3cgHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.u6ioLEdF6D5tjLmOU5Q3cgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 푸딩 — 유통기한 짧음, 기내는 젤류 제한"
+   }
   },
   {
    "cat": "kansai",
@@ -6344,7 +6880,11 @@
    "where": "고베 매장",
    "price": 500,
    "img": "https://www.foodee.jp/wp/wp-content/uploads/2017/10/pudding.jpg",
-   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.403sV1ZXHfYX_PA1CpReqwHaHa&pid=15.1"
+   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.403sV1ZXHfYX_PA1CpReqwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 푸딩 — 유통기한 짧음, 기내는 젤류 제한"
+   }
   },
   {
    "cat": "kansai",
@@ -6353,7 +6893,11 @@
    "where": "교토 기념품점",
    "price": 600,
    "img": "https://tabizine.jp/wp-content/uploads/2023/02/520005-01.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.8vzqCPf_pWvm78-dK1rqCAHaFj&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.8vzqCPf_pWvm78-dK1rqCAHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자 — 유통기한 짧음(약 1주 내외)"
+   }
   },
   {
    "cat": "kansai",
@@ -6389,7 +6933,11 @@
    "where": "오사카 매장",
    "price": 1700,
    "img": "https://www.mon-cher.com/_img/index/_slider/ichigo_sp.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.LQ84OqzC1WL-0CzyvIYIEgHaIf&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.LQ84OqzC1WL-0CzyvIYIEgHaIf&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "유통기한 짧음·냉장 권장 — 당일~수일"
+   }
   },
   {
    "cat": "kansai",
@@ -6398,7 +6946,11 @@
    "where": "교토 매장·교토역",
    "price": 1620,
    "img": "https://item-shopping.c.yimg.jp/i/n/q-toworld_ajm01-ay",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.pswQQifsELV7aakWN89FPAHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.pswQQifsELV7aakWN89FPAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자 — 유통기한 짧음(약 1주 내외)"
+   }
   },
   {
    "cat": "kansai",
@@ -6407,7 +6959,11 @@
    "where": "교토 매장·교토역",
    "price": 1300,
    "img": "https://m.media-amazon.com/images/I/51STdmIsg7S._AC_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.6t0-LM4-h2EDIR0p4EXO-AHaHN&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.6t0-LM4-h2EDIR0p4EXO-AHaHN&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "kansai",
@@ -6416,7 +6972,11 @@
    "where": "교토 매장",
    "price": 1000,
    "img": "https://blog.omiyage-nippon.jp/wp-content/uploads/2023/09/1020776-1024x731.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ASYJ1HhYdJfodcbgCxcDxgHaFS&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.ASYJ1HhYdJfodcbgCxcDxgHaFS&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -6434,7 +6994,11 @@
    "where": "오사카 매장",
    "price": 1100,
    "img": "https://prtimes.jp/i/12783/1/ogp/d12783-1-422232-0.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.AaIwVR7SxNKjqr2L1UZXIwHaFj&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.AaIwVR7SxNKjqr2L1UZXIwHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "유통기한 짧음·냉장 권장 — 당일~수일"
+   }
   },
   {
    "cat": "kansai",
@@ -6479,7 +7043,11 @@
    "where": "오사카 매장·백화점",
    "price": 650,
    "img": "https://www.chidoriya.jp/assets/img/item/mitarashi/img_buy_35th.png",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.KlTNfYK20uk7MwrXJ9SO0wAAAA&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.KlTNfYK20uk7MwrXJ9SO0wAAAA&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -6515,7 +7083,11 @@
    "where": "사카이 매장·백화점",
    "price": 800,
    "img": "https://www.keshimochi.com/library/56f3a596a440490f66271433/56f8a3e802510002138d1837.png",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.6ByrjC3tA0vjRmBAuAmUYQHaEg&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.6ByrjC3tA0vjRmBAuAmUYQHaEg&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "양귀비씨(けしの実) 토핑 — 한국 반입 금지(마약류)"
+   }
   },
   {
    "cat": "kansai",
@@ -6524,7 +7096,11 @@
    "where": "오사카 슈퍼·백화점",
    "price": 900,
    "img": "https://room.r10s.jp/d/strg/ctrl/22/8d2f8d8134584984b26f0a0a99bcf0d787350602.30.9.22.3.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.GSFFxPyIAVR4r4YxoCzeoQHaHa&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.GSFFxPyIAVR4r4YxoCzeoQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "kansai",
@@ -6551,7 +7127,11 @@
    "where": "드럭스토어",
    "price": 900,
    "img": "https://item-shopping.c.yimg.jp/i/f/isshusouden-2_40079986",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.A4rOP8GqTZJuvUhQbVN1vQHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.A4rOP8GqTZJuvUhQbVN1vQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "kansai",
@@ -6560,7 +7140,11 @@
    "where": "오사카역·난바 매장",
    "price": 420,
    "img": "https://item-shopping.c.yimg.jp/i/n/qolca_shu3set_2",
-   "thumb": "https://ts4.explicit.bing.net/th?id=OIP.LGpftWi_y5BMG9q6D2hrBgHaFQ&pid=15.1"
+   "thumb": "https://ts4.explicit.bing.net/th?id=OIP.LGpftWi_y5BMG9q6D2hrBgHaFQ&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "돼지고기 소 — 한국 반입 금지(검역)"
+   }
   },
   {
    "cat": "kansai",
@@ -6569,7 +7153,11 @@
    "where": "고베 매장·백화점",
    "price": 430,
    "img": "https://www.morozoff.co.jp/quality/pudding/img/main_img01.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.FuIWwEwkdiyA0MHrTk4J3gHaDH&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.FuIWwEwkdiyA0MHrTk4J3gHaDH&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 푸딩 — 유통기한 짧음, 기내는 젤류 제한"
+   }
   },
   {
    "cat": "kansai",
@@ -6614,7 +7202,11 @@
    "where": "고베 매장",
    "price": 450,
    "img": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f7db7c18-58c1-4d7f-9544-141c06f89c90.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.V8Nn47GmpQ4hBP7N7TYK6QHaEm&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.V8Nn47GmpQ4hBP7N7TYK6QHaEm&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "kansai",
@@ -6659,7 +7251,11 @@
    "where": "고베 슈퍼·기념품점",
    "price": 500,
    "img": "https://m.media-amazon.com/images/I/71v0mcYG++L._AC_SX679_.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.V-NxzU2zpi7w2CIjn_3_aQHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.V-NxzU2zpi7w2CIjn_3_aQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "kansai",
@@ -6686,7 +7282,11 @@
    "where": "나라 매장·간사이공항",
    "price": 450,
    "img": "https://daibutsu-purin.com/wp-content/uploads/2024/04/yamatopurin-01.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.bGXbS7gvBYDDPx-MzDfVBgHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.bGXbS7gvBYDDPx-MzDfVBgHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 푸딩 — 유통기한 짧음, 기내는 젤류 제한"
+   }
   },
   {
    "cat": "kansai",
@@ -6704,7 +7304,11 @@
    "where": "나라 매장",
    "price": 150,
    "img": "https://cdn-ak.f.st-hatena.com/images/fotolife/d/doraji16/20190527/20190527221238.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.1Prk9eHxpRFm08m9yC9W9wHaDl&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.1Prk9eHxpRFm08m9yC9W9wHaDl&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -6713,7 +7317,11 @@
    "where": "나라 매장·오사카역",
    "price": 1200,
    "img": "https://info.travel-kansai.com/wp-content/uploads/2023/06/18-1-2-1024x827.webp",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.q6PgcBuyFGa2PIKKdCBXUQHaF-&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.q6PgcBuyFGa2PIKKdCBXUQHaF-&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -6812,7 +7420,11 @@
    "where": "시가 매장",
    "price": 200,
    "img": "https://cart.fc2img.com/user_img/tsuruyapan/339a969979ad5bedcf2d6d92fc94da58.JPG",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.SU0XDLdkraRoxpj-YyLULwHaFj&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.SU0XDLdkraRoxpj-YyLULwHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -6821,7 +7433,11 @@
    "where": "교토 기념품점",
    "price": 600,
    "img": "https://item-shopping.c.yimg.jp/i/n/regend_2305-001070_2",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.lpabF8g9hchXndK9PJSvxwHaHa&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.lpabF8g9hchXndK9PJSvxwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자 — 유통기한 짧음(약 1주 내외)"
+   }
   },
   {
    "cat": "kansai",
@@ -6893,7 +7509,11 @@
    "where": "교토 매장",
    "price": 250,
    "img": "https://www.takashimaya.co.jp/broccoli/htdocs_preview/public/article_body/13/13_1_20230208180556/20241017092658/broccolidata/index_files/resources/zup6wvz2k2js3m4f-061ec02408edd5e9a274d9bc6b1c5160.jpg",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.umSYLqtL0iW0tUvnLjBmdAHaGB&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.umSYLqtL0iW0tUvnLjBmdAHaGB&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -6902,7 +7522,11 @@
    "where": "우지·교토 매장",
    "price": 1200,
    "img": "https://stat.ameba.jp/user_images/20200709/02/sweets-yonemama/9f/a5/j/o1080098114786232797.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.N2fLd9E3JW73f1XTesXxdwHaGu&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.N2fLd9E3JW73f1XTesXxdwHaGu&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 푸딩 — 유통기한 짧음, 기내는 젤류 제한"
+   }
   },
   {
    "cat": "kansai",
@@ -6947,7 +7571,11 @@
    "where": "교토 매장·백화점",
    "price": 1000,
    "img": "https://item-shopping.c.yimg.jp/i/n/otoriyose-kyoto_hrks01",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.JRI7PsbeyCpImX_mUF_CVQHaJ4&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.JRI7PsbeyCpImX_mUF_CVQHaJ4&pid=15.1",
+   "warn": {
+    "level": "ban",
+    "reason": "양귀비씨(けしの実) 함유 — 한국 반입 금지(마약류)"
+   }
   },
   {
    "cat": "kansai",
@@ -6956,7 +7584,11 @@
    "where": "교토 매장",
    "price": 700,
    "img": "https://m.media-amazon.com/images/I/61jPjrpfuUL.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.HlQj81U8fgdZ4ny7jBMcrwHaHa&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.HlQj81U8fgdZ4ny7jBMcrwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "대마씨(麻の実) 함유 — 신고 권장·압수 가능"
+   }
   },
   {
    "cat": "kansai",
@@ -6965,7 +7597,11 @@
    "where": "교토 매장·백화점",
    "price": 1080,
    "img": "https://item-shopping.c.yimg.jp/i/l/bon-appetit-world_91080-19-6-6_1",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.khybVF6YtpL0LfxizU4rggHaFj&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.khybVF6YtpL0LfxizU4rggHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "kansai",
@@ -6974,7 +7610,11 @@
    "where": "교토 매장·교토역",
    "price": 1000,
    "img": "https://item-shopping.c.yimg.jp/i/n/y-nishiri_0010",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.nick2C-Nv4691THuSp3ifwHaE8&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.nick2C-Nv4691THuSp3ifwHaE8&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "kansai",
@@ -6983,7 +7623,11 @@
    "where": "교토 매장·교토역",
    "price": 700,
    "img": "https://shop.r10s.jp/doishibazuke/cabinet/namashiba1.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.BPgXEOw-kQ_iK6lxehTCSgHaFj&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.BPgXEOw-kQ_iK6lxehTCSgHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "kansai",
@@ -7073,7 +7717,11 @@
    "where": "오사카 매장",
    "price": 600,
    "img": "https://cdn-ak.f.st-hatena.com/images/fotolife/f/frankie17/20220510/20220510085841.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.Ag_XNvedS7cngRBuEZsviQHaFj&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.Ag_XNvedS7cngRBuEZsviQHaFj&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -7118,7 +7766,11 @@
    "where": "교토 기념품점",
    "price": 600,
    "img": "https://item-shopping.c.yimg.jp/i/n/regend_annnamasirokuro",
-   "thumb": "https://ts2.mm.bing.net/th?id=OIP.MUo3q-uMnovrQqMwBUmSrQHaHC&pid=15.1"
+   "thumb": "https://ts2.mm.bing.net/th?id=OIP.MUo3q-uMnovrQqMwBUmSrQHaHC&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자 — 유통기한 짧음(약 1주 내외)"
+   }
   },
   {
    "cat": "kansai",
@@ -7145,7 +7797,11 @@
    "where": "교토 매장·교토역",
    "price": 1300,
    "img": "https://m.media-amazon.com/images/I/41lWfb8BgqL._AC_SX679_.jpg",
-   "thumb": "https://ts4.mm.bing.net/th?id=OIP.6IwG_LA4lWgzg8yTz9NGNwHaGT&pid=15.1"
+   "thumb": "https://ts4.mm.bing.net/th?id=OIP.6IwG_LA4lWgzg8yTz9NGNwHaGT&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "냉장 보관 — 유통기한 짧음"
+   }
   },
   {
    "cat": "kansai",
@@ -7172,7 +7828,11 @@
    "where": "교토 매장·백화점",
    "price": 1500,
    "img": "https://m.media-amazon.com/images/I/71h9fP1U1NL._AC_SL1500_.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.1BauuQbeH9bNLAAvEPHRcQHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.1BauuQbeH9bNLAAvEPHRcQHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "주류 면세 1인 2L·$400 이내, 위탁수하물로"
+   }
   },
   {
    "cat": "kansai",
@@ -7181,7 +7841,11 @@
    "where": "나라 매장",
    "price": 1000,
    "img": "https://m.media-amazon.com/images/I/717yi4ACrAL._AC_SL1000_.jpg",
-   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ajlSzKkpvx8mRCs0Fa2RpAHaGz&pid=15.1"
+   "thumb": "https://ts1.mm.bing.net/th?id=OIP.ajlSzKkpvx8mRCs0Fa2RpAHaGz&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "생과자·떡 — 유통기한 짧음(당일~2일)"
+   }
   },
   {
    "cat": "kansai",
@@ -7190,7 +7854,11 @@
    "where": "와카야마 기념품점·백화점",
    "price": 1000,
    "img": "https://item-shopping.c.yimg.jp/i/f/marushin_28820_1",
-   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.HZhx69_FSTeMbDt1EeckFAHaHa&pid=15.1"
+   "thumb": "https://ts3.explicit.bing.net/th?id=OIP.HZhx69_FSTeMbDt1EeckFAHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   },
   {
    "cat": "kansai",
@@ -7199,7 +7867,11 @@
    "where": "와카야마 기념품점·간사이공항",
    "price": 1000,
    "img": "https://r.r10s.jp/ran/img/1001/0004/580/137/892/311/10010004580137892311_1.jpg",
-   "thumb": "https://ts3.mm.bing.net/th?id=OIP.gOgtrLB9QM7XyW23uhLZYwHaHa&pid=15.1"
+   "thumb": "https://ts3.mm.bing.net/th?id=OIP.gOgtrLB9QM7XyW23uhLZYwHaHa&pid=15.1",
+   "warn": {
+    "level": "caution",
+    "reason": "액체·젤 100ml 초과 — 위탁수하물로"
+   }
   }
  ]
 }
