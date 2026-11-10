@@ -3,6 +3,19 @@ const CATS = {
   med: ['의약품', '💊'], beauty: ['화장품', '🧴'], daily: ['생활', '🧼'], snack: ['과자', '🍫'],
   food: ['식품·술', '🍜'], goods: ['잡화', '🍳'], stationery: ['문구', '✏️'], kansai: ['간사이', '🏯'],
 };
+// 구매처 그룹: where 문자열에 든 단어로 분류한다. 순서가 곧 우선순위(쇼핑 목록 묶음 기준)
+const STORES = [
+  ['drug', '드럭스토어', ['드럭']],
+  ['donki', '돈키호테·마트', ['돈키', '마트', '슈퍼']],
+  ['conv', '편의점', ['편의점']],
+  ['loft', '로프트·문구점', ['로프트', '핸즈', '문구', '화방']],
+  ['yen100', '100엔샵', ['100엔']],
+  ['elec', '가전양판점', ['가전']],
+  ['dept', '백화점·공항', ['백화점', '공항', '한큐']],
+  ['local', '간사이 현지 매장', ['교토', '오사카', '고베', '나라', '와카야마', '시가', '난바', '사카이', '니시키', '도구야스지', '아리마', '우지']],
+  ['etc', '기타 전문점', []],
+];
+const storeOf = (part) => (STORES.find(([, , keys]) => keys.some((k) => part.includes(k))) || STORES.at(-1))[0];
 const CHO = 'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ';
 const RATE_TTL = 12 * 3600 * 1000;
 
@@ -21,6 +34,8 @@ const state = {
   // 주소 끝 #med 등으로 탭을, #tips 로 팁 창을 바로 열 수 있다
   cat: Object.keys(CATS).includes(location.hash.slice(1)) ? location.hash.slice(1) : 'all',
   sort: localStorage.getItem('jp-shop-sort') || 'default',
+  store: localStorage.getItem('jp-shop-store') || 'all',
+  hideBan: localStorage.getItem('jp-shop-hideban') === '1',
 };
 const saveCart = () => localStorage.setItem('jp-shop-cart', JSON.stringify(state.cart));
 
@@ -159,12 +174,23 @@ const SORTS = {
 };
 
 function render() {
-  const items = search($('#q').value).filter((it) => state.cat === 'all' || it.cat === state.cat);
+  const items = search($('#q').value).filter((it) =>
+    (state.cat === 'all' || it.cat === state.cat)
+    && (state.store === 'all' || it._stores.includes(state.store))
+    && !(state.hideBan && it.warn?.level === 'ban'));
   if (SORTS[state.sort]) items.sort(SORTS[state.sort]);
   $('#list').innerHTML = items.length
     ? items.map(row).join('')
     : `<li class="empty">찾는 제품이 없어요. 일본어 이름으로도 검색해 보세요.</li>`;
   $('#count').textContent = `${items.length}개`;
+  $('#hideBan').classList.toggle('on', state.hideBan);
+}
+
+function renderStores() {
+  const count = (k) => state.list.filter((it) => it._stores.includes(k)).length;
+  $('#store').innerHTML = `<option value="all">모든 구매처</option>`
+    + STORES.map(([k, label]) => `<option value="${k}">${label} (${count(k)})</option>`).join('');
+  $('#store').value = state.store;
 }
 
 function renderCats() {
@@ -218,12 +244,27 @@ function toggleCart(it) {
   return true;
 }
 
+// 면세 기준은 세금 제외 금액. 식품은 소비세 8%, 술·그 밖의 물건은 10%로 보고 뺀다
+const TAX_FREE_MIN = 5000;
+const isAlcohol = (it) => /주류/.test(it.warn?.reason || '');
+const exTax = (it) => it.price / ((['snack', 'kansai'].includes(it.cat) || (it.cat === 'food' && !isAlcohol(it))) ? 1.08 : 1.1);
+
+function cartRow(it) {
+  return `
+        <li class="${state.cart[it.ja] ? 'bought' : ''}" data-ja="${esc(it.ja)}">
+          <label><input type="checkbox" ${state.cart[it.ja] ? 'checked' : ''} /><span class="nm">${tag(it)}${esc(it.ko)}</span></label>
+          <span class="yen">${yen(it.price)}</span>
+          <button type="button" class="del" aria-label="빼기">✕</button>
+        </li>`;
+}
+
 function openCart() {
   const items = cartItems();
   if (!items.length) return $('#cart').close();
   const sum = items.reduce((n, it) => n + it.price, 0);
-  const left = items.filter((it) => !state.cart[it.ja]);
-  const done = items.length - left.length;
+  const done = items.filter((it) => state.cart[it.ja]).length;
+  // 같은 구매처끼리 묶어서, 한 매장에서 다 산다고 할 때 면세 기준을 넘는지 보여 준다
+  const groups = STORES.map(([k, label]) => [label, items.filter((it) => it._store === k)]).filter(([, list]) => list.length);
   $('#cart .content').innerHTML = `
     <h2 tabindex="-1">쇼핑 목록 <small>${items.length}개</small></h2>
     <div class="meter" style="--w:${(done / items.length) * 100}%">
@@ -232,16 +273,18 @@ function openCart() {
     <div class="meter">
       <p><span>예상 합계</span><b>${yen(sum)} · ${won(sum * state.rate)}</b></p>
     </div>
-    <ul class="items">
-      ${items.map((it) => `
-        <li class="${state.cart[it.ja] ? 'bought' : ''}" data-ja="${esc(it.ja)}">
-          <label><input type="checkbox" ${state.cart[it.ja] ? 'checked' : ''} /><span class="nm">${tag(it)}${esc(it.ko)} <small>${esc(it.where)}</small></span></label>
-          <span class="yen">${yen(it.price)}</span>
-          <button type="button" class="del" aria-label="빼기">✕</button>
-        </li>`).join('')}
-    </ul>
+    ${groups.map(([label, list]) => {
+      const total = list.reduce((n, it) => n + it.price, 0);
+      const ex = list.reduce((n, it) => n + exTax(it), 0);
+      const left = Math.ceil(TAX_FREE_MIN - ex);
+      return `
+    <section class="store">
+      <h3><span>${label}</span><small>${yen(total)}</small>${left <= 0 ? '<em class="ok">면세 가능</em>' : `<em>면세까지 ${yen(left)}</em>`}</h3>
+      <ul class="items">${list.map(cartRow).join('')}</ul>
+    </section>`;
+    }).join('')}
     ${items.some((it) => it.warn?.level === 'ban') ? `<p class="note ban">반입금지 표시가 있는 물건은 한국에 가져갈 수 없어요. 일본에서 다 쓰거나 두고 오세요.</p>` : ''}
-    <p class="note">한 매장에서 세금 제외 ¥5,000(세금 포함 약 ¥5,500) 이상이면 면세 환급 대상이에요. 환급받을 물건은 수하물을 부치기 전에 공항 세관 확인을 받아야 해요. 체크하면 산 것으로 표시돼요.</p>
+    <p class="note">면세는 <b>같은 날 같은 매장</b>에서 세금 제외 ¥5,000 이상일 때예요. 구매처별 합계는 한 매장에서 다 산다고 가정한 값이고, 세금은 식품 8%·그 외 10%로 계산했어요. 환급받을 물건은 수하물을 부치기 전에 공항 세관 확인을 받아야 해요.</p>
     <div class="actions">
       <button type="button" data-act="clear">비우기</button>
       <button type="button" class="primary" data-act="close">닫기</button>
@@ -337,6 +380,16 @@ $('#tipsBtn').addEventListener('click', openTips);
 $('#tips').addEventListener('click', (e) => {
   if (e.target === $('#tips') || e.target.closest('.close')) $('#tips').close();
 });
+$('#store').addEventListener('change', () => {
+  state.store = $('#store').value;
+  localStorage.setItem('jp-shop-store', state.store);
+  render();
+});
+$('#hideBan').addEventListener('click', () => {
+  state.hideBan = !state.hideBan;
+  localStorage.setItem('jp-shop-hideban', state.hideBan ? '1' : '');
+  render();
+});
 $('#sort').value = state.sort;
 $('#sort').addEventListener('change', () => {
   state.sort = $('#sort').value;
@@ -348,14 +401,25 @@ try {
   const d = await (await fetch('data.json', { cache: 'no-cache' })).json();
   state.list = d.items.map((it, id) => {
     const names = [it.ko, it.ja].map(norm);
-    return { ...it, id, _hay: names.join('|') + '|' + norm(it.where), _cho: chosung(it.ko.replace(/\s/g, '')) };
+    const parts = it.where.split('·');
+    return {
+      ...it, id,
+      _hay: names.join('|') + '|' + norm(it.where),
+      _cho: chosung(it.ko.replace(/\s/g, '')),
+      _stores: [...new Set(parts.map(storeOf))],
+      _store: storeOf(parts[0]),
+    };
   });
 } catch {
   $('#list').innerHTML = '<li class="empty">목록을 불러오지 못했어요.</li>';
 }
 renderCats();
+renderStores();
 renderRate();
 render();
 renderCart();
 loadRate();
 if (location.hash === '#tips') openTips();
+
+// 오프라인에서도 열리게 서비스 워커 등록 (범위는 /jp-shop/ 아래)
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');

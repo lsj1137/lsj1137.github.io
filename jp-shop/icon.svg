@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#191f28"/>
+  <!-- 쇼핑백 손잡이 -->
+  <path d="M196 196v-30a60 60 0 0 1 120 0v30" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
+  <!-- 쇼핑백 -->
+  <path d="M138 196h236l-16 196a24 24 0 0 1-24 22H178a24 24 0 0 1-24-22z" fill="#fff"/>
+  <!-- 일장기 원 -->
+  <circle cx="256" cy="306" r="46" fill="#e5323c"/>
+</svg>

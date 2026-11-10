@@ -124,6 +124,39 @@ main { max-width: 640px; margin: 0 auto; padding: 0 12px; }
   cursor: pointer;
 }
 
+/* 구매처·반입금지 필터 */
+.filters { display: flex; gap: 8px; padding: 0 2px 10px; }
+#store {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: 1;
+  min-width: 0;
+  height: 36px;
+  padding: 0 28px 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5l3 3 3-3' fill='none' stroke='%236b7684' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 10px center / 12px;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#hideBan {
+  flex: none;
+  height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--sub);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#hideBan.on { background: var(--text); color: #fff; }
+
 #list { list-style: none; margin: 0; padding: 0; background: #fff; border-radius: 16px; overflow: hidden; }
 .row + .row .head { border-top: 1px solid var(--line); }
 .head { display: flex; align-items: center; gap: 14px; padding: 14px 12px 14px 16px; cursor: pointer; }
@@ -328,3 +361,12 @@ body:has(#cartbar:not([hidden])) footer { padding-bottom: calc(96px + env(safe-a
 .tips th { width: 64px; color: var(--sub); font-weight: 500; }
 .tips .src { padding-top: 14px; border-top: 1px solid #e5e8eb; font-size: 12px; color: var(--faint); }
 .tips .src a { color: inherit; }
+
+/* 쇼핑 목록: 구매처별 묶음 */
+#cart .store { margin-top: 18px; }
+#cart .store h3 { display: flex; align-items: baseline; gap: 6px; margin: 0; font-size: 15px; }
+#cart .store h3 small { color: var(--sub); font-weight: 500; font-size: 13px; }
+#cart .store h3 em { margin-left: auto; padding: 2px 8px; border-radius: 6px; background: var(--field); color: var(--sub); font-size: 12px; font-style: normal; font-weight: 600; }
+#cart .store h3 em.ok { background: #e6f7ed; color: #1a8a4a; }
+#cart .store .items { margin-top: 6px; }
+#cart .note b { color: var(--sub); }

@@ -9,6 +9,9 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="일본 쇼핑" />
     <title>일본 쇼핑 필수템</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -35,6 +38,10 @@
           <option value="priceDesc">가격 높은순</option>
           <option value="name">가나다순</option>
         </select>
+      </div>
+      <div class="filters">
+        <select id="store" aria-label="구매처"></select>
+        <button type="button" id="hideBan">반입금지 빼고 보기</button>
       </div>
       <ul id="list"></ul>
     </main>
