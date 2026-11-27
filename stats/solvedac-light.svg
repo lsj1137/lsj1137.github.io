@@ -14,7 +14,7 @@
   <line x1="280" y1="4" x2="280" y2="52" stroke="#d0d7de"/>
     <text x="296" y="26" class="value">1,757</text>
     <text x="296" y="46" class="label muted">Rating</text><line x1="420" y1="4" x2="420" y2="52" stroke="#d0d7de"/>
-    <text x="436" y="26" class="value">820</text>
+    <text x="436" y="26" class="value">818</text>
     <text x="436" y="46" class="label muted">Solved</text><line x1="560" y1="4" x2="560" y2="52" stroke="#d0d7de"/>
     <text x="576" y="26" class="value">5</text>
     <text x="576" y="46" class="label muted">Class</text>
